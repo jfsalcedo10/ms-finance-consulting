@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | M&amp;S Finance Consulting</title>
+  <meta name="description" content="30+ years of accounting and financial consulting experience in Cartagena, Colombia." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="M&amp;S Finance Consulting logo" />
+        <span class="brand-name" data-i18n="brand.name">M&amp;S Finance Consulting</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button data-lang="en" type="button">EN</button>
+          <button data-lang="es" type="button">ES</button>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow" data-i18n="about.eyebrow">About Us</span>
+        <h1 data-i18n="about.title">Three decades of experience, one dedicated professional</h1>
+        <p class="subtitle" data-i18n="about.intro">M&amp;S Finance Consulting was built on a simple principle.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <p class="reveal" data-i18n="about.body1">For more than 30 years...</p>
+        <p class="reveal" data-i18n="about.body2">In recent years, the practice has expanded...</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header align-left reveal">
+          <h2 data-i18n="about.values.title">Our values</h2>
+        </div>
+        <ul class="values-list grid grid-2 reveal">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong data-i18n="about.values.integrity.title">Integrity</strong>
+              <span data-i18n="about.values.integrity.body">Every recommendation is made with honesty.</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong data-i18n="about.values.precision.title">Precision</strong>
+              <span data-i18n="about.values.precision.body">Meticulous, accurate work.</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong data-i18n="about.values.personal.title">Personal attention</strong>
+              <span data-i18n="about.values.personal.body">You are never just a file number.</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong data-i18n="about.values.learning.title">Continuous learning</strong>
+              <span data-i18n="about.values.learning.body">Combining decades of experience with modern tools.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="founder reveal">
+          <div class="founder-avatar">M&amp;S</div>
+          <div>
+            <span class="eyebrow" data-i18n="about.founder.eyebrow">Founder</span>
+            <h3 data-i18n="about.founder.name">[Founder name — TODO]</h3>
+            <p style="color: var(--color-text-muted); font-weight: 600; margin-bottom: 0.75em;" data-i18n="about.founder.role">
+              Founder &amp; Lead Consultant, Accountant
+            </p>
+            <p data-i18n="about.founder.bio">With over 30 years of experience...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">M&amp;S Finance Consulting</div>
+        <p class="footer-tagline" data-i18n="footer.tagline">Accounting, tax, and financial consulting in Cartagena, Colombia.</p>
+      </div>
+      <div class="footer-meta">
+        &copy; <span id="current-year"></span> M&amp;S Finance Consulting. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
