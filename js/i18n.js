@@ -6,7 +6,7 @@
 const translations = {
   en: {
     nav: { home: "Home", about: "About", services: "Services", contact: "Contact" },
-    brand: { name: "M&S Finance Consulting" },
+    brand: { tail: "Finance Consulting" },
     hero: {
       eyebrow: "Accounting & Financial Consulting",
       title: "Clear finances. Confident decisions.",
@@ -27,7 +27,7 @@ const translations = {
           body: "Full-service bookkeeping, tax filing, and financial statement preparation, compliant with Colombian regulations.",
         },
         data: {
-          title: "Modern Data Analysis",
+          title: "Modern Data Analysis and AI",
           body: "A new generation of insight: turning your financial data into clear reports and smarter decisions.",
         },
       },
@@ -48,7 +48,7 @@ const translations = {
       intro:
         "M&S Finance Consulting was built on a simple principle: give every client the same care, precision, and attention a business owner would give their own finances.",
       body1:
-        "For more than 30 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
+        "For more than 10 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
       body2:
         "In recent years, the practice has expanded to include data analysis services, bringing modern tools and techniques to help clients understand their numbers more deeply and make better decisions — a new chapter built on the same foundation of trust.",
       values: {
@@ -58,11 +58,20 @@ const translations = {
         personal: { title: "Personal attention", body: "You are never just a file number. Every client gets direct, personal attention." },
         learning: { title: "Continuous learning", body: "Combining decades of experience with modern tools like data analysis to keep delivering value." },
       },
+      team: {
+        title: "Our team",
+      },
       founder: {
         eyebrow: "Founder",
-        name: "[Founder name — TODO]",
+        name: "Emilio Salcedo",
         role: "Founder & Lead Consultant, Accountant",
         bio: "With over 30 years of experience in accounting and financial consulting, our founder has helped countless businesses and individuals in Cartagena navigate their finances with clarity and confidence.",
+      },
+      analyst: {
+        eyebrow: "Data & Analytics",
+        name: "Juan Felipe Salcedo",
+        role: "Data Engineer & Technology Consultant",
+        bio: "Juan Felipe brings modern data analysis and technology skills to the practice, helping turn financial and business data into clear dashboards and insights that support better decisions.",
       },
     },
     services: {
@@ -98,12 +107,11 @@ const translations = {
       eyebrow: "Get in Touch",
       title: "Contact",
       intro: "Have a question or ready to get started? Reach out — we typically respond within one business day.",
-      infoTitle: "Contact information",
       info: {
-        address: { label: "Address", value: "Cartagena, Colombia [TODO: add full address]" },
-        phone: { label: "Phone / WhatsApp", value: "[TODO: add phone number]" },
-        email: { label: "Email", value: "[TODO: add email address]" },
-        hours: { label: "Business hours", value: "Monday – Friday, 8:00 AM – 5:00 PM" },
+        address: { value: "Cartagena, Colombia" },
+        phone: { value: "+57 300 787 1159" },
+        email: { value: "emiliosalcedo@mscontadores.com.co" },
+        hours: { value: "Monday – Friday, 8:00 AM – 5:00 PM" },
       },
       form: {
         title: "Send a message",
@@ -112,17 +120,19 @@ const translations = {
         subject: "Subject",
         message: "Message",
         submit: "Send message",
-        note: "This form is not yet connected to email — for now, please contact us directly using the information above.",
+        note: "This form is not yet connected to email — for now, please reach us directly using the details in the footer below.",
       },
     },
     footer: {
       tagline: "Accounting, tax, and financial consulting in Cartagena, Colombia.",
       rights: "All rights reserved.",
+      contactTitle: "Contact",
+      hoursTitle: "Hours & Location",
     },
   },
   es: {
     nav: { home: "Inicio", about: "Nosotros", services: "Servicios", contact: "Contacto" },
-    brand: { name: "M&S Finance Consulting" },
+    brand: { tail: "Finance Consulting" },
     hero: {
       eyebrow: "Consultoría Contable y Financiera",
       title: "Finanzas claras. Decisiones seguras.",
@@ -164,7 +174,7 @@ const translations = {
       intro:
         "M&S Finance Consulting se construyó sobre un principio simple: brindar a cada cliente el mismo cuidado, precisión y atención que un empresario le daría a sus propias finanzas.",
       body1:
-        "Durante más de 30 años, M&S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
+        "Durante más de 10 años, M&S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
       body2:
         "En los últimos años, la práctica se ha ampliado para incluir servicios de análisis de datos, incorporando herramientas y técnicas modernas para ayudar a los clientes a entender mejor sus números y tomar mejores decisiones — un nuevo capítulo construido sobre la misma base de confianza.",
       values: {
@@ -174,11 +184,20 @@ const translations = {
         personal: { title: "Atención personal", body: "Nunca eres solo un número de expediente. Cada cliente recibe atención directa y personal." },
         learning: { title: "Aprendizaje continuo", body: "Combinando décadas de experiencia con herramientas modernas como el análisis de datos para seguir generando valor." },
       },
+      team: {
+        title: "Nuestro equipo",
+      },
       founder: {
         eyebrow: "Fundador",
-        name: "[Nombre del fundador — TODO]",
+        name: "Emilio Salcedo",
         role: "Fundador y Consultor Principal, Contador",
         bio: "Con más de 30 años de experiencia en contabilidad y consultoría financiera, nuestro fundador ha ayudado a innumerables empresas y personas en Cartagena a manejar sus finanzas con claridad y confianza.",
+      },
+      analyst: {
+        eyebrow: "Datos y Analítica",
+        name: "Juan Felipe Salcedo",
+        role: "Ingeniero de Datos y Consultor en Tecnología",
+        bio: "Juan Felipe aporta habilidades modernas de análisis de datos y tecnología a la práctica, ayudando a convertir los datos financieros y de negocio en tableros claros y conocimientos que apoyan mejores decisiones.",
       },
     },
     services: {
@@ -214,12 +233,11 @@ const translations = {
       eyebrow: "Contáctanos",
       title: "Contacto",
       intro: "¿Tienes una pregunta o estás listo para comenzar? Escríbenos — normalmente respondemos dentro de un día hábil.",
-      infoTitle: "Información de contacto",
       info: {
-        address: { label: "Dirección", value: "Cartagena, Colombia [TODO: agregar dirección completa]" },
-        phone: { label: "Teléfono / WhatsApp", value: "[TODO: agregar número de teléfono]" },
-        email: { label: "Correo electrónico", value: "[TODO: agregar correo electrónico]" },
-        hours: { label: "Horario de atención", value: "Lunes a viernes, 8:00 a.m. – 5:00 p.m." },
+        address: { value: "Cartagena, Colombia" },
+        phone: { value: "+57 300 787 1159" },
+        email: { value: "emiliosalcedo@mscontadores.com.co" },
+        hours: { value: "Lunes a viernes, 8:00 a.m. – 5:00 p.m." },
       },
       form: {
         title: "Envía un mensaje",
@@ -228,12 +246,14 @@ const translations = {
         subject: "Asunto",
         message: "Mensaje",
         submit: "Enviar mensaje",
-        note: "Este formulario aún no está conectado al correo — por ahora, contáctanos directamente usando la información anterior.",
+        note: "Este formulario aún no está conectado al correo — por ahora, contáctanos directamente usando los datos en el pie de página.",
       },
     },
     footer: {
       tagline: "Contabilidad, impuestos y consultoría financiera en Cartagena, Colombia.",
       rights: "Todos los derechos reservados.",
+      contactTitle: "Contacto",
+      hoursTitle: "Horario y Ubicación",
     },
   },
 };
@@ -255,22 +275,59 @@ function applyLanguage(lang) {
     if (value !== undefined) el.setAttribute("placeholder", value);
   });
 
-  document.querySelectorAll(".lang-switch button").forEach((btn) => {
-    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+  document.querySelectorAll("[data-lang-current]").forEach((el) => {
+    el.textContent = lang.toUpperCase();
+  });
+
+  document.querySelectorAll(".lang-select-menu li").forEach((li) => {
+    li.setAttribute("aria-selected", String(li.getAttribute("data-lang") === lang));
   });
 
   localStorage.setItem("ms_lang", lang);
 }
 
+function closeLangSelect(select) {
+  select.classList.remove("is-open");
+  select.querySelector(".lang-select-toggle").setAttribute("aria-expanded", "false");
+}
+
 function initLanguage() {
+  // Default is Spanish (the practice is based in Cartagena, Colombia) —
+  // not browser-language detection, since plenty of visitors here run an
+  // English OS/browser locale despite being Spanish speakers. A saved
+  // choice from the language switcher always takes priority.
   const saved = localStorage.getItem("ms_lang");
-  const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
-  const initial = saved || browserLang;
+  const initial = saved || "es";
 
   applyLanguage(initial);
 
-  document.querySelectorAll(".lang-switch button").forEach((btn) => {
-    btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+  document.querySelectorAll(".lang-select").forEach((select) => {
+    const toggle = select.querySelector(".lang-select-toggle");
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = select.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    select.querySelectorAll(".lang-select-menu li").forEach((li) => {
+      li.addEventListener("click", () => {
+        applyLanguage(li.getAttribute("data-lang"));
+        closeLangSelect(select);
+      });
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".lang-select.is-open").forEach((select) => {
+      if (!select.contains(event.target)) closeLangSelect(select);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".lang-select.is-open").forEach(closeLangSelect);
+    }
   });
 }
 

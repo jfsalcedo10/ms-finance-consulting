@@ -28,8 +28,25 @@ contact.html       Contact page
 css/styles.css     All styles (colors, layout, components, responsive rules)
 js/i18n.js         Spanish/English translations + language switcher
 js/main.js         Mobile nav, scroll effects, reveal animations
-assets/logo.svg    Placeholder logo
+assets/logo.svg    Site logo (vector), used in the header and favicon
+assets/ms-logo.jpg Original raster logo — source the SVG was traced from;
+                   not used directly on the site, kept for reference/reprints
 ```
+
+## Brand colors
+
+The palette in `css/styles.css` (`:root` custom properties) is sampled
+directly from `assets/ms-logo.jpg`:
+
+- `--color-blue` `#036a7a` — deep teal (primary)
+- `--color-green` `#7eb92c` — brand green (accents, secondary actions)
+- Slate gray `#46545d` appears in the logo mark itself but isn't pulled into
+  a variable — the existing `--color-text` / `--color-text-muted` tokens
+  were already close enough to it
+
+If the logo ever changes, re-derive these by sampling the new file rather
+than eyeballing it — ask Claude to do the same pixel-clustering approach
+used originally.
 
 ## Language switching
 
@@ -42,14 +59,18 @@ the HTML files directly, since HTML text gets overwritten on page load.
 ## TODO before going live
 
 Content placeholders that only the client (dad) can fill in — search
-`js/i18n.js` for `TODO` to find them all:
+`js/i18n.js` for `TODO` to find what's left:
 
-- [ ] Founder's real name and exact professional title/credentials
-      (`about.founder.name`, `about.founder.role`)
-- [ ] Phone / WhatsApp number (`contact.info.phone.value`)
-- [ ] Email address (`contact.info.email.value`)
-- [ ] Full physical address (`contact.info.address.value`)
-- [ ] Replace `assets/logo.svg` placeholder with a real logo, if there is one
+- [x] Founder's real name — Emilio Salcedo (`about.founder.name`)
+- [x] Phone / WhatsApp number — +57 300 787 1159, wired as a `tel:` link
+      in the footer (`contact.info.phone.value`)
+- [x] Email address — emiliosalcedo@mscontadores.com.co, wired as a
+      `mailto:` link in the footer (`contact.info.email.value`)
+- [ ] Founder's exact professional title/credentials (`about.founder.role`
+      currently says "Founder & Lead Consultant, Accountant" — confirm
+      wording, e.g. official "Contador Público" / tarjeta profesional no.)
+- [x] Address — kept to "Cartagena, Colombia" only, no street address
+      (`contact.info.address.value`)
 - [ ] Contact form (`contact.html`) currently does not send anywhere — wire
       it up to a service like Formspree or EmailJS before launch
 - [ ] Consider adding real photos (founder headshot, office) to replace the
