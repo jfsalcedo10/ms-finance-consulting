@@ -18,6 +18,10 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000 in your browser.
 
+Want to share a live preview with someone else (not just view it locally)?
+See [`SHARING-A-PREVIEW.md`](SHARING-A-PREVIEW.md) for how to do that with a
+free Cloudflare Tunnel.
+
 ## Project structure
 
 ```

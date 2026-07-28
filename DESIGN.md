@@ -127,14 +127,14 @@ components:
 
 **Creative North Star: "The Growth Ledger"**
 
-The practice was built on thirty years of ledgers, ink, and paper — and its future is a father-son partnership where the accounting foundation now grows into data analysis and data engineering. The visual system says both things at once: a warm ledger-paper atmosphere (fine horizontal rule-line texture, ink tones, a serif that reads as trustworthy and established) carries a sparing, deliberate green accent that stands for growth, data, and forward motion. Neither side dominates — the paper-and-ink world is the base layer everything sits on, and the green is the signal that something modern and analytical is happening inside it.
+The practice was built on thirty years of ledgers, ink, and paper — and its future is a father-son partnership where the accounting foundation now grows into data analysis and data engineering. The visual system says both things at once: a warm ledger-paper atmosphere (a faint engraved security-paper texture, ink tones, a serif that reads as trustworthy and established) carries a sparing, deliberate green accent that stands for growth, data, and forward motion. Neither side dominates — the paper-and-ink world is the base layer everything sits on, and the green is the signal that something modern and analytical is happening inside it.
 
 The voice is modern-meets-traditional: it foregrounds the actual contrast in the business (a credentialed accountant of 30+ years, a data scientist son) rather than picking one aesthetic and hiding the other. Components stay precise and document-like — tight corner radii, restrained motion, shadows that only appear in response to touch — because a ledger does not perform for attention; it earns trust through precision.
 
 A dedicated mono/label typeface was tried early and explicitly rejected: it read as a generic "AI-generated dev-tool" aesthetic rather than an accounting practice. The system deliberately runs on exactly two typefaces.
 
 **Key Characteristics:**
-- Warm ledger-paper base (ruled horizontal-line texture, cream/paper tones) instead of a flat or gradient background
+- Warm ledger-paper base (faint engraved security-paper texture, cream/paper tones) instead of a flat, gradient, or notebook-like ruled/grid background
 - Deep Harbor Teal as the dominant identity color; Growth Green used rarely and only with intent
 - Two typefaces only — an editorial serif for trust, a precise sans for everything functional
 - Flat-at-rest surfaces; shadows exist only as a response to hover, scroll, or open state
@@ -150,17 +150,16 @@ A dominant teal-and-paper identity with green treated as a rare, high-value sign
 - **Deep Harbor Teal Bright** (`#0299a8`): Reserved for the "S" in the M&S wordmark only — a single bright accent inside an otherwise deep-toned identity.
 
 ### Secondary
-- **Growth Green** (`#7eb92c`): Primary-button fill, focus rings, active nav underlines, footer icon accents, the values-list dot. Never used as a background fill or large surface color.
-- **Growth Green Deep** (`#5c8f1f`): Primary-button hover state only.
+- **Growth Green** (`#7eb92c`): Primary-button fill (rest and hover — see the No-Darker-Green Rule below), focus rings, active nav underlines, footer icon accents, the values-list dot. Never used as a background fill or large surface color.
 
 ### Neutral
 - **Slate Ink** (`#46545d`): The logo's third color; used for the "&" in the wordmark and nowhere else as a UI color — reserved for that one deliberate echo of the mark.
-- **Paper** (`#f6efe1`): Page background; carries the horizontal rule-line texture.
+- **Paper** (`#f6efe1`): Page background; carries the engraved security-paper texture.
 - **Card Cream** (`#fffcf4`): Card, form, and dropdown-menu surfaces — a shade lighter than the page paper so surfaces read as "placed on" the page.
 - **Ink** (`#17262a`): Primary body text.
 - **Ink Muted** (`#566268`): Secondary text — subtitles, card copy, muted footer text.
 - **Hairline** (`rgba(23, 38, 42, 0.14)`): Borders on cards, inputs, dropdowns, the header's scrolled-state divider.
-- **Grid Line** (`rgba(3, 106, 122, 0.07)`): The faint 34px-spaced horizontal rule lines behind the entire page — the literal ledger-paper ruling. (Named for the underlying CSS variable; renders as horizontal lines only, not a two-axis grid — see the Ruled-Paper Rule in Layout.)
+- **Grid Line** (`rgba(3, 106, 122, 0.07)` base color, rendered at ~0.06 stroke opacity in the pattern itself): The faint concentric-ring guilloché texture behind the entire page — the engraved pattern used on banknotes, checks, and certificates. (Named for the underlying CSS variable; two earlier versions — a two-axis grid, then plain horizontal rule lines — were both tried and rejected for reading as notebook/school paper rather than a financial document. See the Security-Paper Rule in Layout.)
 - **Paper White** (`#ffffff`): Form field backgrounds only, for contrast against the cream card surface they sit inside.
 
 ### Named Rules
@@ -205,10 +204,13 @@ Six Piazzolla (display-family) steps and six Public Sans steps, all consolidated
 
 ## Layout
 
-A centered `1120px` max-width container with `24px` horizontal padding (the gutter) on every page. Section rhythm runs on a consistent `76px` vertical padding block, tightened to smaller values only inside cards, the mobile nav, and the CTA banner. Card and service grids run 3-across (or 2-across for the About team) on desktop, dropping to 2 columns at `860px` and stacking to 1 column at `640px`. The header is `position: sticky` with a translucent, blurred paper background that only gains a shadow and hairline border once the page scrolls. The entire page sits on a faint `34px`-spaced horizontal rule-line texture (the `grid-line` neutral) — literal ledger-paper ruling, not a two-axis grid — this is the one atmosphere layer that never turns off, including on interior pages.
+A centered `1120px` max-width container with `24px` horizontal padding (the gutter) on every page. Section rhythm runs on a `76px` vertical padding block on desktop (hero `100px`/`76px`, page-header `84px`/`52px`) — tightened at `640px` (hero `56px`/`44px`, page-header `48px`/`16px`, section `32px`) so that stacked padding between a page-header and the section beneath it doesn't compound into ~130px of dead space on a short mobile viewport. Card and service grids run 3-across (or 2-across for the About team) on desktop, dropping to 2 columns at `860px` and stacking to 1 column at `640px`. The header is `position: sticky` with a translucent, blurred paper background that only gains a shadow and hairline border once the page scrolls. The entire page sits on a faint `120px`-tiled concentric-ring guilloché texture (the `grid-line` neutral, at low opacity) — the engraved-line pattern used on banknotes, checks, and certificates — this is the one atmosphere layer that never turns off, including on interior pages.
 
 ### Named Rules
-**The Ruled-Paper Rule.** The background texture is horizontal lines only, evoking ruled ledger/accounting paper. A two-axis grid was tried first and rejected — it read as generic blueprint/graph-paper decoration rather than an accounting-specific cue. Don't add the vertical axis back.
+**The No-Stacking-Padding Rule.** A section-transition element's padding (page-header, hero) and the padding of whatever follows it are tuned together, not independently — check the *combined* gap they produce, especially at the `640px` breakpoint, not each rule's value in isolation.
+
+### Named Rules
+**The Security-Paper Rule.** The background texture is a concentric-ring guilloché pattern — the engraved linework printed on banknotes, checks, and certificates — never straight ruled lines or a plain grid. Both of those were tried and rejected: a two-axis grid read as generic blueprint decoration, and horizontal-only ruled lines read as school-notebook paper. Keep the pattern's opacity very low (~0.06 stroke-opacity) and the tile large (120px) — an earlier denser/darker pass looked fine in an isolated swatch but was overwhelming across a real full-height page. Always verify against a real rendered page, not a small mockup.
 
 ## Elevation & Depth
 
@@ -260,7 +262,7 @@ The header logo is an inline `<svg>` written directly into each page's `<header>
 
 ### Do:
 - **Do** keep Growth Green rare — buttons, focus rings, active states, small accents only. Never a fill for a large surface.
-- **Do** keep the grid-line paper texture running under every page; it is the system's one constant atmosphere layer.
+- **Do** keep the engraved security-paper texture running under every page; it is the system's one constant atmosphere layer. Keep it very quiet (~0.06 opacity) — this pattern reads correctly only at low intensity.
 - **Do** hold buttons, inputs, and small controls to the 7px radius and cards/banners to 10px — never introduce a pill shape.
 - **Do** apply shadows only in response to hover, scroll, or open state (Flat-Until-Touched Rule).
 - **Do** respect `prefers-reduced-motion` for every animation in the system (hero/page-header reveals, scroll-reveal cards, the logo grow-in).

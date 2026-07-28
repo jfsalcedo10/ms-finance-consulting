@@ -45,11 +45,37 @@ body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background-color: var(--color-paper);
-  background-image: linear-gradient(var(--color-line-soft) 1px, transparent 1px);
-  background-size: 100% 34px;
+  /* Engraved security-paper texture (concentric-ring guilloché), the pattern
+     printed on banknotes, checks, and stock certificates — chosen after
+     ruled/grid lines read as school-notebook paper instead of a financial
+     document. Inlined as a data URI (not a separate asset) to keep the site
+     dependency-free; source SVG kept below for future edits. */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDM2YTdhIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDYiPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjE4Ii8+PGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iMzIiLz48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMzIiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIzMiIvPjxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjMyIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSIzMiIvPjwvZz48L3N2Zz4=");
+  background-size: 120px 120px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Source for the data URI above — edit here, then re-encode with:
+   python3 -c "import base64; print(base64.b64encode(open('pattern.svg','rb').read()).decode())"
+
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <g fill="none" stroke="#036a7a" stroke-width="0.5" stroke-opacity="0.06">
+    <circle cx="60" cy="60" r="18"/>
+    <circle cx="60" cy="60" r="32"/>
+    <circle cx="0" cy="0" r="32"/>
+    <circle cx="120" cy="0" r="32"/>
+    <circle cx="0" cy="120" r="32"/>
+    <circle cx="120" cy="120" r="32"/>
+  </g>
+</svg>
+
+Tuning notes: the first pass (80px tile, 3 rings, 0.14 opacity) looked fine
+in an isolated mockup but was overwhelming across a full page — this
+120px/2-ring/0.06-opacity version is the one that actually reads as quiet
+atmosphere at real page scale. Verify any future change against a full
+rendered page, not a small swatch.
+*/
 
 img {
   max-width: 100%;
@@ -895,6 +921,23 @@ form {
 }
 
 @media (max-width: 640px) {
+  /* Vertical rhythm (hero/page-header padding, section padding) was tuned
+     for desktop only. Unreduced, a page-header's bottom padding (52px)
+     stacks with the next section's top padding (76px) into 128px of dead
+     space on mobile — e.g. between the Contact subtitle and the form, or
+     the About subtitle and "For more than 30 years...". Tightened here. */
+  .hero {
+    padding: 56px 0 44px;
+  }
+
+  .page-header {
+    padding: 48px 0 16px;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+
   .main-nav {
     position: fixed;
     top: 68px;
