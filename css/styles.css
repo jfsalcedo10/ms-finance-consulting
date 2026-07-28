@@ -7,7 +7,6 @@
   --color-teal-deep: #023b45;
   --color-teal-bright: #0299a8;
   --color-green: #7eb92c;
-  --color-green-deep: #5c8f1f;
   --color-slate: #46545d;
 
   --color-paper: #f6efe1;
@@ -46,10 +45,8 @@ body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background-color: var(--color-paper);
-  background-image:
-    linear-gradient(var(--color-line-soft) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-line-soft) 1px, transparent 1px);
-  background-size: 34px 34px;
+  background-image: linear-gradient(var(--color-line-soft) 1px, transparent 1px);
+  background-size: 100% 34px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -80,6 +77,10 @@ h4 {
   letter-spacing: -0.01em;
   margin: 0 0 0.5em;
   color: var(--color-teal-deep);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
 }
 
 p {
@@ -127,7 +128,10 @@ p {
 }
 
 .btn-primary:hover {
-  background: var(--color-green-deep);
+  /* Background intentionally stays Growth Green on hover, not a darker
+     shade — Deep Harbor Teal Deep text on a darkened green fails WCAG AA
+     contrast (was 3.15:1 against the 4.5:1 minimum). Shadow + lift alone
+     carry the hover signal here, same as cards. */
   box-shadow: var(--shadow-md);
 }
 
@@ -248,7 +252,7 @@ p {
 }
 
 .brand-s {
-  color: var(--color-teal-bright);
+  color: var(--color-teal);
 }
 
 .brand-tail {
@@ -278,14 +282,16 @@ p {
   left: 0;
   bottom: -2px;
   height: 2px;
-  width: 0;
+  width: 100%;
   background: var(--color-green);
-  transition: width 0.2s var(--ease-out);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s var(--ease-out);
 }
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 .main-nav a.active {
@@ -313,7 +319,7 @@ p {
   background: var(--color-paper-card);
   padding: 7px 11px;
   font-family: inherit;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -369,8 +375,14 @@ p {
   cursor: pointer;
 }
 
-.lang-select-menu li:hover {
+.lang-select-menu li:hover,
+.lang-select-menu li:focus-visible {
   background: var(--color-paper);
+}
+
+.lang-select-menu li:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: -2px;
 }
 
 .lang-select-menu li[aria-selected="true"] {
@@ -798,7 +810,7 @@ form {
   color: var(--color-paper);
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .footer-tagline {
@@ -818,7 +830,7 @@ form {
 
 .footer-col p,
 .footer-contact-row {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   margin: 0 0 8px;
 }
 
@@ -846,7 +858,7 @@ form {
 
 .footer-bottom {
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: rgba(246, 239, 225, 0.65);
 }
 

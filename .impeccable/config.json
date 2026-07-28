@@ -1,0 +1,53 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-radius",
+        "value": "5px",
+        "createdAt": "2026-07-28T16:58:07.605Z",
+        "reason": "Nested menu-item radius intentionally smaller than its 7px parent container (documented in DESIGN.md Shapes)"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "2px",
+        "createdAt": "2026-07-28T16:58:07.634Z",
+        "reason": "Decorative end-cap rounding on a 2px-tall nav underline bar, unrelated to the 7/10px shape scale (documented in DESIGN.md Shapes)"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-07-28T16:58:07.660Z",
+        "reason": "False positive: detector matched <img src> text inside a code comment explaining why the logo avoids that pattern, not an actual <img> tag"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "400px",
+        "createdAt": "2026-07-28T17:17:40.719Z",
+        "reason": "Decorative oversized background watermark glyph (hero/page-header &, 30, %, @), not running text — outside the type ramp by design"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "300px",
+        "createdAt": "2026-07-28T17:17:40.752Z",
+        "reason": "Decorative oversized background watermark glyph (hero/page-header &, 30, %, @), not running text — outside the type ramp by design"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "260px",
+        "createdAt": "2026-07-28T17:17:40.780Z",
+        "reason": "Decorative oversized background watermark glyph (hero/page-header &, 30, %, @), not running text — outside the type ramp by design"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "180px",
+        "createdAt": "2026-07-28T17:17:40.809Z",
+        "reason": "Decorative oversized background watermark glyph (hero/page-header &, 30, %, @), not running text — outside the type ramp by design"
+      }
+    ]
+  }
+}

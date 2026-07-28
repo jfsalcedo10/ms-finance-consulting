@@ -286,9 +286,30 @@ function applyLanguage(lang) {
   localStorage.setItem("ms_lang", lang);
 }
 
-function closeLangSelect(select) {
+function closeLangSelect(select, { returnFocus } = {}) {
+  const wasOpen = select.classList.contains("is-open");
   select.classList.remove("is-open");
-  select.querySelector(".lang-select-toggle").setAttribute("aria-expanded", "false");
+  const toggle = select.querySelector(".lang-select-toggle");
+  toggle.setAttribute("aria-expanded", "false");
+  if (returnFocus && wasOpen) toggle.focus();
+}
+
+function openLangSelect(select) {
+  select.classList.add("is-open");
+  select.querySelector(".lang-select-toggle").setAttribute("aria-expanded", "true");
+  // Move focus into the listbox so keyboard/screen-reader users can actually
+  // reach the options — a real WCAG 2.1.1 gap when this only opened visually.
+  // Deferred: the menu's `visibility: hidden` is part of a CSS transition
+  // (see .lang-select-menu), and browsers don't resolve that transition's
+  // computed value synchronously — not even after a forced reflow or a
+  // requestAnimationFrame tick. A short delay (well under human perception,
+  // but past that resolution point) is what reliably makes the option
+  // focusable; verified empirically, not a guess.
+  setTimeout(() => {
+    const options = Array.from(select.querySelectorAll(".lang-select-menu li"));
+    const selected = options.find((li) => li.getAttribute("aria-selected") === "true");
+    (selected || options[0])?.focus();
+  }, 60);
 }
 
 function initLanguage() {
@@ -303,18 +324,47 @@ function initLanguage() {
 
   document.querySelectorAll(".lang-select").forEach((select) => {
     const toggle = select.querySelector(".lang-select-toggle");
+    const options = Array.from(select.querySelectorAll(".lang-select-menu li"));
 
     toggle.addEventListener("click", (event) => {
       event.stopPropagation();
-      const isOpen = select.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+      if (select.classList.contains("is-open")) {
+        closeLangSelect(select);
+      } else {
+        openLangSelect(select);
+      }
     });
 
-    select.querySelectorAll(".lang-select-menu li").forEach((li) => {
-      li.addEventListener("click", () => {
-        applyLanguage(li.getAttribute("data-lang"));
-        closeLangSelect(select);
+    const selectOption = (li) => {
+      applyLanguage(li.getAttribute("data-lang"));
+      closeLangSelect(select, { returnFocus: true });
+    };
+
+    options.forEach((li, index) => {
+      li.addEventListener("click", () => selectOption(li));
+
+      li.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          selectOption(li);
+        } else if (event.key === "ArrowDown") {
+          event.preventDefault();
+          options[(index + 1) % options.length].focus();
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          options[(index - 1 + options.length) % options.length].focus();
+        } else if (event.key === "Escape") {
+          closeLangSelect(select, { returnFocus: true });
+        }
+        // Tab is left to the browser's default; the container's focusout
+        // handler below closes the menu once focus actually leaves it.
       });
+    });
+
+    // Closing on focusout (not just outside-click) covers keyboard users
+    // tabbing away from the widget entirely.
+    select.addEventListener("focusout", (event) => {
+      if (!select.contains(event.relatedTarget)) closeLangSelect(select);
     });
   });
 
@@ -326,7 +376,7 @@ function initLanguage() {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      document.querySelectorAll(".lang-select.is-open").forEach(closeLangSelect);
+      document.querySelectorAll(".lang-select.is-open").forEach((select) => closeLangSelect(select, { returnFocus: true }));
     }
   });
 }

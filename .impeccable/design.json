@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-28T17:25:44Z",
+  "title": "Design System: M&S Finance Consulting",
+  "extensions": {
+    "colorMeta": {
+      "deep-harbor-teal": {
+        "role": "primary",
+        "displayName": "Deep Harbor Teal",
+        "canonical": "#036a7a",
+        "tonalRamp": ["#02414b", "#03798b", "#05adc7", "#10daf9", "#4ce3fb", "#88ecfc", "#b9f4fd", "#e6fbfe"]
+      },
+      "deep-harbor-teal-deep": {
+        "role": "primary",
+        "displayName": "Deep Harbor Teal Deep",
+        "canonical": "#023b45",
+        "tonalRamp": ["#02404a", "#04778b", "#06aac6", "#11d6f8", "#4de0fa", "#88eafc", "#baf3fd", "#e6fbfe"]
+      },
+      "deep-harbor-teal-bright": {
+        "role": "primary",
+        "displayName": "Deep Harbor Teal Bright",
+        "canonical": "#0299a8",
+        "tonalRamp": ["#01454c", "#02818d", "#02b8ca", "#0de7fc", "#4aedfd", "#86f3fe", "#b8f8fe", "#e6fcff"]
+      },
+      "growth-green": {
+        "role": "secondary",
+        "displayName": "Growth Green",
+        "canonical": "#7eb92c",
+        "tonalRamp": ["#2a3e0f", "#4f731b", "#70a527", "#91d039", "#acdc6b", "#c8e79c", "#dff1c5", "#f4faea"]
+      },
+      "slate-ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "#46545d",
+        "tonalRamp": ["#21272c", "#3d4a51", "#586974", "#738896", "#96a6b0", "#b9c4ca", "#d6dce0", "#f0f3f4"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f6efe1",
+        "tonalRamp": ["#3b2d12", "#6e5421", "#9d782f", "#c79b43", "#d5b472", "#e3cda1", "#efe2c8", "#f9f5eb"]
+      },
+      "card-cream": {
+        "role": "neutral",
+        "displayName": "Card Cream",
+        "canonical": "#fffcf4",
+        "tonalRamp": ["#4c3800", "#8f6800", "#cc9400", "#ffbc0a", "#ffcd47", "#ffde85", "#ffecb8", "#fff8e5"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#17262a",
+        "tonalRamp": ["#1b2d31", "#33535c", "#487784", "#6199a8", "#88b3be", "#b0ccd4", "#d1e1e6", "#eff4f6"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#566268",
+        "tonalRamp": ["#23272a", "#414a4e", "#5c6970", "#798890", "#9ba6ac", "#bcc4c8", "#d8dcdf", "#f1f3f3"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(23, 38, 42, 0.14)"
+      },
+      "grid-line": {
+        "role": "neutral",
+        "displayName": "Grid Line",
+        "canonical": "rgba(3, 106, 122, 0.07)"
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only." },
+      "headline-lg": { "displayName": "Headline Large", "purpose": "Page-header H1s (About/Services/Contact)." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s — the default headline step." },
+      "headline-sm": { "displayName": "Headline Small", "purpose": "Card/team H3s and the footer brand name." },
+      "headline-xl": { "displayName": "Headline XL", "purpose": "Oversized italic initials inside team-member avatars." },
+      "brand-mark": { "displayName": "Brand Mark", "purpose": "Header logotype text next to the icon — identity, not a content heading." },
+      "body": { "displayName": "Body", "purpose": "All paragraph copy." },
+      "body-lg": { "displayName": "Body Large", "purpose": "Hero subtitle only." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Form input/textarea text." },
+      "body-xs": { "displayName": "Body XS", "purpose": "Form notes, footer tagline/body copy, team-card role line, language-dropdown menu items." },
+      "label": { "displayName": "Label", "purpose": "Nav links and form field labels — uppercase, letter-spaced." },
+      "label-sm": { "displayName": "Label Small", "purpose": "Eyebrows, footer column headings, language-dropdown toggle, footer copyright line." },
+      "icon-glyph": { "displayName": "Icon Glyph", "purpose": "Numeral/glyph inside a .card-icon chip (e.g. \"30+\") — functions as iconography, not running text." }
+    },
+    "shadows": [
+      { "name": "resting-lift", "value": "0 1px 3px rgba(23, 38, 42, 0.1)", "purpose": "Cards and buttons at rest; scrolled header." },
+      { "name": "active-lift", "value": "0 12px 28px rgba(23, 38, 42, 0.14)", "purpose": "Card/button hover; open language dropdown." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default easing for all transitions and reveals." },
+      { "name": "rise-in", "value": "0.55s cubic-bezier(0.16, 1, 0.3, 1) both", "purpose": "Logo bar-chart grow-in on page load, staggered per layer." },
+      { "name": "fade-up-in", "value": "0.6s-0.7s cubic-bezier(0.16, 1, 0.3, 1) both", "purpose": "Hero/page-header content staggered entrance." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "860px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action button — Growth Green fill; hover lifts with shadow only, fill stays the same (a darker hover fill failed WCAG AA contrast and was removed).",
+      "html": "<button class=\"ds-btn-primary\">Contact us today</button>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 0.85em 1.75em; border-radius: 7px; font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; border: 1.5px solid transparent; cursor: pointer; background: #7eb92c; color: #023b45; box-shadow: 0 1px 3px rgba(23, 38, 42, 0.1); transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { box-shadow: 0 12px 28px rgba(23, 38, 42, 0.14); transform: translateY(-2px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outline button — inverts to a solid teal fill on hover.",
+      "html": "<button class=\"ds-btn-secondary\">Our services</button>",
+      "css": ".ds-btn-secondary { display: inline-block; padding: 0.85em 1.75em; border-radius: 7px; font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; cursor: pointer; background: transparent; color: #023b45; border: 1.5px solid #023b45; transition: background 0.18s cubic-bezier(0.16, 1, 0.3, 1), color 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { background: #023b45; color: #f6efe1; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Standard content card used for services, highlights, and team members.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-icon\">30+</div><h3 class=\"ds-card-title\">30+ Years of Experience</h3><p class=\"ds-card-body\">Decades of hands-on accounting and financial consulting experience.</p></div>",
+      "css": ".ds-card { background: #fffcf4; border: 1px solid rgba(23, 38, 42, 0.14); border-radius: 10px; padding: 28px; box-shadow: 0 1px 3px rgba(23, 38, 42, 0.1); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(23, 38, 42, 0.14); border-color: #036a7a; } .ds-card-icon { width: 46px; height: 46px; border-radius: 7px; background: #023b45; color: #7eb92c; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 1.3rem; } .ds-card-title { font-family: Piazzolla, Georgia, serif; font-weight: 600; font-size: 1.15rem; color: #023b45; margin: 0 0 0.4em; } .ds-card-body { color: #566268; margin: 0; font-family: 'Public Sans', sans-serif; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Text input with the system's focus-glow treatment.",
+      "html": "<div class=\"ds-form-row\"><label class=\"ds-label\" for=\"ds-name\">Full name</label><input class=\"ds-input\" id=\"ds-name\" type=\"text\" /></div>",
+      "css": ".ds-form-row { margin-bottom: 18px; } .ds-label { display: block; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.04em; margin-bottom: 7px; color: #023b45; } .ds-input { width: 100%; padding: 12px 14px; border-radius: 7px; border: 1px solid rgba(23, 38, 42, 0.14); font-family: 'Public Sans', sans-serif; font-size: 0.95rem; color: #17262a; background: #ffffff; } .ds-input:focus { outline: none; border-color: #7eb92c; box-shadow: 0 0 0 3px rgba(126, 185, 44, 0.2); }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Header navigation link with a hover/active underline that scales in from 0 to full width (transform-based, not a width animation).",
+      "html": "<a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">Home</a>",
+      "css": ".ds-nav-link { font-family: 'Public Sans', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; color: #17262a; position: relative; padding: 4px 0; display: inline-block; text-decoration: none; } .ds-nav-link::after { content: ''; position: absolute; left: 0; bottom: -2px; height: 2px; width: 100%; background: #7eb92c; transform: scaleX(0); transform-origin: left; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover::after, .ds-nav-link--active::after { transform: scaleX(1); } .ds-nav-link--active { color: #023b45; }"
+    },
+    {
+      "name": "Language Dropdown",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Bordered toggle + menu language switcher, replacing an earlier two-button toggle.",
+      "html": "<div class=\"ds-lang\"><button class=\"ds-lang-toggle\">EN <svg width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 9l6 6 6-6\"/></svg></button></div>",
+      "css": ".ds-lang-toggle { display: flex; align-items: center; gap: 7px; border: 1px solid rgba(23, 38, 42, 0.14); border-radius: 7px; background: #fffcf4; padding: 7px 11px; font-family: 'Public Sans', sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: #023b45; cursor: pointer; transition: border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-lang-toggle:hover { border-color: #036a7a; } .ds-lang-toggle svg { color: #566268; }"
+    },
+    {
+      "name": "Footer Contact Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Icon + text link pair used for email/phone in the footer.",
+      "html": "<a class=\"ds-footer-row\" href=\"mailto:example@example.com\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5.5\" width=\"17\" height=\"13\" rx=\"1.5\"/><path d=\"M4 6.5l8 6.5 8-6.5\"/></svg><span>emiliosalcedo@mscontadores.com.co</span></a>",
+      "css": ".ds-footer-row { display: flex; align-items: center; gap: 9px; width: fit-content; font-size: 0.85rem; color: rgba(246, 239, 225, 0.78); text-decoration: none; transition: color 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-footer-row:hover { color: #f6efe1; } .ds-footer-row svg { flex: 0 0 auto; color: #7eb92c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Growth Ledger",
+    "overview": "The practice was built on thirty years of ledgers, ink, and paper — and its future is a father-son partnership where the accounting foundation now grows into data analysis and data engineering. The visual system says both things at once: a warm ledger-paper atmosphere (fine horizontal rule-line texture, ink tones, a serif that reads as trustworthy and established) carries a sparing, deliberate green accent that stands for growth, data, and forward motion. Neither side dominates — the paper-and-ink world is the base layer everything sits on, and the green is the signal that something modern and analytical is happening inside it.\n\nThe voice is modern-meets-traditional: it foregrounds the actual contrast in the business (a credentialed accountant of 30+ years, a data scientist son) rather than picking one aesthetic and hiding the other. Components stay precise and document-like — tight corner radii, restrained motion, shadows that only appear in response to touch — because a ledger does not perform for attention; it earns trust through precision.\n\nA dedicated mono/label typeface was tried early and explicitly rejected: it read as a generic 'AI-generated dev-tool' aesthetic rather than an accounting practice. The system deliberately runs on exactly two typefaces. A two-axis grid background was also tried and rejected in favor of horizontal-only ruling, for the same reason: it read as generic blueprint/graph-paper decoration rather than an accounting-specific cue.",
+    "keyCharacteristics": [
+      "Warm ledger-paper base (horizontal rule-line texture, cream/paper tones) instead of a flat, gradient, or two-axis-grid background",
+      "Deep Harbor Teal as the dominant identity color; Growth Green used rarely and only with intent",
+      "Two typefaces only — an editorial serif for trust, a precise sans for everything functional",
+      "Flat-at-rest surfaces; shadows exist only as a response to hover, scroll, or open state",
+      "Tight 7–10px radii everywhere; no pill-shaped buttons"
+    ],
+    "rules": [
+      { "name": "The Sparing Green Rule", "body": "Growth Green appears only on things the visitor can act on or that are actively true right now — buttons, focus states, active nav, hover accents. It is never a background, never decorative, and never covers more than a small control at a time.", "section": "colors" },
+      { "name": "The One Bright Accent Rule", "body": "Deep Harbor Teal Bright exists in exactly one place: the \"S\" of the wordmark. It is not a reusable UI color — its rarity is what makes the wordmark read as a real logotype instead of styled text.", "section": "colors" },
+      { "name": "The No-Darker-Green Rule", "body": "Deep Harbor Teal Deep text only pairs safely with the base Growth Green — darkening the green for a hover/active state drops contrast below WCAG AA (a 'Growth Green Deep' fill was tried and measured at 3.15:1 against the 4.5:1 minimum, then removed). If a state needs to read as deeper, change elevation (shadow/lift) instead of darkening the green under dark text.", "section": "colors" },
+      { "name": "The No Third Typeface Rule", "body": "Every label, nav link, eyebrow, and button uses the body sans (uppercase + letter-spaced), never a dedicated mono or 'UI' font. A mono label font was implemented once and replaced specifically because it read as a generic AI-tool aesthetic rather than a real brand decision — don't reintroduce one.", "section": "typography" },
+      { "name": "The Two-Exception Rule", "body": "Exactly two text treatments sit outside the display/body hierarchy on purpose: the Brand Mark (header logotype) and the Icon Glyph (card numeral chips). Both function as identity/iconography, not content. Do not add a third 'just this once' exception without folding it into the named scale.", "section": "typography" },
+      { "name": "The Ruled-Paper Rule", "body": "The background texture is horizontal lines only, evoking ruled ledger/accounting paper. A two-axis grid was tried first and rejected — it read as generic blueprint/graph-paper decoration rather than an accounting-specific cue. Don't add the vertical axis back.", "section": "layout" },
+      { "name": "The Flat-Until-Touched Rule", "body": "Depth is earned by interaction, not applied by default. If an element isn't hovered, focused, scrolled-past, or open, it should not carry a shadow.", "section": "elevation" },
+      { "name": "The No-Pill Rule", "body": "No button, chip, or badge is ever fully rounded. The system's two radius steps (7px / 10px) are the ceiling.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep Growth Green rare — buttons, focus rings, active states, small accents only. Never a fill for a large surface.",
+      "Do keep the horizontal rule-line paper texture running under every page; it is the system's one constant atmosphere layer.",
+      "Do hold buttons, inputs, and small controls to the 7px radius and cards/banners to 10px — never introduce a pill shape.",
+      "Do apply shadows only in response to hover, scroll, or open state (Flat-Until-Touched Rule).",
+      "Do respect prefers-reduced-motion for every animation in the system (hero/page-header reveals, scroll-reveal cards, the logo grow-in)."
+    ],
+    "donts": [
+      "Don't introduce a third typeface, especially a mono/\"dev-tool\" one, for labels or UI text — Public Sans at a smaller uppercase treatment is the label style; a dedicated mono font was tried and rejected for reading as generic AI-tool output.",
+      "Don't add a second axis to the background rule-line texture — a two-axis grid was tried and rejected for reading as generic blueprint decoration.",
+      "Don't load the animated logo via <img src=\"assets/logo.svg\"> — inline the SVG in the page's markup so its CSS animation actually runs in Safari.",
+      "Don't fabricate testimonials, certifications, client logos, or case studies. PRODUCT.md confirms none exist yet; only real, confirmed facts belong on the site.",
+      "Don't give the two-button toggle pattern back to the language switcher — it was replaced by the dropdown for feeling too utilitarian for this brand."
+    ]
+  }
+}
