@@ -69,7 +69,10 @@ access key (see README) to go live.
 - Emilio Salcedo — founder, accountant (Contador Público) with a
   specialization; 30+ years in practice in Cartagena.
 - Juan Felipe Salcedo — son, MSc in Statistics and Data Science; provides
-  data analysis and technology consulting under the same practice.
+  data analysis, AI-assisted reporting, workflow automation, and custom
+  dashboards/BI tooling under the same practice. Has built predictive/
+  forecasting models in past work, but not yet in a finance-specific
+  context — not currently claimed as a site capability for that reason.
 - Real contact details: email `info@mscontadores.com.co`, phone /
   WhatsApp `+57 300 787 1159`.
 - No testimonials, case studies, press mentions, client logos, or specific

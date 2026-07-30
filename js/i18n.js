@@ -28,7 +28,7 @@ const translations = {
         },
         data: {
           title: "Modern Data Analysis and AI",
-          body: "A new generation of insight: turning your financial data into clear reports and smarter decisions.",
+          body: "A new generation of insight — AI-assisted analysis, automation, and dashboards that turn your financial data into clearer, faster decisions.",
         },
       },
       about: {
@@ -71,7 +71,7 @@ const translations = {
         eyebrow: "Data & Analytics",
         name: "Juan Felipe Salcedo",
         role: "Data Engineer & Technology Consultant",
-        bio: "Juan Felipe brings modern data analysis and technology skills to the practice, helping turn financial and business data into clear dashboards and insights that support better decisions.",
+        bio: "Juan Felipe brings modern data analysis, AI, and automation skills to the practice, helping turn financial and business data into clear dashboards and insights that support better decisions.",
       },
     },
     services: {
@@ -93,8 +93,8 @@ const translations = {
           body: "Personalized guidance on budgeting, cash flow, and financial strategy for businesses and individuals alike.",
         },
         data: {
-          title: "Data Analysis",
-          body: "Modern data analysis services that turn your financial and business data into clear dashboards and actionable insights — a new capability built on decades of financial expertise.",
+          title: "Data Analysis & AI",
+          body: "Modern data analysis, AI-assisted reporting, and workflow automation — plus custom dashboards and BI tools — that turn your financial and business data into clear, actionable insights. A new capability built on decades of financial expertise.",
         },
       },
       cta: {
@@ -156,8 +156,8 @@ const translations = {
           body: "Contabilidad integral, declaración de impuestos y preparación de estados financieros, conforme a la normativa colombiana.",
         },
         data: {
-          title: "Análisis de Datos Moderno",
-          body: "Una nueva generación de conocimiento: convertir tus datos financieros en reportes claros y mejores decisiones.",
+          title: "Análisis de Datos Moderno e IA",
+          body: "Una nueva generación de conocimiento — análisis asistido por IA, automatización y tableros que convierten tus datos financieros en decisiones más claras y rápidas.",
         },
       },
       about: {
@@ -200,7 +200,7 @@ const translations = {
         eyebrow: "Datos y Analítica",
         name: "Juan Felipe Salcedo",
         role: "Ingeniero de Datos y Consultor en Tecnología",
-        bio: "Juan Felipe aporta habilidades modernas de análisis de datos y tecnología a la práctica, ayudando a convertir los datos financieros y de negocio en tableros claros y conocimientos que apoyan mejores decisiones.",
+        bio: "Juan Felipe aporta habilidades modernas de análisis de datos, IA y automatización a la práctica, ayudando a convertir los datos financieros y de negocio en tableros claros y conocimientos que apoyan mejores decisiones.",
       },
     },
     services: {
@@ -222,8 +222,8 @@ const translations = {
           body: "Asesoría personalizada en presupuestos, flujo de caja y estrategia financiera, tanto para empresas como para personas.",
         },
         data: {
-          title: "Análisis de Datos",
-          body: "Servicios modernos de análisis de datos que convierten tu información financiera y de negocio en tableros claros y conocimientos accionables — una nueva capacidad construida sobre décadas de experiencia financiera.",
+          title: "Análisis de Datos e IA",
+          body: "Análisis de datos moderno, informes asistidos por IA y automatización de flujos de trabajo — además de tableros personalizados y herramientas de BI — que convierten tu información financiera y de negocio en conocimientos claros y accionables. Una nueva capacidad construida sobre décadas de experiencia financiera.",
         },
       },
       cta: {
