@@ -48,7 +48,7 @@ const translations = {
       intro:
         "M&S Finance Consulting was built on a simple principle: give every client the same care, precision, and attention a business owner would give their own finances.",
       body1:
-        "For more than 10 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
+        "For more than 30 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
       body2:
         "In recent years, the practice has expanded to include data analysis services, bringing modern tools and techniques to help clients understand their numbers more deeply and make better decisions — a new chapter built on the same foundation of trust.",
       values: {
@@ -120,7 +120,7 @@ const translations = {
         subject: "Subject",
         message: "Message",
         submit: "Send message",
-        note: "Messages are sent directly to our inbox — we typically respond within one business day.",
+        note: "Prefer not to use the form? Reach us directly using the details in the footer below.",
         sending: "Sending your message…",
         success: "Thanks — your message has been sent. We'll get back to you soon.",
         error: "Something went wrong sending your message. Please try again, or email us directly using the details in the footer below.",
@@ -177,7 +177,7 @@ const translations = {
       intro:
         "M&S Finance Consulting se construyó sobre un principio simple: brindar a cada cliente el mismo cuidado, precisión y atención que un empresario le daría a sus propias finanzas.",
       body1:
-        "Durante más de 10 años, M&S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
+        "Durante más de 30 años, M&S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
       body2:
         "En los últimos años, la práctica se ha ampliado para incluir servicios de análisis de datos, incorporando herramientas y técnicas modernas para ayudar a los clientes a entender mejor sus números y tomar mejores decisiones — un nuevo capítulo construido sobre la misma base de confianza.",
       values: {
@@ -249,7 +249,7 @@ const translations = {
         subject: "Asunto",
         message: "Mensaje",
         submit: "Enviar mensaje",
-        note: "Los mensajes se envían directamente a nuestra bandeja de entrada — normalmente respondemos dentro de un día hábil.",
+        note: "¿Prefieres no usar el formulario? Contáctanos directamente usando los datos en el pie de página.",
         sending: "Enviando tu mensaje…",
         success: "Gracias — tu mensaje ha sido enviado. Te responderemos pronto.",
         error: "Ocurrió un error al enviar tu mensaje. Inténtalo de nuevo, o escríbenos directamente usando los datos en el pie de página.",
