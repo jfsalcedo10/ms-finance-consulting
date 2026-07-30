@@ -51,4 +51,43 @@ document.addEventListener("DOMContentLoaded", () => {
   // Footer year
   const yearEl = document.querySelector("#current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Contact form — submits to Web3Forms via fetch so we can show an
+  // inline status message instead of navigating away to their API response.
+  const contactForm = document.querySelector("#contact-form");
+  if (contactForm) {
+    const statusEl = contactForm.querySelector(".form-status");
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const currentLang = () => document.documentElement.lang || "es";
+    const setStatus = (key) => {
+      statusEl.setAttribute("data-i18n", `contact.form.${key}`);
+      statusEl.setAttribute("data-state", key);
+      statusEl.textContent = getTranslation(currentLang(), `contact.form.${key}`);
+    };
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      submitBtn.disabled = true;
+      setStatus("sending");
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(contactForm),
+        });
+        const result = await response.json();
+        if (result.success) {
+          setStatus("success");
+          contactForm.reset();
+        } else {
+          setStatus("error");
+        }
+      } catch (err) {
+        setStatus("error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
 });

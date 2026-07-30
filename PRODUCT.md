@@ -38,8 +38,9 @@ can actually reach directly.
 Client engagements center on bookkeeping, tax filing/planning, financial
 statement preparation, and ad hoc financial or data-analysis consulting
 conversations. Site visitors reach out via the contact form or the direct
-contact details (email, phone/WhatsApp) in the footer — there is no
-backend yet; the contact form does not currently send anywhere.
+contact details (email, phone/WhatsApp) in the footer — the form submits to
+Web3Forms, a no-backend email-delivery service, and needs only a real
+access key (see README) to go live.
 
 ## Capabilities and Constraints
 
@@ -47,8 +48,9 @@ backend yet; the contact form does not currently send anywhere.
   switcher) — not optional, given the expat/tourism client base.
 - Static site: plain HTML/CSS/JS, no build tooling, must remain openable
   via `file://` or a trivial static server.
-- Contact form has no backend yet (open decision: Web3Forms vs. Formspree
-  vs. other, deferred).
+- Contact form submits to Web3Forms; needs a real access key from
+  web3forms.com before it will actually deliver messages (placeholder
+  `WEB3FORMS_ACCESS_KEY` in `contact.html`).
 - Full physical street address is not yet finalized — city-only
   ("Cartagena, Colombia") is used until provided.
 
@@ -68,7 +70,7 @@ backend yet; the contact form does not currently send anywhere.
   specialization; 30+ years in practice in Cartagena.
 - Juan Felipe Salcedo — son, MSc in Statistics and Data Science; provides
   data analysis and technology consulting under the same practice.
-- Real contact details: email `emiliosalcedo@mscontadores.com.co`, phone /
+- Real contact details: email `info@mscontadores.com.co`, phone /
   WhatsApp `+57 300 787 1159`.
 - No testimonials, case studies, press mentions, client logos, or specific
   certification/license numbers are on hand — future work must not

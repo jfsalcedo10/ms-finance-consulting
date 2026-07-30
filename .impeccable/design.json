@@ -72,6 +72,11 @@
         "role": "neutral",
         "displayName": "Paper White",
         "canonical": "#ffffff"
+      },
+      "form-error": {
+        "role": "status",
+        "displayName": "Form Error",
+        "canonical": "#b3261e"
       }
     },
     "typographyMeta": {
@@ -157,7 +162,7 @@
       "kind": "custom",
       "refersTo": null,
       "description": "Icon + text link pair used for email/phone in the footer.",
-      "html": "<a class=\"ds-footer-row\" href=\"mailto:example@example.com\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5.5\" width=\"17\" height=\"13\" rx=\"1.5\"/><path d=\"M4 6.5l8 6.5 8-6.5\"/></svg><span>emiliosalcedo@mscontadores.com.co</span></a>",
+      "html": "<a class=\"ds-footer-row\" href=\"mailto:example@example.com\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5.5\" width=\"17\" height=\"13\" rx=\"1.5\"/><path d=\"M4 6.5l8 6.5 8-6.5\"/></svg><span>info@mscontadores.com.co</span></a>",
       "css": ".ds-footer-row { display: flex; align-items: center; gap: 9px; width: fit-content; font-size: 0.85rem; color: rgba(246, 239, 225, 0.78); text-decoration: none; transition: color 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-footer-row:hover { color: #f6efe1; } .ds-footer-row svg { flex: 0 0 auto; color: #7eb92c; }"
     }
   ],

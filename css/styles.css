@@ -814,6 +814,20 @@ form {
   margin-bottom: 0;
 }
 
+.form-status[data-state="success"] {
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+.form-status[data-state="error"] {
+  color: #b3261e;
+  font-weight: 600;
+}
+
+form:has(button:disabled) {
+  opacity: 0.85;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--color-teal-deep);

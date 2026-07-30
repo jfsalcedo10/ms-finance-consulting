@@ -47,6 +47,12 @@
         "value": "180px",
         "createdAt": "2026-07-28T17:17:40.809Z",
         "reason": "Decorative oversized background watermark glyph (hero/page-header &, 30, %, @), not running text — outside the type ramp by design"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#b3261e",
+        "createdAt": "2026-07-30T17:49:46.773Z",
+        "reason": "User confirmed #b3261e is intentional"
       }
     ]
   }

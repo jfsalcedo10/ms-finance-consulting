@@ -92,7 +92,8 @@ user explicitly disliked the toggle's feel.
 ## Outstanding TODOs
 
 Tracked in `README.md` under "TODO before going live" — currently just the
-full street address, wiring the contact form to a real backend (Web3Forms
-vs. Formspree was being discussed, undecided), founder's exact professional
-credentials wording, and real photos. Check that section before assuming
-something is still a placeholder.
+full street address, a real Web3Forms access key for the contact form (it's
+wired up in `contact.html`/`js/main.js` but still has the placeholder
+`WEB3FORMS_ACCESS_KEY` value — see "Contact form setup" in README),
+founder's exact professional credentials wording, and real photos. Check
+that section before assuming something is still a placeholder.

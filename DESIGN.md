@@ -14,6 +14,7 @@ colors:
   hairline: "rgba(23, 38, 42, 0.14)"
   grid-line: "rgba(3, 106, 122, 0.07)"
   paper-white: "#ffffff"
+  form-error: "#b3261e"
 typography:
   display:
     fontFamily: "Piazzolla, Georgia, 'Times New Roman', serif"
@@ -161,6 +162,7 @@ A dominant teal-and-paper identity with green treated as a rare, high-value sign
 - **Hairline** (`rgba(23, 38, 42, 0.14)`): Borders on cards, inputs, dropdowns, the header's scrolled-state divider.
 - **Grid Line** (`rgba(3, 106, 122, 0.07)` base color, rendered at ~0.06 stroke opacity in the pattern itself): The faint concentric-ring guilloché texture behind the entire page — the engraved pattern used on banknotes, checks, and certificates. (Named for the underlying CSS variable; two earlier versions — a two-axis grid, then plain horizontal rule lines — were both tried and rejected for reading as notebook/school paper rather than a financial document. See the Security-Paper Rule in Layout.)
 - **Paper White** (`#ffffff`): Form field backgrounds only, for contrast against the cream card surface they sit inside.
+- **Form Error** (`#b3261e`): A single-purpose status color for the contact form's inline error state (`.form-status[data-state="error"]`) — not part of the brand palette, never used decoratively. Success uses Growth Green instead, since "message sent" is exactly the "actively true right now" case the Sparing Green Rule already covers.
 
 ### Named Rules
 **The Sparing Green Rule.** Growth Green appears only on things the visitor can act on or that are actively true right now — buttons, focus states, active nav, hover accents. It is never a background, never decorative, and never covers more than a small control at a time.

@@ -110,7 +110,7 @@ const translations = {
       info: {
         address: { value: "Cartagena, Colombia" },
         phone: { value: "+57 300 787 1159" },
-        email: { value: "emiliosalcedo@mscontadores.com.co" },
+        email: { value: "info@mscontadores.com.co" },
         hours: { value: "Monday – Friday, 8:00 AM – 5:00 PM" },
       },
       form: {
@@ -120,7 +120,10 @@ const translations = {
         subject: "Subject",
         message: "Message",
         submit: "Send message",
-        note: "This form is not yet connected to email — for now, please reach us directly using the details in the footer below.",
+        note: "Messages are sent directly to our inbox — we typically respond within one business day.",
+        sending: "Sending your message…",
+        success: "Thanks — your message has been sent. We'll get back to you soon.",
+        error: "Something went wrong sending your message. Please try again, or email us directly using the details in the footer below.",
       },
     },
     footer: {
@@ -236,7 +239,7 @@ const translations = {
       info: {
         address: { value: "Cartagena, Colombia" },
         phone: { value: "+57 300 787 1159" },
-        email: { value: "emiliosalcedo@mscontadores.com.co" },
+        email: { value: "info@mscontadores.com.co" },
         hours: { value: "Lunes a viernes, 8:00 a.m. – 5:00 p.m." },
       },
       form: {
@@ -246,7 +249,10 @@ const translations = {
         subject: "Asunto",
         message: "Mensaje",
         submit: "Enviar mensaje",
-        note: "Este formulario aún no está conectado al correo — por ahora, contáctanos directamente usando los datos en el pie de página.",
+        note: "Los mensajes se envían directamente a nuestra bandeja de entrada — normalmente respondemos dentro de un día hábil.",
+        sending: "Enviando tu mensaje…",
+        success: "Gracias — tu mensaje ha sido enviado. Te responderemos pronto.",
+        error: "Ocurrió un error al enviar tu mensaje. Inténtalo de nuevo, o escríbenos directamente usando los datos en el pie de página.",
       },
     },
     footer: {
