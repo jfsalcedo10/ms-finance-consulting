@@ -58,11 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contactForm) {
     const statusEl = contactForm.querySelector(".form-status");
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const currentLang = () => document.documentElement.lang || "es";
+    // Strings are baked into the form per language at build time, so this
+    // file has no dependency on the translation layer.
+    const MESSAGES = {
+      sending: contactForm.dataset.msgSending,
+      success: contactForm.dataset.msgSuccess,
+      error: contactForm.dataset.msgError,
+    };
     const setStatus = (key) => {
-      statusEl.setAttribute("data-i18n", `contact.form.${key}`);
       statusEl.setAttribute("data-state", key);
-      statusEl.textContent = getTranslation(currentLang(), `contact.form.${key}`);
+      statusEl.textContent = MESSAGES[key] || "";
     };
 
     contactForm.addEventListener("submit", async (event) => {
@@ -90,4 +95,62 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Language dropdown. The menu items are now real links (the URL carries the
+  // language), so this only handles open/close and keyboard navigation.
+  const closeLangSelect = (select, { returnFocus } = {}) => {
+    const wasOpen = select.classList.contains("is-open");
+    select.classList.remove("is-open");
+    const toggle = select.querySelector(".lang-select-toggle");
+    toggle.setAttribute("aria-expanded", "false");
+    if (returnFocus && wasOpen) toggle.focus();
+  };
+
+  document.querySelectorAll(".lang-select").forEach((select) => {
+    const toggle = select.querySelector(".lang-select-toggle");
+    const links = Array.from(select.querySelectorAll(".lang-select-menu a"));
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (select.classList.contains("is-open")) {
+        closeLangSelect(select);
+      } else {
+        select.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        if (links[0]) links[0].focus();
+      }
+    });
+
+    links.forEach((link, index) => {
+      link.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowDown") {
+          event.preventDefault();
+          links[(index + 1) % links.length].focus();
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          links[(index - 1 + links.length) % links.length].focus();
+        } else if (event.key === "Escape") {
+          closeLangSelect(select, { returnFocus: true });
+        }
+      });
+    });
+
+    select.addEventListener("focusout", (event) => {
+      if (!select.contains(event.relatedTarget)) closeLangSelect(select);
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".lang-select.is-open").forEach((select) => {
+      if (!select.contains(event.target)) closeLangSelect(select);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      document
+        .querySelectorAll(".lang-select.is-open")
+        .forEach((select) => closeLangSelect(select, { returnFocus: true }));
+    }
+  });
 });

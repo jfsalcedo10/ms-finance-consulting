@@ -9,7 +9,10 @@
 
     <section class="section">
       <div class="container">
-        <form class="contact-form-wrap reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <form class="contact-form-wrap reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+              data-msg-sending="{{ contact.form.sending }}"
+              data-msg-success="{{ contact.form.success }}"
+              data-msg-error="{{ contact.form.error }}">
           <h3>{{ contact.form.title }}</h3>
           <input type="hidden" name="access_key" value="ba891fec-793a-4c4a-8573-323911a71ae4" />
           <input type="hidden" name="subject" value="New message from M&amp;S Finance Consulting website" />

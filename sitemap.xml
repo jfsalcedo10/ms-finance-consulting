@@ -1,32 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mscontadores.com.co/</loc>
     <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.mscontadores.com.co/about.html</loc>
     <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/about.html" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mscontadores.com.co/services.html</loc>
     <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/services.html" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mscontadores.com.co/contact.html</loc>
     <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/contact.html" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mscontadores.com.co/privacy.html</loc>
     <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/privacy.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.mscontadores.com.co/en/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mscontadores.com.co/en/about.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/about.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mscontadores.com.co/en/services.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/services.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mscontadores.com.co/en/contact.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/contact.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mscontadores.com.co/en/privacy.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.mscontadores.com.co/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mscontadores.com.co/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mscontadores.com.co/privacy.html" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

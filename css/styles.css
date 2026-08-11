@@ -393,6 +393,13 @@ p {
 }
 
 .lang-select-menu li {
+  border-radius: 5px;
+}
+
+/* Padding lives on the anchor so the whole row is a click target, not just
+   the text. The menu items are links now — the URL carries the language. */
+.lang-select-menu li a {
+  display: block;
   padding: 8px 10px;
   border-radius: 5px;
   font-size: 0.85rem;
@@ -401,12 +408,12 @@ p {
   cursor: pointer;
 }
 
-.lang-select-menu li:hover,
-.lang-select-menu li:focus-visible {
+.lang-select-menu li a:hover,
+.lang-select-menu li a:focus-visible {
   background: var(--color-paper);
 }
 
-.lang-select-menu li:focus-visible {
+.lang-select-menu li a:focus-visible {
   outline: 2px solid var(--color-green);
   outline-offset: -2px;
 }
