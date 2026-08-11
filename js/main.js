@@ -117,7 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         select.classList.add("is-open");
         toggle.setAttribute("aria-expanded", "true");
-        if (links[0]) links[0].focus();
+        // Move focus into the menu so keyboard/screen-reader users can
+        // actually reach the options — a real WCAG 2.1.1 gap when this only
+        // opened visually. Deferred: the menu's `visibility: hidden` is part
+        // of a CSS transition (see .lang-select-menu), and browsers don't
+        // resolve that transition's computed value synchronously — not even
+        // after a forced reflow or a requestAnimationFrame tick. A short
+        // delay (well under human perception, but past that resolution
+        // point) is what reliably makes the link focusable; verified
+        // empirically, not a guess. Do not "simplify" this back to a
+        // synchronous focus() call — that silently does nothing.
+        setTimeout(() => links[0]?.focus(), 60);
       }
     });
 
