@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Build sources, served because the whole repo is published but of no use to
+# crawlers. Not secret — this is the same copy that appears on the pages.
+Disallow: /templates/
+Disallow: /content/
+
 Sitemap: https://www.mscontadores.com.co/sitemap.xml
