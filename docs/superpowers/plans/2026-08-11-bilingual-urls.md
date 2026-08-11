@@ -30,13 +30,40 @@ Copy moves out of `js/i18n.js` into JSON so Python can read it without Node. Not
 **Files:**
 - Create: `tools/extract_content.py` (throwaway, deleted in Task 5)
 - Create: `content/es.json`, `content/en.json`
+- Create: `sitelib.py` (shared constants and helpers)
 - Create: `verify.py` (parity check only; grows in Task 4)
 
 **Interfaces:**
 - Consumes: nothing.
-- Produces: `content/{es,en}.json`, each a dict whose top-level keys are the existing i18n namespaces (`nav`, `brand`, `hero`, `home`, `about`, `services`, `contact`, `legal`, `footer`) **plus** three new ones: `meta`, `pages`, `schema`. Task 2's templates reference these by dotted path.
+- Produces: `sitelib.py` exporting `SITE: str`, `PAGES: tuple[str, ...]`, `LANGS: tuple[str, ...]`, and `flatten(obj: dict, prefix: str = "") -> dict`. Both `build.py` (Task 3) and `verify.py` import from it — there is exactly one definition of each. Also produces `content/{es,en}.json`, each a dict whose top-level keys are the existing i18n namespaces (`nav`, `brand`, `hero`, `home`, `about`, `services`, `contact`, `legal`, `footer`) **plus** three new ones: `meta`, `pages`, `schema`. Task 2's templates reference these by dotted path.
 
-- [ ] **Step 1: Write the failing check**
+- [ ] **Step 1: Create the shared module**
+
+Create `sitelib.py`. `build.py` and `verify.py` both need these; defining them once
+avoids two divergent notions of what the site's pages and URL are.
+
+```python
+#!/usr/bin/env python3
+"""Constants and helpers shared by build.py and verify.py. Stdlib only."""
+
+SITE = "https://www.mscontadores.com.co"
+PAGES = ("index", "about", "services", "contact", "privacy")
+LANGS = ("es", "en")
+
+
+def flatten(obj, prefix=""):
+    """Flatten nested dicts to dotted keys: {'a': {'b': 1}} -> {'a.b': 1}."""
+    flat = {}
+    for key, value in obj.items():
+        path = f"{prefix}{key}"
+        if isinstance(value, dict):
+            flat.update(flatten(value, path + "."))
+        else:
+            flat[path] = value
+    return flat
+```
+
+- [ ] **Step 2: Write the failing check**
 
 Create `verify.py`:
 
@@ -47,23 +74,14 @@ import json
 import sys
 from pathlib import Path
 
+from sitelib import flatten
+
 ROOT = Path(__file__).resolve().parent
 FAILURES = []
 
 
 def fail(msg):
     FAILURES.append(msg)
-
-
-def flatten(obj, prefix=""):
-    flat = {}
-    for key, value in obj.items():
-        path = f"{prefix}{key}"
-        if isinstance(value, dict):
-            flat.update(flatten(value, path + "."))
-        else:
-            flat[path] = value
-    return flat
 
 
 def check_copy_parity():
@@ -93,12 +111,12 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-- [ ] **Step 2: Run it to verify it fails**
+- [ ] **Step 3: Run it to verify it fails**
 
 Run: `python3 verify.py`
 Expected: FAIL — `FileNotFoundError` for `content/es.json`, because the content files do not exist yet.
 
-- [ ] **Step 3: Write the migration script**
+- [ ] **Step 4: Write the migration script**
 
 Create `tools/extract_content.py`. This uses Node **once** to evaluate the real translations object, which is exact and avoids hand-transcription errors across ~200 strings.
 
@@ -222,19 +240,19 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 4: Run the migration**
+- [ ] **Step 5: Run the migration**
 
 Run: `python3 tools/extract_content.py`
 Expected: `wrote content/es.json` and `wrote content/en.json`.
 
-- [ ] **Step 5: Run the check to verify it passes**
+- [ ] **Step 6: Run the check to verify it passes**
 
 Run: `python3 verify.py`
 Expected: PASS — `copy parity: N keys per language`, then `All checks passed.`
 
 If it reports missing keys, the two language blocks in `js/i18n.js` were already out of sync. Fix `content/*.json` by hand — do **not** loosen the check.
 
-- [ ] **Step 6: Sanity-check the migrated content**
+- [ ] **Step 7: Sanity-check the migrated content**
 
 Run:
 ```bash
@@ -257,10 +275,10 @@ Once `/en/privacy.html` is indexable, the English policy is a public legal
 document in its own right, and that clause is what keeps the Spanish text
 authoritative.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 8: Commit**
 
 ```bash
-git add tools/extract_content.py content/es.json content/en.json verify.py
+git add tools/extract_content.py content/es.json content/en.json sitelib.py verify.py
 git commit -m "Migrate site copy from js/i18n.js to content/*.json
 
 Pre-rendered pages never fetch copy, so the file:// CORS constraint that
@@ -745,24 +763,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+from sitelib import LANGS, PAGES, SITE, flatten
+
 ROOT = Path(__file__).resolve().parent
-SITE = "https://www.mscontadores.com.co"
-PAGES = ("index", "about", "services", "contact", "privacy")
-LANGS = ("es", "en")
 REL = {"es": "", "en": "../"}
 
 PLACEHOLDER = re.compile(r"\{\{\s*([A-Za-z0-9_.]+)\s*\}\}")
-
-
-def flatten(obj, prefix=""):
-    flat = {}
-    for key, value in obj.items():
-        path = f"{prefix}{key}"
-        if isinstance(value, dict):
-            flat.update(flatten(value, path + "."))
-        else:
-            flat[path] = value
-    return flat
 
 
 def check_parity(es, en):
@@ -997,8 +1003,8 @@ import subprocess
 from html.parser import HTMLParser
 from urllib.parse import urlparse
 
-SITE = "https://www.mscontadores.com.co"
-PAGES = ("index", "about", "services", "contact", "privacy")
+from sitelib import PAGES, SITE
+
 VOID = {"meta", "link", "br", "img", "input", "hr", "path", "rect", "circle",
         "source", "area", "col", "embed", "track", "wbr"}
 
