@@ -1,0 +1,259 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "brand": {
+    "tail": "Finance Consulting"
+  },
+  "hero": {
+    "eyebrow": "Accounting & Financial Consulting",
+    "title": "Clear finances. Confident decisions.",
+    "subtitle": "M&S Finance Consulting has supported businesses and individuals in Cartagena, Colombia for over 30 years with accounting, tax, and financial consulting — now enhanced with modern data analysis.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "Our services"
+  },
+  "home": {
+    "highlights": {
+      "title": "Why work with us",
+      "experience": {
+        "title": "30+ Years of Experience",
+        "body": "Decades of hands-on accounting and financial consulting experience serving businesses and individuals across Cartagena."
+      },
+      "accounting": {
+        "title": "Accounting & Tax Expertise",
+        "body": "Full-service bookkeeping, tax filing, and financial statement preparation, compliant with Colombian regulations."
+      },
+      "data": {
+        "title": "Modern Data Analysis and AI",
+        "body": "A new generation of insight — AI-assisted analysis, automation, and dashboards that turn your financial data into clearer, faster decisions."
+      }
+    },
+    "about": {
+      "title": "A one-on-one relationship you can trust",
+      "body": "Founded and led personally, M&S Finance Consulting means you always work directly with an experienced professional — not a call center. Get to know our story.",
+      "cta": "Learn more about us"
+    },
+    "cta": {
+      "title": "Ready to put your finances in order?",
+      "body": "Schedule a consultation and see how three decades of experience can work for you.",
+      "button": "Contact us today"
+    }
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Three decades of experience, one dedicated professional",
+    "intro": "M&S Finance Consulting was built on a simple principle: give every client the same care, precision, and attention a business owner would give their own finances.",
+    "body1": "For more than 30 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
+    "body2": "In recent years, the practice has expanded to include data analysis services, bringing modern tools and techniques to help clients understand their numbers more deeply and make better decisions — a new chapter built on the same foundation of trust.",
+    "values": {
+      "title": "Our values",
+      "integrity": {
+        "title": "Integrity",
+        "body": "Every recommendation is made with honesty and your best interest in mind."
+      },
+      "precision": {
+        "title": "Precision",
+        "body": "Meticulous, accurate work — because in finance, details matter."
+      },
+      "personal": {
+        "title": "Personal attention",
+        "body": "You are never just a file number. Every client gets direct, personal attention."
+      },
+      "learning": {
+        "title": "Continuous learning",
+        "body": "Combining decades of experience with modern tools like data analysis to keep delivering value."
+      }
+    },
+    "team": {
+      "title": "Our team"
+    },
+    "founder": {
+      "eyebrow": "Founder",
+      "name": "Emilio Salcedo",
+      "role": "Founder & Lead Consultant, Accountant",
+      "bio": "With over 30 years of experience in accounting and financial consulting, our founder has helped countless businesses and individuals in Cartagena navigate their finances with clarity and confidence."
+    },
+    "analyst": {
+      "eyebrow": "Data & Analytics",
+      "name": "Juan Felipe Salcedo",
+      "role": "Data Engineer & Technology Consultant",
+      "bio": "Juan Felipe brings modern data analysis, AI, and automation skills to the practice, helping turn financial and business data into clear dashboards and insights that support better decisions."
+    }
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "title": "Accounting, tax, and data analysis services",
+    "intro": "Comprehensive accounting and financial services, backed by three decades of experience — plus modern data analysis to give you a sharper view of your numbers.",
+    "items": {
+      "accounting": {
+        "title": "Accounting & Bookkeeping",
+        "body": "Accurate, up-to-date bookkeeping and financial statement preparation, so you always know exactly where your business stands."
+      },
+      "tax": {
+        "title": "Tax Planning & Filing",
+        "body": "Timely, compliant tax preparation and planning under Colombian regulations, minimizing risk and helping you plan ahead."
+      },
+      "consulting": {
+        "title": "Financial Consulting",
+        "body": "Personalized guidance on budgeting, cash flow, and financial strategy for businesses and individuals alike."
+      },
+      "data": {
+        "title": "Data Analysis & AI",
+        "body": "Modern data analysis, AI-assisted reporting, and workflow automation — plus custom dashboards and BI tools — that turn your financial and business data into clear, actionable insights. A new capability built on decades of financial expertise."
+      }
+    },
+    "cta": {
+      "title": "Not sure what you need?",
+      "body": "Every business is different. Let's talk about your specific situation.",
+      "button": "Schedule a consultation"
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in Touch",
+    "title": "Contact your accountant in Cartagena",
+    "intro": "Have a question or ready to get started? Reach out — we typically respond within one business day.",
+    "info": {
+      "address": {
+        "value": "Cartagena, Colombia"
+      },
+      "phone": {
+        "value": "+57 300 787 1159"
+      },
+      "email": {
+        "value": "info@mscontadores.com.co"
+      },
+      "hours": {
+        "value": "Monday – Friday, 8:00 AM – 5:00 PM"
+      }
+    },
+    "form": {
+      "title": "Send a message",
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "consent": "I authorize M&S Finance Consulting S.A.S. to process the personal data I provide here, for the purposes and under the terms described in its",
+      "consentLink": "Personal Data Processing Policy",
+      "consentTail": ", including its transmission through servers located abroad.",
+      "note": "Prefer not to use the form? Reach us directly using the details in the footer below.",
+      "sending": "Sending your message…",
+      "success": "Thanks — your message has been sent. We'll get back to you soon.",
+      "error": "Something went wrong sending your message. Please try again, or email us directly using the details in the footer below."
+    }
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Personal Data Processing Policy",
+    "subtitle": "How M&S Finance Consulting collects, uses, protects, and deletes your personal data, in compliance with Colombian Law 1581 of 2012 and Decree 1074 of 2015.",
+    "updated": "In force since: 11 August 2026",
+    "langNote": "Issued in Spanish. The English translation is informational; in case of discrepancy, the Spanish text governs.",
+    "s1": {
+      "title": "1. Who is responsible for your data",
+      "body": "The party responsible for processing your personal data (Responsable del Tratamiento) is:",
+      "name": "M&S Finance Consulting S.A.S. — NIT: 901.242.087-7",
+      "address": "Address: Cartagena, Bolívar, Colombia",
+      "email": "Email: info@mscontadores.com.co",
+      "phone": "Phone: +57 300 787 1159",
+      "officer": "Queries, requests, and complaints regarding personal data are handled by Customer Service, reachable at the email address above."
+    },
+    "s2": {
+      "title": "2. What data we collect",
+      "body": "Through the contact form on this website we collect only the data you choose to give us:",
+      "i1": "Full name.",
+      "i2": "Email address.",
+      "i3": "Subject line (optional).",
+      "i4": "The content of the message you write.",
+      "note": "We do not collect sensitive personal data (as defined in Article 5 of Law 1581 of 2012) through this website, nor do we collect data from children or adolescents. Please do not include sensitive information, tax identification numbers, or financial account details in the contact form — use a direct channel for that once we have established contact."
+    },
+    "s3": {
+      "title": "3. Why we process it (purposes)",
+      "body": "Your data is processed exclusively for the following purposes:",
+      "i1": "To respond to your query, quote request, or contact request.",
+      "i2": "To contact you back by email or phone regarding the message you sent.",
+      "i3": "To keep a record of the communication as evidence of the request and of your authorization.",
+      "note": "We do not use your data for advertising, marketing, profiling, or automated decision-making, and we do not sell, rent, or share it with third parties for commercial purposes."
+    },
+    "s4": {
+      "title": "4. Authorization",
+      "body": "We process your data on the basis of the prior, express, and informed authorization you grant by ticking the consent box on the contact form before submitting it. You may revoke that authorization at any time, at no cost, using the procedure described in section 7, unless a legal or contractual duty requires us to keep the data."
+    },
+    "s5": {
+      "title": "5. Third parties and international transfer",
+      "body": "The contact form is delivered through Web3Forms, an email-forwarding service operated from outside Colombia, which means your message is transmitted through servers located abroad (primarily the United States). This constitutes an international transfer of data under Article 26 of Law 1581 of 2012, and by ticking the consent box you expressly and unequivocally authorize it. Web3Forms acts only as a conduit that delivers the message to our inbox; it does not use your data for its own purposes.",
+      "fonts": "This site also loads typefaces from Google Fonts, which involves your browser making a request to Google's servers and therefore exposing your IP address to Google. No other third-party service receives your data."
+    },
+    "s6": {
+      "title": "6. Your rights as a data subject",
+      "body": "Under Article 8 of Law 1581 of 2012, you have the right to:",
+      "i1": "Access, know, update, and rectify your personal data, free of charge.",
+      "i2": "Request proof of the authorization you granted, except where the law does not require it.",
+      "i3": "Be informed, upon request, about how your data has been used.",
+      "i4": "File complaints with the Superintendencia de Industria y Comercio (SIC) for breaches of the law, after having exhausted the process with us.",
+      "i5": "Revoke your authorization and/or request the deletion of your data when the SIC has determined that we have breached the law, or when there is no legal or contractual duty to retain it."
+    },
+    "s7": {
+      "title": "7. How to exercise your rights",
+      "body": "Write to info@mscontadores.com.co with the subject line \"Protección de Datos Personales\", stating your name, identification, the request you are making, and an address or email where we can reply. We handle requests as follows:",
+      "i1": "Queries (consultas) — requests to know, access, or be informed about your data: answered within ten (10) business days. If that is not possible, we will tell you why and answer within a further five (5) business days.",
+      "i2": "Complaints (reclamos) — requests to correct, update, or delete data, or to report a suspected breach: answered within fifteen (15) business days. If that is not possible, we will tell you why and answer within a further eight (8) business days. If a complaint is incomplete, we will ask you for the missing information within five (5) days; if you do not respond within two months, the complaint is deemed withdrawn."
+    },
+    "s8": {
+      "title": "8. Security and retention",
+      "body": "We apply reasonable technical, human, and administrative measures to keep your data secure and to prevent unauthorized access, loss, or alteration — including transmission of this website over HTTPS and access controls on the inbox that receives form submissions. We retain contact messages only as long as needed for the purposes above and to comply with applicable accounting and commercial record-keeping duties, after which they are deleted."
+    },
+    "s9": {
+      "title": "9. Cookies and local storage",
+      "body": "This website does not use advertising, analytics, or tracking cookies. It stores a single item in your browser's local storage (`ms_lang`) to remember whether you prefer Spanish or English. That value stays on your device, is not personal data, is never sent to us, and can be cleared at any time from your browser settings."
+    },
+    "s10": {
+      "title": "10. Changes to this policy",
+      "body": "We may update this policy. Any substantial change will be published on this page with a new effective date, and where the change affects the purposes of processing we will request your authorization again."
+    },
+    "s11": {
+      "title": "11. Term",
+      "body": "This policy is in force from the date indicated above. Personal data collected through this website will be retained for the period necessary to fulfil the purposes described in section 3 and to comply with applicable legal obligations."
+    }
+  },
+  "footer": {
+    "tagline": "Accounting, tax, and financial consulting in Cartagena, Colombia.",
+    "rights": "All rights reserved.",
+    "contactTitle": "Contact",
+    "hoursTitle": "Hours & Location",
+    "privacy": "Privacy Policy"
+  },
+  "meta": {
+    "htmlLang": "en",
+    "langLabel": "EN",
+    "ogLocale": "en_US",
+    "ogLocaleAlt": "es_CO"
+  },
+  "pages": {
+    "index": {
+      "title": "Certified Public Accountant in Cartagena | M&amp;S Finance Consulting",
+      "description": "Accounting, tax, financial consulting and data analysis in Cartagena, Colombia. Over 30 years of experience, with direct, personal attention."
+    },
+    "about": {
+      "title": "About Us | Accountants and Data Analysts in Cartagena",
+      "description": "A public accountant with 30+ years in Cartagena, alongside an MSc in Statistics and Data Science. Established financial expertise and modern analytical capability in one practice."
+    },
+    "services": {
+      "title": "Accounting, Tax and Data Services in Cartagena | M&amp;S",
+      "description": "Bookkeeping, tax planning, financial consulting, and data analysis with AI, automation and custom dashboards, in Cartagena, Colombia."
+    },
+    "contact": {
+      "title": "Contact | Accountant in Cartagena &mdash; M&amp;S Finance Consulting",
+      "description": "Get in touch for accounting, tax and financial advice in Cartagena, Colombia. We reply within one business day. Tel +57 300 787 1159."
+    },
+    "privacy": {
+      "title": "Privacy Policy | M&amp;S Finance Consulting",
+      "description": "M&amp;S Finance Consulting's Personal Data Processing Policy, under Colombia's Law 1581 of 2012."
+    }
+  },
+  "schema": {
+    "description": "Accounting, tax and financial consulting firm in Cartagena, Colombia, with more than 30 years of experience, also offering data analysis applied to finance."
+  }
+}
