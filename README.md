@@ -3,7 +3,9 @@
 Bilingual (Spanish/English) static website for M&S Finance Consulting, an
 accounting and financial consulting practice in Cartagena, Colombia.
 
-No build tools or dependencies — plain HTML, CSS, and JavaScript.
+Plain HTML, CSS, and JavaScript — no npm, no bundler, no third-party
+dependencies. The site is generated from templates and JSON content by a
+small stdlib-only Python script; see "Building" below.
 
 ## Preview locally
 
@@ -22,19 +24,41 @@ Want to share a live preview with someone else (not just view it locally)?
 See [`SHARING-A-PREVIEW.md`](SHARING-A-PREVIEW.md) for how to do that with a
 free Cloudflare Tunnel.
 
+## Building
+
+The site is generated. Sources are `templates/` and `content/*.json`; the
+`.html` files in the repo root and in `en/` are output.
+
+```bash
+python3 build.py     # regenerate the site
+python3 verify.py    # check the result
+```
+
+Run `build.py` before every commit that touches copy or templates. Both
+scripts use only the Python standard library — there is nothing to install.
+`python3 build.py --check` exits non-zero if the committed output is stale,
+which is the fastest way to catch a forgotten rebuild.
+
 ## Project structure
 
 ```
-index.html        Home page
-about.html         About page
-services.html      Services page
-contact.html       Contact page
-css/styles.css     All styles (colors, layout, components, responsive rules)
-js/i18n.js         Spanish/English translations + language switcher
-js/main.js         Mobile nav, scroll effects, reveal animations
-assets/logo.svg    Site logo (vector), used in the header and favicon
-assets/ms-logo.jpg Original raster logo — source the SVG was traced from;
-                   not used directly on the site, kept for reference/reprints
+build.py            Generates the site from templates/ + content/*.json
+verify.py            Checks the generated output (run after every build)
+sitelib.py           Shared helpers used by build.py and verify.py
+templates/           HTML templates (shared header/nav/footer, per-page bodies)
+content/es.json       Spanish copy
+content/en.json       English copy
+index.html            Home page (Spanish, generated — do not hand-edit)
+about.html            About page (generated)
+services.html         Services page (generated)
+contact.html          Contact page (generated)
+en/                    English pages, one per Spanish page (generated)
+sitemap.xml            Generated — 10 URLs (5 Spanish + 5 English), with hreflang alternates
+css/styles.css         All styles (colors, layout, components, responsive rules)
+js/main.js              Mobile nav, scroll effects, reveal animations, language dropdown
+assets/logo.svg         Site logo (vector), used in the header and favicon
+assets/ms-logo.jpg      Original raster logo — source the SVG was traced from;
+                        not used directly on the site, kept for reference/reprints
 ```
 
 ## Brand colors
@@ -54,16 +78,18 @@ used originally.
 
 ## Language switching
 
-All page text is tagged with `data-i18n="key.path"` attributes. Translations
-live in `js/i18n.js` under the `translations` object (`en` and `es`). The
-language toggle in the header swaps text client-side and remembers the
-choice in `localStorage`. To edit copy, change it in `js/i18n.js` — not in
-the HTML files directly, since HTML text gets overwritten on page load.
+Each language has its own URL — Spanish at the root (`/about.html`), English
+under `/en/` (`/en/about.html`). The switcher in the header is a plain link
+to the counterpart page, so it works without JavaScript and search engines
+can crawl both versions.
+
+Copy lives in `content/es.json` and `content/en.json`. The two files must
+have identical key sets; `build.py` refuses to build if they drift.
 
 ## TODO before going live
 
 Content placeholders that only the client (dad) can fill in — search
-`js/i18n.js` for `TODO` to find what's left:
+`content/es.json` and `content/en.json` for `TODO` to find what's left:
 
 - [x] Founder's real name — Emilio Salcedo (`about.founder.name`)
 - [x] Phone / WhatsApp number — +57 300 787 1159, wired as a `tel:` link
@@ -82,7 +108,7 @@ Content placeholders that only the client (dad) can fill in — search
       current monogram placeholders
 - [x] Legal identification of the Responsable in the privacy policy —
       M&S Finance Consulting S.A.S., NIT 901.242.087-7 (`legal.s1.name` in
-      `js/i18n.js`). See "Privacy policy" below.
+      `content/es.json` / `content/en.json`). See "Privacy policy" below.
 
 ## Privacy policy
 
@@ -141,7 +167,9 @@ The key is safe to have in public HTML — it only authorizes submissions
 
 ## SEO
 
-- `robots.txt` and `sitemap.xml` (5 pages) are in the repo root.
+- `robots.txt` and `sitemap.xml` (10 URLs — 5 Spanish pages plus their 5
+  English counterparts, each with reciprocal `hreflang` alternates) are in
+  the repo root.
 - Every page has a unique `<title>`/description, a `rel="canonical"` link,
   Open Graph + Twitter Card tags, and `AccountingService` JSON-LD structured
   data (name, legal name, NIT, contact info, hours, founder — kept in sync
@@ -149,14 +177,15 @@ The key is safe to have in public HTML — it only authorizes submissions
   `@id` (`…/#organization`) so crawlers treat them as a single business
   entity rather than five separate ones. `services.html` additionally carries
   an `OfferCatalog` of the four services.
-- **The static HTML text is Spanish, not English — keep it that way.** The
-  site serves Spanish by default, so the fallback text nodes and all
-  `<title>`/description/OG metadata are Spanish too. Previously they were
-  English, which told crawlers the page was English while the rendered page
-  was Spanish, and undercut ranking for the Spanish queries the practice
-  actually competes on. The English copy still lives in `js/i18n.js` and the
-  switcher works exactly as before. If you regenerate any page's markup, seed
-  the text nodes from the **`es`** translations.
+- **Each language's pages carry their own `<title>`/description/OG metadata
+  in that language — Spanish pages are Spanish, English pages under `/en/`
+  are English.** Before this site had separate URLs per language, all pages
+  served Spanish-rendered HTML with English metadata bolted on client-side,
+  which told crawlers the page was English while the rendered page was
+  Spanish and undercut ranking for the Spanish queries the practice actually
+  competes on. That's fixed now: `build.py` generates each language's pages
+  straight from `content/es.json` / `content/en.json`, so the served markup
+  and its metadata always agree.
 - Titles/descriptions target real search terms ("contador público en
   Cartagena", "servicios contables y tributarios"), not just the brand name —
   nobody searches "M&S Finance Consulting" who isn't already a client.
@@ -188,13 +217,13 @@ can't hit it until the user scrolls, so the page loads blank.
   when a link is shared on WhatsApp/Facebook/etc.) — regenerate it by
   re-rendering an HTML fixture using the site's real fonts/colors at that
   exact size if the brand mark ever changes; there's no build step for it.
-- **Known limitation, not a quick fix:** the site is bilingual via
-  client-side JS (one URL per page, language swapped after load), so
-  there's no `hreflang` and no way for Google to index the English and
-  Spanish versions as separate pages — only whichever language renders
-  (Spanish, by default) is realistically indexed. Properly fixing this
-  means separate URLs per language, which is a real restructure, not
-  something to bolt on casually.
+- Both languages are separately indexable: every page carries a
+  self-referencing canonical plus reciprocal `hreflang` (`es`, `en`,
+  `x-default`). Index pages use the extensionless canonical form (`/` and
+  `/en/`) while internal links stay relative file paths — that mismatch is
+  deliberate, and the canonical is what collapses the two forms Pages serves.
+  `hreflang` is plain `es`, not `es-CO`, so Spanish speakers searching from
+  outside Colombia are included.
 - `areaServed` in the JSON-LD lists the Región Caribe plus the main cities
   (Cartagena, Barranquilla, Santa Marta, Montería, Sincelejo, Valledupar,
   Riohacha), because the practice serves clients across the region, not only

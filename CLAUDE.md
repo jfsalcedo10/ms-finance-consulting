@@ -23,19 +23,29 @@ agreed path once the client is ready to go live — see README.
 
 ## Stack and non-negotiables
 
-Plain HTML/CSS/JS, zero build tools, zero npm dependencies. This is
-intentional — the site must open directly via `file://` (double-click
+Plain HTML/CSS/JS, zero npm dependencies. There is a small stdlib-only build
+step (`build.py`, see below) that generates the site from `templates/` and
+`content/*.json`, but no bundler, no framework, and no `package.json`. The
+generated output must still open directly via `file://` (double-click
 `index.html`) or a trivial static server, nothing more. Don't introduce a
 bundler, framework, or package.json unless explicitly asked; it would break
 the "just open the file" simplicity that was a deliberate choice.
 
 Bilingual (ES/EN), default language is **Spanish** (not browser-language
-detection — that was tried and explicitly rejected, see Decisions below).
-All copy lives in `js/i18n.js` as a JS object (not fetched JSON, so it works
-over `file://` without CORS issues). **Edit copy in `js/i18n.js`, never in
-the HTML text nodes** — every element with `data-i18n="key.path"` has its
-textContent overwritten on page load, so HTML edits get silently discarded.
-This has already tripped up the user once.
+detection — that was tried and explicitly rejected, see Decisions below). Each language has its
+own URL: Spanish at the site root, English under `/en/`. This is what makes
+the English pages indexable; the previous client-side text-swapping approach
+meant Google only ever saw Spanish.
+
+**The HTML files are generated. Never edit them by hand — your changes will
+be overwritten.** Copy lives in `content/es.json` and `content/en.json`;
+markup lives in `templates/`. After changing either, run `python3 build.py`
+and commit the regenerated pages alongside your edit. `python3 verify.py`
+checks the result.
+
+`build.py` and `verify.py` are stdlib-only. There is still no npm, no
+bundler, and no third-party dependency, and the generated site still opens
+directly via `file://` — every internal link is a relative path.
 
 ## Design system
 
@@ -84,10 +94,10 @@ user explicitly disliked the toggle's feel.
    silently wins and kills the centering. This broke the CTA banner once.
    Prefer nesting: `<div class="container"><div class="cta-banner">`.
 
-4. Every page repeats the same header/nav/language-dropdown/footer markup
-   (no templating, by design). When changing any of them, **grep across all
-   four HTML files** (`index.html`, `about.html`, `services.html`,
-   `contact.html`) — it's easy to update three and miss one.
+4. **Header/nav/footer markup lives once, in `templates/base.html`.** The old
+   hazard — change it in three files and miss the fourth — is gone. But the
+   inverse now applies: editing a generated `.html` file directly is silently
+   discarded on the next build.
 
 ## Outstanding TODOs
 
