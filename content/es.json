@@ -225,6 +225,11 @@
     "hoursTitle": "Horario y Ubicación",
     "privacy": "Política de Privacidad"
   },
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La página que buscas no existe o cambió de dirección.",
+    "home": "Ir al inicio"
+  },
   "meta": {
     "htmlLang": "es",
     "langLabel": "ES",

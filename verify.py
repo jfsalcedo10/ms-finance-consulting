@@ -38,15 +38,30 @@ BUILD_SUPPLIED = {"content", "head_extra", "rel", "page.title", "page.descriptio
 
 
 def check_template_placeholders():
-    """Every {{ key }} in templates/ must resolve against content/es.json."""
+    """Every {{ key }} in templates/ must resolve against content/es.json.
+
+    templates/404.html is a special case: it renders both languages onto one
+    page, so its placeholders are prefixed "es."/"en." rather than bare keys.
+    """
     es = flatten(json.loads((ROOT / "content" / "es.json").read_text("utf-8")))
+    en = flatten(json.loads((ROOT / "content" / "en.json").read_text("utf-8")))
     templates = sorted((ROOT / "templates").rglob("*.html"))
     if not templates:
         fail("no templates found under templates/")
         return
     for path in templates:
+        is_404 = path == ROOT / "templates" / "404.html"
         for key in PLACEHOLDER.findall(path.read_text("utf-8")):
-            if key in BUILD_SUPPLIED or key in es:
+            if key in BUILD_SUPPLIED:
+                continue
+            if is_404:
+                if key.startswith("es.") and key[len("es."):] in es:
+                    continue
+                if key.startswith("en.") and key[len("en."):] in en:
+                    continue
+                fail(f"{path.relative_to(ROOT)}: unknown placeholder {{{{ {key} }}}}")
+                continue
+            if key in es:
                 continue
             fail(f"{path.relative_to(ROOT)}: unknown placeholder {{{{ {key} }}}}")
     print(f"  template placeholders: {len(templates)} templates checked")
@@ -164,6 +179,31 @@ def check_structured_data():
     print("  structured data: every JSON-LD block parses with a consistent @id")
 
 
+def check_404():
+    """404.html is a deliberate exception: GitHub Pages serves it for every
+    missing path across the whole site (including under /en/), so every
+    asset path on it must be absolute or root-relative — a bare relative
+    path would resolve against the missing path's directory, not the root.
+    It also answers for both languages on one page, so it must not be part
+    of the ES/EN mirror or the sitemap.
+    """
+    path = ROOT / "404.html"
+    if not path.exists():
+        fail("404.html: missing")
+        return
+    html = path.read_text("utf-8")
+    if "noindex" not in html:
+        fail("404.html: missing noindex")
+    for attr in re.findall(r'(?:href|src)="([^"]+)"', html):
+        if attr.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:", "/")):
+            continue
+        fail(f"404.html: bare relative asset path '{attr}' (must be root-relative or absolute)")
+    sitemap = (ROOT / "sitemap.xml").read_text("utf-8")
+    if "404.html" in sitemap:
+        fail("404.html: must not appear in sitemap.xml")
+    print("  404 page: present, noindex, root-relative assets, excluded from sitemap")
+
+
 def main():
     check_copy_parity()
     check_template_placeholders()
@@ -172,6 +212,7 @@ def main():
     check_hreflang_and_canonical()
     check_links_resolve()
     check_structured_data()
+    check_404()
     if FAILURES:
         print("\nFAILED:", file=sys.stderr)
         for msg in FAILURES:

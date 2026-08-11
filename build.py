@@ -116,6 +116,17 @@ def generate():
                 base, page_values, f"templates/base.html ({lang}/{page})"
             )
 
+    # 404.html is a deliberate exception: GitHub Pages serves it for every
+    # missing path across the whole site (including under /en/), so it can't
+    # follow the ES/EN mirror or the relative-path convention. One file
+    # answers for both languages, keyed by an "es."/"en." prefix, and it is
+    # intentionally left out of the sitemap below.
+    tpl_404 = (ROOT / "templates" / "404.html").read_text("utf-8")
+    values_404 = {}
+    for lang in LANGS:
+        values_404.update({f"{lang}.{k}": v for k, v in flatten(content[lang]).items()})
+    outputs[ROOT / "404.html"] = render(tpl_404, values_404, "templates/404.html")
+
     outputs[ROOT / "sitemap.xml"] = build_sitemap()
     return outputs
 

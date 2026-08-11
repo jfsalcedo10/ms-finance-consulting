@@ -225,6 +225,11 @@
     "hoursTitle": "Hours & Location",
     "privacy": "Privacy Policy"
   },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "home": "Go to the homepage"
+  },
   "meta": {
     "htmlLang": "en",
     "langLabel": "EN",
