@@ -106,14 +106,16 @@ def check_determinism():
 
 
 def check_well_formed():
-    for path in generated_pages():
+    # 404.html is outside generated_pages() so the mirror/canonical/hreflang
+    # checks skip it, but tag balance still applies.
+    for path in generated_pages() + [ROOT / "404.html"]:
         parser = TagBalance()
         parser.feed(path.read_text("utf-8"))
         for err in parser.errors:
             fail(f"{path.relative_to(ROOT)}: {err}")
         if parser.stack:
             fail(f"{path.relative_to(ROOT)}: unclosed tags {parser.stack}")
-    print(f"  well-formedness: {len(generated_pages())} pages parsed")
+    print(f"  well-formedness: {len(generated_pages()) + 1} pages parsed")
 
 
 def check_hreflang_and_canonical():
