@@ -1,0 +1,78 @@
+  <main>
+    <section class="page-header" data-mark="30">
+      <div class="container">
+        <span class="eyebrow">{{ about.eyebrow }}</span>
+        <h1>{{ about.title }}</h1>
+        <p class="subtitle">{{ about.intro }}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <p class="reveal">{{ about.body1 }}</p>
+        <p class="reveal">{{ about.body2 }}</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header align-left reveal">
+          <h2>{{ about.values.title }}</h2>
+        </div>
+        <ul class="values-list grid grid-2 reveal">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ about.values.integrity.title }}</strong>
+              <span>{{ about.values.integrity.body }}</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ about.values.precision.title }}</strong>
+              <span>{{ about.values.precision.body }}</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ about.values.personal.title }}</strong>
+              <span>{{ about.values.personal.body }}</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ about.values.learning.title }}</strong>
+              <span>{{ about.values.learning.body }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>{{ about.team.title }}</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="team-card reveal">
+            <div class="founder-avatar">M&amp;S</div>
+            <span class="eyebrow">{{ about.founder.eyebrow }}</span>
+            <h3>{{ about.founder.name }}</h3>
+            <p class="role">{{ about.founder.role }}</p>
+            <p>{{ about.founder.bio }}</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="founder-avatar">JF</div>
+            <span class="eyebrow">{{ about.analyst.eyebrow }}</span>
+            <h3>{{ about.analyst.name }}</h3>
+            <p class="role">{{ about.analyst.role }}</p>
+            <p>{{ about.analyst.bio }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

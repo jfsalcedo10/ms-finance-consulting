@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the generated site. Stdlib only. Run: python3 verify.py"""
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -26,8 +27,31 @@ def check_copy_parity():
     print(f"  copy parity: {len(es_keys)} keys per language")
 
 
+PLACEHOLDER = re.compile(r"\{\{\s*([A-Za-z0-9_.]+)\s*\}\}")
+# Slots build.py supplies itself; not content keys.
+BUILD_SUPPLIED = {"content", "head_extra", "rel", "page.title", "page.description",
+                  "page.canonical", "page.altEs", "page.altEn",
+                  "page.langEs", "page.langEn"}
+
+
+def check_template_placeholders():
+    """Every {{ key }} in templates/ must resolve against content/es.json."""
+    es = flatten(json.loads((ROOT / "content" / "es.json").read_text("utf-8")))
+    templates = sorted((ROOT / "templates").rglob("*.html"))
+    if not templates:
+        fail("no templates found under templates/")
+        return
+    for path in templates:
+        for key in PLACEHOLDER.findall(path.read_text("utf-8")):
+            if key in BUILD_SUPPLIED or key in es:
+                continue
+            fail(f"{path.relative_to(ROOT)}: unknown placeholder {{{{ {key} }}}}")
+    print(f"  template placeholders: {len(templates)} templates checked")
+
+
 def main():
     check_copy_parity()
+    check_template_placeholders()
     if FAILURES:
         print("\nFAILED:", file=sys.stderr)
         for msg in FAILURES:

@@ -1,0 +1,49 @@
+  <main>
+    <section class="page-header" data-mark="@">
+      <div class="container">
+        <span class="eyebrow">{{ contact.eyebrow }}</span>
+        <h1>{{ contact.title }}</h1>
+        <p class="subtitle">{{ contact.intro }}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="contact-form-wrap reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <h3>{{ contact.form.title }}</h3>
+          <input type="hidden" name="access_key" value="ba891fec-793a-4c4a-8573-323911a71ae4" />
+          <input type="hidden" name="subject" value="New message from M&amp;S Finance Consulting website" />
+          <input type="hidden" name="from_name" value="M&amp;S Finance Consulting website" />
+          <input type="checkbox" name="botcheck" style="display: none;" />
+          <div class="form-row">
+            <label for="name">{{ contact.form.name }}</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">{{ contact.form.email }}</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-row">
+            <label for="subject-line">{{ contact.form.subject }}</label>
+            <input type="text" id="subject-line" name="topic" />
+          </div>
+          <div class="form-row">
+            <label for="message">{{ contact.form.message }}</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <!-- Required by Ley 1581 de 2012: prior, express and informed authorization
+               must be collected before processing. The value is submitted with the form
+               so the delivered email doubles as evidence of the authorization. -->
+          <div class="form-consent">
+            <input type="checkbox" id="consent" name="Autorizacion_datos" value="Si - autorizo el tratamiento de mis datos personales" required />
+            <label for="consent">
+              <span>{{ contact.form.consent }}</span>
+              <a href="privacy.html">{{ contact.form.consentLink }}</a><span>{{ contact.form.consentTail }}</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">{{ contact.form.submit }}</button>
+          <p class="form-note form-status" data-state="idle">{{ contact.form.note }}</p>
+        </form>
+      </div>
+    </section>
+  </main>

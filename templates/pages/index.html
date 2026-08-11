@@ -1,0 +1,60 @@
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="eyebrow">{{ hero.eyebrow }}</span>
+        <h1>{{ hero.title }}</h1>
+        <p class="subtitle">{{ hero.subtitle }}</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">{{ hero.ctaPrimary }}</a>
+          <a href="services.html" class="btn btn-secondary">{{ hero.ctaSecondary }}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>{{ home.highlights.title }}</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="card-icon">30+</div>
+            <h3>{{ home.highlights.experience.title }}</h3>
+            <p>{{ home.highlights.experience.body }}</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg></div>
+            <h3>{{ home.highlights.accounting.title }}</h3>
+            <p>{{ home.highlights.accounting.body }}</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6M10 20v-10M16 20v-14"/><path d="M15 9l5-5M20 4h-3.5M20 4v3.5"/></svg></div>
+            <h3>{{ home.highlights.data.title }}</h3>
+            <p>{{ home.highlights.data.body }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid grid-2" style="align-items: center;">
+        <div class="reveal">
+          <span class="eyebrow">{{ hero.eyebrow }}</span>
+          <h2>{{ home.about.title }}</h2>
+          <p>{{ home.about.body }}</p>
+          <a href="about.html" class="btn btn-primary">{{ home.about.cta }}</a>
+        </div>
+        <div class="reveal founder-avatar" style="justify-self: center; width: 220px;">M&amp;S</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>{{ home.cta.title }}</h2>
+          <p>{{ home.cta.body }}</p>
+          <a href="contact.html" class="btn btn-primary">{{ home.cta.button }}</a>
+        </div>
+      </div>
+    </section>
+  </main>

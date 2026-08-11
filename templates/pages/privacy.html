@@ -1,0 +1,78 @@
+  <main>
+    <section class="page-header" data-mark="&#167;">
+      <div class="container">
+        <span class="eyebrow">{{ legal.eyebrow }}</span>
+        <h1>{{ legal.title }}</h1>
+        <p class="subtitle">{{ legal.subtitle }}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Deliberately NOT .reveal: the whole policy is one element taller
+             than the viewport, so the observer's 0.15 threshold isn't met until
+             you scroll, leaving the page blank on load. A legal document should
+             render immediately anyway. -->
+        <article class="legal-doc">
+          <div class="legal-masthead">
+            <p class="legal-meta">{{ legal.updated }}</p>
+            <p class="legal-note">{{ legal.langNote }}</p>
+          </div>
+          <h2>{{ legal.s1.title }}</h2>
+          <p>{{ legal.s1.body }}</p>
+          <ul class="legal-list">
+            <li>{{ legal.s1.name }}</li>
+            <li>{{ legal.s1.address }}</li>
+            <li>{{ legal.s1.email }}</li>
+            <li>{{ legal.s1.phone }}</li>
+          </ul>
+          <p>{{ legal.s1.officer }}</p>
+          <h2>{{ legal.s2.title }}</h2>
+          <p>{{ legal.s2.body }}</p>
+          <ul class="legal-list">
+            <li>{{ legal.s2.i1 }}</li>
+            <li>{{ legal.s2.i2 }}</li>
+            <li>{{ legal.s2.i3 }}</li>
+            <li>{{ legal.s2.i4 }}</li>
+          </ul>
+          <p>{{ legal.s2.note }}</p>
+          <h2>{{ legal.s3.title }}</h2>
+          <p>{{ legal.s3.body }}</p>
+          <ul class="legal-list">
+            <li>{{ legal.s3.i1 }}</li>
+            <li>{{ legal.s3.i2 }}</li>
+            <li>{{ legal.s3.i3 }}</li>
+          </ul>
+          <p>{{ legal.s3.note }}</p>
+          <h2>{{ legal.s4.title }}</h2>
+          <p>{{ legal.s4.body }}</p>
+          <h2>{{ legal.s5.title }}</h2>
+          <p>{{ legal.s5.body }}</p>
+          <p>{{ legal.s5.fonts }}</p>
+          <h2>{{ legal.s6.title }}</h2>
+          <p>{{ legal.s6.body }}</p>
+          <ul class="legal-list">
+            <li>{{ legal.s6.i1 }}</li>
+            <li>{{ legal.s6.i2 }}</li>
+            <li>{{ legal.s6.i3 }}</li>
+            <li>{{ legal.s6.i4 }}</li>
+            <li>{{ legal.s6.i5 }}</li>
+          </ul>
+          <h2>{{ legal.s7.title }}</h2>
+          <p>{{ legal.s7.body }}</p>
+          <ul class="legal-list">
+            <li>{{ legal.s7.i1 }}</li>
+            <li>{{ legal.s7.i2 }}</li>
+          </ul>
+          <h2>{{ legal.s8.title }}</h2>
+          <p>{{ legal.s8.body }}</p>
+          <h2>{{ legal.s9.title }}</h2>
+          <p>{{ legal.s9.body }}</p>
+          <h2>{{ legal.s10.title }}</h2>
+          <p>{{ legal.s10.body }}</p>
+          <h2>{{ legal.s11.title }}</h2>
+          <p>{{ legal.s11.body }}</p>
+        </article>
+      </div>
+    </section>
+  </main>
