@@ -15,11 +15,12 @@ on the About page as a second team member. The user is a data scientist,
 comfortable technically but rusty on frontend/web dev, and this was their
 first time using Claude Code — so favor explaining *why*, not just doing.
 
-Not in production yet. Currently previewed via a local `python3 -m
+**Live in production** on GitHub Pages at www.mscontadores.com.co, deployed
+from `main` — pushes to `main` go straight to a real client-facing site, so
+treat them with corresponding care. Local preview is a `python3 -m
 http.server` + a Cloudflare quick tunnel (ephemeral URL, dies when the
 process stops — don't assume a tunnel from a past session is still live;
-start a fresh one if asked to share a preview link). GitHub Pages is the
-agreed path once the client is ready to go live — see README.
+start a fresh one if asked to share a preview link).
 
 ## Stack and non-negotiables
 
@@ -102,8 +103,7 @@ user explicitly disliked the toggle's feel.
 ## Outstanding TODOs
 
 Tracked in `README.md` under "TODO before going live" — currently just the
-full street address, a real Web3Forms access key for the contact form (it's
-wired up in `contact.html`/`js/main.js` but still has the placeholder
-`WEB3FORMS_ACCESS_KEY` value — see "Contact form setup" in README),
-founder's exact professional credentials wording, and real photos. Check
-that section before assuming something is still a placeholder.
+full street address, founder's exact professional credentials wording, and
+real photos. The contact form is wired up in `contact.html`/`js/main.js`
+with a real, working Web3Forms access key — not a placeholder; don't "fix"
+it. Check that section before assuming something is still a placeholder.

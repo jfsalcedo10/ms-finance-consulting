@@ -159,11 +159,15 @@ A Venezuelan, Argentine, or Spanish national researching a Cartagena accountant
 explicitly part of the target per the section above. Plain `es` reaches Spanish
 speakers everywhere, Colombia included, and gives up nothing.
 
-`sitemap.xml` `lastmod` values derive from git — the commit date of the last
-change to the page's template or its content JSON (`git log -1 --format=%cs`).
-Stamping the current build date instead would churn all ten entries on every
-rebuild and turn the signal into noise. If git is unavailable, `build.py`
-retains the value already present in `sitemap.xml` rather than inventing one.
+`sitemap.xml` deliberately omits `lastmod`. An earlier version derived it from
+git — the commit date of the last change to the page's template or its
+content JSON — but `build.py` builds from the working tree while that date
+reflects committed state, so the normal edit → build → commit cycle baked in
+the *previous* commit's date and `build.py --check` then contradicted itself
+on a perfectly normal workflow. `--check` is the project's only guard against
+shipping stale output, and a stale-output gate that raises false alarms gets
+ignored. Google also largely ignores `lastmod` in ranking, so the field
+wasn't worth the churn.
 
 `robots.txt` and `CNAME` are unchanged — the sitemap URL does not move.
 

@@ -9,7 +9,6 @@ content/{es,en}.json; markup from templates/.
 """
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -55,40 +54,11 @@ def render(template, values, where):
     return out
 
 
-def git_date(paths):
-    """Commit date of the last change to any of these files, or None."""
-    try:
-        result = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", *[str(p) for p in paths]],
-            cwd=ROOT, capture_output=True, text=True, check=True,
-        )
-        return result.stdout.strip() or None
-    except Exception:
-        return None
-
-
-def existing_lastmods():
-    """Preserve lastmod values if git is unavailable, rather than inventing one."""
-    path = ROOT / "sitemap.xml"
-    if not path.exists():
-        return {}
-    text = path.read_text("utf-8")
-    return dict(
-        re.findall(r"<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>", text, re.S)
-    )
-
-
 def build_sitemap():
-    previous = existing_lastmods()
     rows = []
     for lang in LANGS:
         for page in PAGES:
             loc = canonical(lang, page)
-            sources = [
-                ROOT / "templates" / "pages" / f"{page}.html",
-                ROOT / "content" / f"{lang}.json",
-            ]
-            lastmod = git_date(sources) or previous.get(loc)
             priority = "1.0" if page == "index" else ("0.3" if page == "privacy" else "0.8")
             freq = "yearly" if page == "privacy" else "monthly"
             alts = "".join(
@@ -101,8 +71,6 @@ def build_sitemap():
                 f'href="{canonical("es", page)}" />'
             )
             entry = f"  <url>\n    <loc>{loc}</loc>"
-            if lastmod:
-                entry += f"\n    <lastmod>{lastmod}</lastmod>"
             entry += f"{alts}\n    <changefreq>{freq}</changefreq>"
             entry += f"\n    <priority>{priority}</priority>\n  </url>"
             rows.append(entry)

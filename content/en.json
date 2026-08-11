@@ -207,7 +207,7 @@
     },
     "s9": {
       "title": "9. Cookies and local storage",
-      "body": "This website does not use advertising, analytics, or tracking cookies. It stores a single item in your browser's local storage (`ms_lang`) to remember whether you prefer Spanish or English. That value stays on your device, is not personal data, is never sent to us, and can be cleared at any time from your browser settings."
+      "body": "This website does not use advertising, analytics, or tracking cookies, and stores no information in your browser. The language is determined by the address of the page you visit, not by data saved on your device."
     },
     "s10": {
       "title": "10. Changes to this policy",
