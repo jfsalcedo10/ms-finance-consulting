@@ -900,6 +900,135 @@ form:has(button:disabled) {
   font-family: var(--font-body);
   font-size: 0.76rem;
   color: rgba(246, 239, 225, 0.65);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer-bottom a {
+  color: rgba(246, 239, 225, 0.75);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(246, 239, 225, 0.28);
+  transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+}
+
+.footer-bottom a:hover {
+  color: var(--color-green);
+  border-bottom-color: var(--color-green);
+}
+
+/* ---------- Consent checkbox (contact form) ---------- */
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 22px;
+}
+
+.form-consent input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin: 3px 0 0;
+  accent-color: var(--color-teal);
+}
+
+.form-consent label {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+}
+
+.form-consent a {
+  color: var(--color-teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Legal documents (privacy policy) ----------
+   Narrow measure and generous heading spacing — this is meant to be read
+   top to bottom, not scanned like a marketing page. */
+.legal-doc {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+.legal-doc h2 {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  line-height: 1.35;
+  color: var(--color-teal-deep);
+  margin: 40px 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-line);
+}
+
+.legal-doc p {
+  color: var(--color-ink-muted);
+  margin: 0 0 14px;
+}
+
+/* Justified, as a printed legal instrument would be. Hyphenation is required,
+   not optional, here: without it justification stretches word spacing into
+   rivers of whitespace. `lang="es"` on <html> is what lets the browser
+   hyphenate Spanish correctly. Reverts to ragged-right on narrow screens,
+   where the measure is too short for justification to look like anything but
+   gaps. The masthead is excluded — it's metadata, not body copy. */
+.legal-doc p:not(.legal-meta):not(.legal-note),
+.legal-doc li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (max-width: 640px) {
+  .legal-doc p:not(.legal-meta):not(.legal-note),
+  .legal-doc li {
+    text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+  }
+}
+
+/* Dateline, not a card: the effective date and governing-language clause are
+   the document's issuing details, so they're set as quiet metadata above the
+   text. No border of its own — the first section heading's rule is the only
+   separator, keeping one line here instead of two. */
+.legal-masthead {
+  margin-bottom: 0;
+}
+
+.legal-meta {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal) !important;
+  margin-bottom: 4px !important;
+}
+
+.legal-note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+  margin-bottom: 0 !important;
+}
+
+.legal-list {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: var(--color-ink-muted);
+}
+
+.legal-list li {
+  margin-bottom: 8px;
+}
+
+.legal-list li::marker {
+  color: var(--color-green);
 }
 
 /* ---------- Reveal-on-scroll ---------- */
@@ -998,6 +1127,7 @@ form:has(button:disabled) {
 
   .footer-bottom {
     text-align: center;
+    justify-content: center;
   }
 
   .hero::before,
