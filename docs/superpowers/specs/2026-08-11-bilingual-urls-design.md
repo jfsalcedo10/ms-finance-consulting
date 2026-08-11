@@ -86,36 +86,84 @@ sitemap.xml
 
 `{{ key.path }}` string substitution against the language's JSON. No loops, no
 conditionals, no expressions. If a template ever needs logic, that is a signal
-the content model is wrong, not that the engine needs features. Keeping it
-substitution-only is what holds the script near ~120 lines and reviewable.
+the content model is wrong, not that the engine needs features.
 
-Page bodies are composed into `base.html` through a single `{{ content }}` slot.
-Per-page values that live in `<head>` (title, meta description, canonical path,
-OG fields) come from the same JSON under a `pages.<name>.meta` namespace.
+`base.html` exposes exactly **two** slots:
+
+- `{{ content }}` — the page body
+- `{{ head_extra }}` — per-page `<head>` markup
+
+The second slot is required, not optional. `services.html` already carries a
+JSON-LD `hasOfferCatalog` block that the other four pages do not, so structured
+data cannot live entirely in `base.html` without the engine growing
+conditionals. Each page template owns its own JSON-LD and emits it through
+`head_extra`; the shared organization fields stay in `base.html`.
+
+Scalar per-page `<head>` values (title, meta description, OG fields) come from
+the language JSON under a `pages.<name>.meta` namespace.
 
 ### Path handling
 
-All internal links are **relative**, so double-clicking a file still works and
-the `file://` guarantee in `CLAUDE.md` survives:
+Two different URL forms coexist, and conflating them is the easiest way to get
+this wrong:
 
-- Root pages link to `css/styles.css`, `about.html`, `en/index.html`
-- `/en/` pages link to `../css/styles.css`, `about.html`, `../index.html`
+**Internal links are relative file paths**, so double-clicking a file still
+works and the `file://` guarantee in `CLAUDE.md` survives:
 
-`build.py` computes the prefix (`""` or `"../"`) per output directory and
-substitutes it. Canonical and `hreflang` URLs remain absolute, as those specs
-require.
+| From | To Spanish home | To English home | To sibling page |
+|---|---|---|---|
+| `/index.html` | `index.html` | `en/index.html` | `about.html` |
+| `/en/index.html` | `../index.html` | `index.html` | `about.html` |
+| `/en/about.html` | `../index.html` | `index.html` | `services.html` |
+
+Note that from any `/en/` page, `../index.html` is the **Spanish** home — it is
+the language-switcher target, never a navigation link. English navigation within
+`/en/` uses bare siblings.
+
+`build.py` computes the prefix (`""` or `"../"`) per output directory.
+
+**Canonical, `hreflang`, and sitemap URLs are absolute and extensionless for
+index pages:**
+
+| Page | Canonical URL |
+|---|---|
+| Spanish home | `https://www.mscontadores.com.co/` |
+| English home | `https://www.mscontadores.com.co/en/` |
+| Other Spanish | `https://www.mscontadores.com.co/about.html` |
+| Other English | `https://www.mscontadores.com.co/en/about.html` |
+
+GitHub Pages serves both `/en/` and `/en/index.html`, so the two forms are live
+whether we like it or not. The canonical tag is what collapses them into one
+indexed URL, and it must consistently name the directory form. Internal links
+still point at `en/index.html` — that mismatch is deliberate and is precisely
+what the canonical exists to resolve. `/` is already the form used in the
+current `sitemap.xml`, so this is consistent with what Google has already
+crawled.
 
 ## SEO wiring
 
 Per page, generated automatically:
 
 - `<html lang="es">` / `<html lang="en">`
-- Self-referencing absolute `<link rel="canonical">`
-- Reciprocal alternates: `hreflang="es-CO"`, `hreflang="en"`, and
+- Self-referencing absolute `<link rel="canonical">`, in the extensionless form
+  above
+- Reciprocal alternates: `hreflang="es"`, `hreflang="en"`, and
   `hreflang="x-default"` pointing at the Spanish URL (Spanish is the default)
 - `og:locale` / `og:locale:alternate` matching the page's language
 - `sitemap.xml` regenerated with all 10 URLs, each carrying `xhtml:link`
   alternate entries
+
+**Use `es`, not `es-CO`.** `es-CO` targets Spanish speakers located in Colombia.
+A Venezuelan, Argentine, or Spanish national researching a Cartagena accountant
+*before* relocating is searching from outside Colombia, and that audience is
+explicitly part of the target per the section above. Plain `es` reaches Spanish
+speakers everywhere, Colombia included, and gives up nothing.
+
+`sitemap.xml` `lastmod` values derive from git — the commit date of the last
+change to the page's template or its content JSON (`git log -1 --format=%cs`).
+Stamping the current build date instead would churn all ten entries on every
+rebuild and turn the signal into noise. If git is unavailable, `build.py`
+retains the value already present in `sitemap.xml` rather than inventing one.
 
 `robots.txt` and `CNAME` are unchanged — the sitemap URL does not move.
 
@@ -139,22 +187,32 @@ previously; the decision stands.
 
 ## Verification
 
-No test framework — that would contradict the zero-dependency premise.
-`verify.py` (stdlib) asserts what actually matters and is runnable on demand:
+No test framework — that would contradict the zero-dependency premise. Checks
+are split by when they can be known, and each belongs to exactly one script.
 
-1. **Determinism** — a rebuild produces byte-identical output to what is
-   committed (`build.py --check` exits non-zero on drift).
-2. **Well-formedness** — every generated page parses with balanced tags.
-3. **`hreflang` reciprocity** — every alternate points at a page that exists and
+**`build.py` fails fast, before writing anything:**
+
+1. **Copy parity** — `es.json` and `en.json` must have identical key sets. A
+   missing translation aborts the build rather than emitting a page with a raw
+   `{{ placeholder }}` in it.
+2. **No unresolved placeholders** — if any `{{ … }}` survives substitution, the
+   build fails.
+
+**`verify.py` (stdlib) inspects generated output, runnable on demand:**
+
+3. **Determinism** — rebuilding produces byte-identical output to what is
+   committed. `build.py --check` performs the same comparison without writing,
+   for use before committing.
+4. **Well-formedness** — every generated page parses with balanced tags.
+5. **`hreflang` reciprocity** — every alternate points at a page that exists and
    that links back.
-4. **Link integrity** — every relative `href`/`src` resolves to a real file on
+6. **Canonical hygiene** — every canonical uses the extensionless index form
+   where applicable, and no two pages declare the same canonical.
+7. **Link integrity** — every relative `href`/`src` resolves to a real file on
    disk, which is what makes the `file://` guarantee testable rather than
    assumed.
-5. **Structured data** — every JSON-LD block parses, and `@id` is consistent
+8. **Structured data** — every JSON-LD block parses, and `@id` is consistent
    across pages.
-6. **Copy parity** — `es.json` and `en.json` have identical key sets, so a
-   missing translation fails the build instead of silently rendering a raw
-   `{{ placeholder }}`.
 
 ## Risks
 
@@ -179,6 +237,27 @@ templates, JSON) reviewed carefully and the generated files taken on faith from
 to the current ones. Verification is manual: compare each page before and after
 in a browser. Worth doing deliberately rather than assuming, since the migration
 rewrites every page's markup path.
+
+**The English privacy policy becomes genuinely public.** Today it is near
+invisible to search; afterwards it is an indexed legal document in its own right.
+Nothing about it changes, but the governing-language clause ("Issued in Spanish.
+The English translation is informational; in case of discrepancy, the Spanish
+text governs") starts doing real work rather than sitting on a page nobody can
+find. It must survive the migration verbatim.
+
+## Rollback
+
+Generated output is committed and `js/i18n.js` is deleted, so sources and
+outputs swap roles in a single commit. If indexing degrades or the canonical
+strategy proves wrong, the recovery path is **revert the merge commit** — that
+restores `js/i18n.js`, the five original pages, and the previous `sitemap.xml`
+together, as a consistent set.
+
+Reverting is safe with respect to search: the Spanish URLs never move in either
+direction, so a revert only removes the `/en/` pages, which Google drops as
+404s. It does not disturb anything currently ranking. Do not attempt a partial
+rollback of individual files; the build's whole premise is that output is
+derived, so a half-reverted tree is neither valid input nor valid output.
 
 ## Success criteria
 
