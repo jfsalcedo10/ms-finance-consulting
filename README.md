@@ -39,6 +39,17 @@ scripts use only the Python standard library — there is nothing to install.
 `python3 build.py --check` exits non-zero if the committed output is stale,
 which is the fastest way to catch a forgotten rebuild.
 
+**Hard-reload (Cmd+Shift+R) after a deploy before believing a bug.** CSS and
+JS are cache-busted with `?v=` query strings, but the HTML itself cannot be —
+its URL *is* the URL. So a browser holding a cached page will keep asking for
+whatever assets that old page referenced. This already produced one phantom
+bug report: after `js/i18n.js` was deleted, a cached copy of the previous
+`index.html` kept requesting it, the request 404'd, and the language dropdown
+silently stopped opening — the file had carried its open/close logic. Nothing
+was broken; the reload fixed it. Real visitors can hit the same window
+briefly after a deploy that changes asset URLs, and it clears itself once
+their HTML cache expires.
+
 ## Project structure
 
 ```
