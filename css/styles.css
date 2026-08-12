@@ -551,6 +551,40 @@ p {
   animation-delay: 0.28s;
 }
 
+/* The 404 adds a CTA as a 4th child; without this it would fade in at delay 0,
+   i.e. ahead of the eyebrow, inverting the stagger. */
+.page-header .container > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* ---------- 404 ----------
+   A short dead-end page. Centre it in the viewport rather than leaving one
+   small block stranded at the top of an otherwise empty screen. Deriving the
+   height from flex (rather than `calc(100vh - <header height>)`) means it
+   stays correct if the header's height ever changes. */
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.notfound main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.notfound .page-header {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.notfound .page-header .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-header h1 {
   font-size: clamp(1.9rem, 3.5vw, 2.6rem);
 }
