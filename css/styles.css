@@ -647,10 +647,16 @@ p {
    down both sides and two rounded corners, and a border can do neither. Costs
    no extra height, which was the constraint. */
 .hero + .section-alt {
-  margin-left: clamp(10px, 1.6vw, 22px);
-  margin-right: clamp(10px, 1.6vw, 22px);
-  border-radius: 22px;
+  --panel-inset: clamp(10px, 1.6vw, 22px);
+  --panel-radius: 22px;
+  margin-left: var(--panel-inset);
+  margin-right: var(--panel-inset);
+  border-radius: var(--panel-radius);
+  will-change: margin, border-radius;
 }
+
+/* Without JS, or with reduced motion, the panel simply stays inset and
+   rounded — which is a complete design in itself, not a broken one. */
 
 .section-alt .eyebrow {
   color: var(--color-green);

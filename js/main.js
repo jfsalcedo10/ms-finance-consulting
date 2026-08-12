@@ -96,6 +96,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // The dark panel under the hero starts inset and rounded, then expands to
+  // full-bleed as it scrolls in — so the strip at the fold reads as a panel,
+  // and the section reads as a section once you are looking at it.
+  //
+  // Progress is derived from the panel's own position rather than a fixed
+  // scroll distance, so it behaves the same whatever the hero's height works
+  // out to on a given screen.
+  const panel = document.querySelector(".hero + .section-alt");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (panel && !reducedMotion.matches) {
+    const INSET_MAX = 22;
+    const RADIUS_MAX = 22;
+    let queued = false;
+
+    const applyPanel = () => {
+      queued = false;
+      const top = panel.getBoundingClientRect().top;
+      // 0 when the panel's top edge sits at the bottom of the viewport,
+      // 1 by the time it has risen to within 15% of the top.
+      const span = window.innerHeight * 0.85;
+      const progress = Math.min(Math.max((window.innerHeight - top) / span, 0), 1);
+      const remaining = 1 - progress;
+      panel.style.setProperty("--panel-inset", `${(INSET_MAX * remaining).toFixed(2)}px`);
+      panel.style.setProperty("--panel-radius", `${(RADIUS_MAX * remaining).toFixed(2)}px`);
+    };
+
+    const onScroll = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(applyPanel);
+    };
+
+    applyPanel();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+  }
+
   // Language dropdown. The menu items are now real links (the URL carries the
   // language), so this only handles open/close and keyboard navigation.
   const closeLangSelect = (select, { returnFocus } = {}) => {
