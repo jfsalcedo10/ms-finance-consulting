@@ -613,6 +613,15 @@ p {
   padding: 76px 0;
 }
 
+/* The page header already carries 52px of bottom padding. A following section
+   adding its full 76px on top stacks to ~128px of dead space between the
+   subtitle and the first line of content — the gap reads as a mistake rather
+   than as rhythm. 76px is right BETWEEN sections, where nothing else is
+   spacing them; it is double-counting directly under a header. */
+.page-header + .section {
+  padding-top: 40px;
+}
+
 .section-alt {
   background: linear-gradient(155deg, var(--color-teal-deep) 0%, var(--color-teal) 100%);
   color: rgba(246, 239, 225, 0.9);
@@ -1349,6 +1358,10 @@ form:has(button:disabled) {
 
   .section {
     padding: 32px 0;
+  }
+
+  .page-header + .section {
+    padding-top: 32px;
   }
 
   .main-nav {
