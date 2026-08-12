@@ -641,6 +641,15 @@ p {
   color: rgba(246, 239, 225, 0.9);
 }
 
+/* Rounded top corners on the dark band directly under the hero. A border
+   cannot have rounded corners; a panel rising from below the fold can — so
+   this makes the visible strip read as the start of a surface rather than a
+   rule, without adding a single pixel to its height. Only the section that
+   follows the hero, since elsewhere the boundary is unambiguous. */
+.hero + .section-alt {
+  border-radius: 18px 18px 0 0;
+}
+
 .section-alt .eyebrow {
   color: var(--color-green);
 }
