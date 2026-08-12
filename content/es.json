@@ -117,8 +117,8 @@
   },
   "contact": {
     "eyebrow": "Contáctanos",
-    "title": "Contacta a tu contador en Cartagena",
-    "intro": "¿Tienes una pregunta o estás listo para comenzar? Escríbenos — normalmente respondemos dentro de un día hábil.",
+    "title": "Hablemos de tu negocio",
+    "intro": "Contabilidad, impuestos o un proyecto de datos: escríbenos y te respondemos normalmente dentro de un día hábil.",
     "info": {
       "address": {
         "value": "Cartagena, Colombia"
@@ -314,8 +314,8 @@
       "title": "Cómo funciona",
       "s1title": "Semana 1 — diagnóstico",
       "s1body": "Reviso dónde viven tus datos hoy y qué se está haciendo a mano. Termina de una de dos maneras: con un alcance y un precio confirmados, o con el diagnóstico entregado por escrito y ahí queda. Esta semana se paga en ambos casos.",
-      "s2title": "Semanas 2 y 3 — construcción",
-      "s2body": "Se construye lo acordado, se entrega funcionando y te explico cómo mantenerlo. Sin dependencia permanente de mí.",
+      "s2title": "Semana 2 en adelante — construcción",
+      "s2body": "Se construye lo acordado, con un plazo definido al final de la semana 1 según el alcance real — no un número inventado antes de mirar tus datos. Se entrega funcionando y te explico cómo mantenerlo, sin dependencia permanente de mí.",
       "note": "Puedes parar al final de la semana 1 sin explicaciones. El diagnóstico es tuyo de todas formas."
     },
     "build": {

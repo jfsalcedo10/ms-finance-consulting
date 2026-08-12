@@ -66,9 +66,27 @@
           <h2>{{ data.why.title }}</h2>
         </div>
         <ul class="values-list">
-          <li><strong>{{ data.why.experience.title }}</strong><span>{{ data.why.experience.body }}</span></li>
-          <li><strong>{{ data.why.requirements.title }}</strong><span>{{ data.why.requirements.body }}</span></li>
-          <li><strong>{{ data.why.rigor.title }}</strong><span>{{ data.why.rigor.body }}</span></li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ data.why.experience.title }}</strong>
+              <span>{{ data.why.experience.body }}</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ data.why.requirements.title }}</strong>
+              <span>{{ data.why.requirements.body }}</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>{{ data.why.rigor.title }}</strong>
+              <span>{{ data.why.rigor.body }}</span>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -89,11 +107,11 @@
       <div class="container">
         <div class="prose-narrow">
           <h2>{{ data.limits.title }}</h2>
-          <ul class="legal-list">
-            <li>{{ data.limits.i1 }}</li>
-            <li>{{ data.limits.i2 }}</li>
-            <li>{{ data.limits.i3 }}</li>
-            <li>{{ data.limits.i4 }}</li>
+          <ul class="values-list">
+            <li><span class="dot"></span><div><span>{{ data.limits.i1 }}</span></div></li>
+            <li><span class="dot"></span><div><span>{{ data.limits.i2 }}</span></div></li>
+            <li><span class="dot"></span><div><span>{{ data.limits.i3 }}</span></div></li>
+            <li><span class="dot"></span><div><span>{{ data.limits.i4 }}</span></div></li>
           </ul>
         </div>
       </div>
