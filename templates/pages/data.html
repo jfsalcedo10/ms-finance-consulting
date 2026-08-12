@@ -1,0 +1,111 @@
+  <main>
+    <section class="page-header" data-mark="&#8721;">
+      <div class="container">
+        <span class="eyebrow">{{ data.eyebrow }}</span>
+        <h1>{{ data.title }}</h1>
+        <p class="subtitle">{{ data.subtitle }}</p>
+      </div>
+    </section>
+
+    <!-- The offer comes before the capability list on purpose: a visitor who
+         can't tell what they'd be buying leaves before reaching the detail. -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>{{ data.offer.title }}</h2>
+        <p>{{ data.offer.lead }}</p>
+
+        <div class="grid grid-2">
+          <div class="card reveal">
+            <h3>{{ data.how.s1title }}</h3>
+            <p>{{ data.how.s1body }}</p>
+          </div>
+          <div class="card reveal">
+            <h3>{{ data.how.s2title }}</h3>
+            <p>{{ data.how.s2body }}</p>
+          </div>
+        </div>
+
+        <p class="note-strong">{{ data.how.note }}</p>
+        <p>{{ data.offer.note }}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header align-left">
+          <h2>{{ data.build.title }}</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6M10 20v-10M16 20v-14"/><path d="M15 9l5-5M20 4h-3.5M20 4v3.5"/></svg></div>
+            <h3>{{ data.build.dashboards.title }}</h3>
+            <p>{{ data.build.dashboards.body }}</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 12v6c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-6"/></svg></div>
+            <h3>{{ data.build.pipelines.title }}</h3>
+            <p>{{ data.build.pipelines.body }}</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M4 12h6M4 17h9"/><path d="M15.5 9.5l3 2.5-3 2.5"/><circle cx="19.5" cy="6" r="1.6"/></svg></div>
+            <h3>{{ data.build.automation.title }}</h3>
+            <p>{{ data.build.automation.body }}</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.2 4.8 5.3.6-4 3.6 1.1 5.2L12 15.1l-4.6 2.6 1.1-5.2-4-3.6 5.3-.6z"/><path d="M12 19.5v1.5"/></svg></div>
+            <h3>{{ data.build.ai.title }}</h3>
+            <p>{{ data.build.ai.body }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header align-left">
+          <h2>{{ data.why.title }}</h2>
+        </div>
+        <ul class="values-list">
+          <li><strong>{{ data.why.experience.title }}</strong><span>{{ data.why.experience.body }}</span></li>
+          <li><strong>{{ data.why.requirements.title }}</strong><span>{{ data.why.requirements.body }}</span></li>
+          <li><strong>{{ data.why.rigor.title }}</strong><span>{{ data.why.rigor.body }}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- The differentiator. A reader won't derive it unaided, so it gets its
+         own section rather than a bullet. -->
+    <section class="section">
+      <div class="container">
+        <div class="prose-narrow reveal">
+          <h2>{{ data.trust.title }}</h2>
+          <p>{{ data.trust.body1 }}</p>
+          <p>{{ data.trust.body2 }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="prose-narrow">
+          <h2>{{ data.limits.title }}</h2>
+          <ul class="legal-list">
+            <li>{{ data.limits.i1 }}</li>
+            <li>{{ data.limits.i2 }}</li>
+            <li>{{ data.limits.i3 }}</li>
+            <li>{{ data.limits.i4 }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>{{ data.cta.title }}</h2>
+          <p>{{ data.cta.body }}</p>
+          <a href="contact.html" class="btn btn-primary">{{ data.cta.button }}</a>
+        </div>
+      </div>
+    </section>
+  </main>

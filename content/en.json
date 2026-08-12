@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "data": "Data & AI"
   },
   "brand": {
     "tail": "Finance Consulting"
@@ -256,6 +257,10 @@
     "privacy": {
       "title": "Privacy Policy | M&amp;S Finance Consulting",
       "description": "M&amp;S Finance Consulting's Personal Data Processing Policy, under Colombia's Law 1581 of 2012."
+    },
+    "data": {
+      "title": "Data, Dashboards and Automation for Business | M&amp;S",
+      "description": "Dashboards, data integration and reporting automation for businesses in Colombia. Five years of professional data engineering alongside 30 years of accounting."
     }
   },
   "schema": {
@@ -292,5 +297,74 @@
       "Valledupar",
       "Riohacha"
     ]
+  },
+  "data": {
+    "eyebrow": "Data & AI",
+    "title": "From scattered data to clear decisions",
+    "subtitle": "The information already exists. It is spread across accounting software, spreadsheets and email, and answering a simple question takes days. I build the systems that put it within reach.",
+    "offer": {
+      "title": "What you can hire",
+      "lead": "A fixed-scope build: a working system, delivered and explained. Not open-ended advice, and not a report full of recommendations — something that is left running.",
+      "note": "The price depends on the scope, so it is not published here. It is agreed in writing before any build begins."
+    },
+    "how": {
+      "title": "How it works",
+      "s1title": "Week 1 — assessment",
+      "s1body": "I look at where your data actually lives today and what is being done by hand. It ends one of two ways: with a confirmed scope and price, or with the assessment handed to you in writing and nothing further. This week is paid either way.",
+      "s2title": "Weeks 2 and 3 — the build",
+      "s2body": "What we agreed gets built, delivered working, and explained so you can maintain it. No permanent dependency on me.",
+      "note": "You can stop at the end of week 1, no explanation needed. The assessment is yours regardless."
+    },
+    "build": {
+      "title": "What I build",
+      "dashboards": {
+        "title": "Dashboards and reporting",
+        "body": "One place to see margin, cash flow or sales without rebuilding the spreadsheet each time, kept up to date on its own."
+      },
+      "pipelines": {
+        "title": "Data integration",
+        "body": "Connecting accounting software, point of sale and spreadsheets so they stop telling different stories. Python, dbt and SQL on cloud databases."
+      },
+      "automation": {
+        "title": "Automating manual work",
+        "body": "The report someone assembles every Monday, the reconciliation that takes half a day: processes that run themselves and flag it when something does not add up."
+      },
+      "ai": {
+        "title": "AI where it can be checked",
+        "body": "Pulling data out of invoices and documents, classifying transactions, summarising. Only where the answer can be verified against the source."
+      }
+    },
+    "why": {
+      "title": "Why me",
+      "experience": {
+        "title": "Five years building data systems",
+        "body": "Data engineer with an MSc in Statistics and Data Science. Previously at Leal, a Series C Colombian startup, and currently at a global materials technology company, working at enterprise data volumes."
+      },
+      "requirements": {
+        "title": "I translate needs, I don't receive specifications",
+        "body": "Almost nobody arrives with a written requirement. They arrive saying “I don't know whether this product is actually making me money”. Turning that into a data model is the hard part, and it is what I do every day."
+      },
+      "rigor": {
+        "title": "Rigour before novelty",
+        "body": "I build AI systems that cite their sources and score how well grounded each answer is, so it is obvious when the model is speculating."
+      }
+    },
+    "trust": {
+      "title": "AI you can check",
+      "body1": "The most common objection to using AI with financial information is that it makes things up. It is a fair objection and worth taking seriously.",
+      "body2": "So the systems I build return the source alongside the answer, plus a measure of how well supported it is. When the model has nothing to stand on, that shows. For numbers that end up in a tax filing or a business decision, that difference is not a technical detail."
+    },
+    "limits": {
+      "title": "What I don't do",
+      "i1": "I don't develop custom applications or websites.",
+      "i2": "I don't replace the accounting work. This builds on it.",
+      "i3": "I don't propose AI when a well-built spreadsheet solves the problem.",
+      "i4": "I don't take on work that needs immediate support around the clock. I work to a defined scope and agreed timelines."
+    },
+    "cta": {
+      "title": "Tell me what you can't see today",
+      "body": "Write to me with the question your data should answer and doesn't. If it isn't something I should be solving, I'll say so.",
+      "button": "Contact us"
+    }
   }
 }

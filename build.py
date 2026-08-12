@@ -12,7 +12,7 @@ import re
 import sys
 from pathlib import Path
 
-from sitelib import LANGS, PAGES, SITE, flatten
+from sitelib import LANGS, PAGES, SITE, filename, flatten
 
 ROOT = Path(__file__).resolve().parent
 REL = {"es": "", "en": "../"}
@@ -54,11 +54,13 @@ def offer_catalog(values):
 def canonical(lang, page):
     if page == "index":
         return f"{SITE}/" if lang == "es" else f"{SITE}/en/"
-    return f"{SITE}/{page}.html" if lang == "es" else f"{SITE}/en/{page}.html"
+    name = filename(lang, page)
+    return f"{SITE}/{name}.html" if lang == "es" else f"{SITE}/en/{name}.html"
 
 
 def output_path(lang, page):
-    return ROOT / f"{page}.html" if lang == "es" else ROOT / "en" / f"{page}.html"
+    name = filename(lang, page)
+    return ROOT / f"{name}.html" if lang == "es" else ROOT / "en" / f"{name}.html"
 
 
 def render(template, values, where):
@@ -134,8 +136,18 @@ def generate():
                 "page.canonical": canonical(lang, page),
                 "page.altEs": canonical("es", page),
                 "page.altEn": canonical("en", page),
-                "page.langEs": (f"{page}.html" if lang == "es" else f"../{page}.html"),
-                "page.langEn": (f"en/{page}.html" if lang == "es" else f"{page}.html"),
+                "page.langEs": (
+                    f"{filename('es', page)}.html" if lang == "es"
+                    else f"../{filename('es', page)}.html"
+                ),
+                "page.langEn": (
+                    f"en/{filename('en', page)}.html" if lang == "es"
+                    else f"{filename('en', page)}.html"
+                ),
+                # Nav links are bare siblings within a language tree, but the
+                # data page's filename differs per language, so the nav needs it
+                # supplied rather than hardcoded in base.html.
+                "file.data": f"{filename(lang, 'data')}.html",
             })
             body = render(body_tpl, page_values, f"templates/pages/{page}.html ({lang})")
             page_values["content"] = body

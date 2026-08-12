@@ -3,7 +3,8 @@
     "home": "Inicio",
     "about": "Nosotros",
     "services": "Servicios",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "data": "Datos e IA"
   },
   "brand": {
     "tail": "Finance Consulting"
@@ -256,6 +257,10 @@
     "privacy": {
       "title": "Pol&iacute;tica de Privacidad | M&amp;S Finance Consulting",
       "description": "Pol&iacute;tica de Tratamiento de Datos Personales de M&amp;S Finance Consulting, conforme a la Ley 1581 de 2012 de Colombia."
+    },
+    "data": {
+      "title": "An&aacute;lisis de Datos, Tableros y Automatizaci&oacute;n | M&amp;S",
+      "description": "Tableros, integraci&oacute;n de datos y automatizaci&oacute;n de informes para empresas en Colombia. Ingenier&iacute;a de datos junto a 30 a&ntilde;os de experiencia contable."
     }
   },
   "schema": {
@@ -292,5 +297,74 @@
       "Valledupar",
       "Riohacha"
     ]
+  },
+  "data": {
+    "eyebrow": "Datos e IA",
+    "title": "De datos dispersos a decisiones claras",
+    "subtitle": "La información ya existe. Está repartida entre el software contable, hojas de cálculo y correos, y responder una pregunta simple toma días. Construyo los sistemas que la ponen a tu alcance.",
+    "offer": {
+      "title": "Qué puedes contratar",
+      "lead": "Un desarrollo de alcance fijo: un sistema que funciona, entregado y explicado. No es una asesoría abierta ni un informe con recomendaciones — es algo que queda funcionando.",
+      "note": "El precio depende del alcance, así que no lo publico. Se acuerda por escrito antes de que empiece cualquier desarrollo."
+    },
+    "how": {
+      "title": "Cómo funciona",
+      "s1title": "Semana 1 — diagnóstico",
+      "s1body": "Reviso dónde viven tus datos hoy y qué se está haciendo a mano. Termina de una de dos maneras: con un alcance y un precio confirmados, o con el diagnóstico entregado por escrito y ahí queda. Esta semana se paga en ambos casos.",
+      "s2title": "Semanas 2 y 3 — construcción",
+      "s2body": "Se construye lo acordado, se entrega funcionando y te explico cómo mantenerlo. Sin dependencia permanente de mí.",
+      "note": "Puedes parar al final de la semana 1 sin explicaciones. El diagnóstico es tuyo de todas formas."
+    },
+    "build": {
+      "title": "Qué construyo",
+      "dashboards": {
+        "title": "Tableros y reportes",
+        "body": "Un lugar donde ver margen, flujo de caja o ventas sin volver a armar la hoja de cálculo cada vez, actualizado solo."
+      },
+      "pipelines": {
+        "title": "Integración de datos",
+        "body": "Conectar el software contable, el punto de venta y las hojas de cálculo para que dejen de contar historias distintas. Python, dbt y SQL sobre bases de datos en la nube."
+      },
+      "automation": {
+        "title": "Automatización de trabajo manual",
+        "body": "El informe que alguien arma cada lunes, la conciliación que toma media jornada: procesos que corren solos y avisan cuando algo no cuadra."
+      },
+      "ai": {
+        "title": "IA donde se puede verificar",
+        "body": "Extraer datos de facturas y documentos, clasificar movimientos, resumir. Solo donde la respuesta se puede comprobar contra la fuente."
+      }
+    },
+    "why": {
+      "title": "Por qué yo",
+      "experience": {
+        "title": "Cinco años construyendo sistemas de datos",
+        "body": "Ingeniero de datos con maestría en Estadística y Ciencia de Datos. Trabajé en Leal, startup colombiana serie C, y actualmente en una empresa global de tecnología de materiales, con volúmenes de datos de nivel corporativo."
+      },
+      "requirements": {
+        "title": "Traduzco necesidades, no recibo especificaciones",
+        "body": "Casi nadie llega con un requerimiento escrito. Llegan diciendo «no sé si este producto me está dejando plata». Convertir eso en un modelo de datos es la parte difícil, y es la que hago todos los días."
+      },
+      "rigor": {
+        "title": "Rigor antes que novedad",
+        "body": "Construyo sistemas de IA que citan sus fuentes y miden qué tan fundamentada está cada respuesta, de modo que sea evidente cuándo el modelo está especulando."
+      }
+    },
+    "trust": {
+      "title": "IA que puedes verificar",
+      "body1": "La objeción más común a usar IA con información financiera es que se inventa cosas. Es una objeción correcta, y conviene tomarla en serio.",
+      "body2": "Por eso los sistemas que construyo devuelven la fuente junto con la respuesta, y una medida de qué tan respaldada está. Cuando el modelo no tiene con qué sostener algo, se nota. Tratándose de números que terminan en una declaración o en una decisión de negocio, esa diferencia no es un detalle técnico."
+    },
+    "limits": {
+      "title": "Qué no hago",
+      "i1": "No desarrollo aplicaciones ni sitios web a medida.",
+      "i2": "No reemplazo el trabajo contable. Se apoya en él.",
+      "i3": "No propongo IA cuando una hoja de cálculo bien hecha resuelve el problema.",
+      "i4": "No tomo proyectos que exijan soporte inmediato a toda hora. Trabajo con alcance definido y tiempos acordados."
+    },
+    "cta": {
+      "title": "Cuéntame qué no puedes ver hoy",
+      "body": "Escríbeme con la pregunta que tus datos deberían responder y no responden. Si no es algo que yo deba resolver, te lo digo.",
+      "button": "Contáctanos"
+    }
   }
 }

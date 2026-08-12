@@ -8,7 +8,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
-from sitelib import PAGES, SITE, flatten
+from sitelib import PAGES, SITE, filename, flatten
 
 ROOT = Path(__file__).resolve().parent
 FAILURES = []
@@ -35,7 +35,7 @@ PLACEHOLDER = re.compile(r"\{\{\s*([A-Za-z0-9_.]+)\s*\}\}")
 BUILD_SUPPLIED = {"content", "head_extra", "rel", "page.title", "page.description",
                   "page.canonical", "page.altEs", "page.altEn",
                   "page.langEs", "page.langEn",
-                  "schema.areaServed", "schema.offerCatalog"}
+                  "schema.areaServed", "schema.offerCatalog", "file.data"}
 
 
 def check_template_placeholders():
@@ -73,7 +73,9 @@ VOID = {"meta", "link", "br", "img", "input", "hr", "path", "rect", "circle",
 
 
 def generated_pages():
-    return [ROOT / f"{p}.html" for p in PAGES] + [ROOT / "en" / f"{p}.html" for p in PAGES]
+    return [ROOT / f"{filename('es', p)}.html" for p in PAGES] + [
+        ROOT / "en" / f"{filename('en', p)}.html" for p in PAGES
+    ]
 
 
 class TagBalance(HTMLParser):
