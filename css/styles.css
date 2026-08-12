@@ -960,11 +960,10 @@ form:has(button:disabled) {
   border-bottom-color: var(--color-green);
 }
 
-/* Narrow measure for the reading-oriented sections of the data page (the
-   trust argument, the scope limits). Full container width is fine for cards
-   and lists but hurts sustained prose. */
-.prose-narrow {
-  max-width: 62ch;
+/* Terms below the engagement cards. Needs real separation from the grid
+   above it, or it reads as an orphaned caption hanging off the last card. */
+.offer-terms {
+  margin-top: 38px;
 }
 
 /* The walk-away guarantee. It carries more weight than the body copy around

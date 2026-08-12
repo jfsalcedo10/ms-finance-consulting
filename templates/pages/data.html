@@ -25,8 +25,10 @@
           </div>
         </div>
 
-        <p class="note-strong">{{ data.how.note }}</p>
-        <p>{{ data.offer.note }}</p>
+        <div class="offer-terms">
+          <p class="note-strong">{{ data.how.note }}</p>
+          <p>{{ data.offer.note }}</p>
+        </div>
       </div>
     </section>
 
@@ -95,25 +97,27 @@
          own section rather than a bullet. -->
     <section class="section">
       <div class="container">
-        <div class="prose-narrow reveal">
+        <div class="section-header align-left reveal">
           <h2>{{ data.trust.title }}</h2>
-          <p>{{ data.trust.body1 }}</p>
-          <p>{{ data.trust.body2 }}</p>
+        </div>
+        <div class="grid grid-2">
+          <p class="reveal">{{ data.trust.body1 }}</p>
+          <p class="reveal">{{ data.trust.body2 }}</p>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
-        <div class="prose-narrow">
+        <div class="section-header align-left reveal">
           <h2>{{ data.limits.title }}</h2>
-          <ul class="values-list">
-            <li><span class="dot"></span><div><span>{{ data.limits.i1 }}</span></div></li>
-            <li><span class="dot"></span><div><span>{{ data.limits.i2 }}</span></div></li>
-            <li><span class="dot"></span><div><span>{{ data.limits.i3 }}</span></div></li>
-            <li><span class="dot"></span><div><span>{{ data.limits.i4 }}</span></div></li>
-          </ul>
         </div>
+        <ul class="values-list grid grid-2 reveal">
+          <li><span class="dot"></span><div><span>{{ data.limits.i1 }}</span></div></li>
+          <li><span class="dot"></span><div><span>{{ data.limits.i2 }}</span></div></li>
+          <li><span class="dot"></span><div><span>{{ data.limits.i3 }}</span></div></li>
+          <li><span class="dot"></span><div><span>{{ data.limits.i4 }}</span></div></li>
+        </ul>
       </div>
     </section>
 
