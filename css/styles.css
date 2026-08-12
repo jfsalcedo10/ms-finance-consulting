@@ -960,6 +960,14 @@ form:has(button:disabled) {
   border-bottom-color: var(--color-green);
 }
 
+/* Centred measure for sustained prose — long-form argument reads badly at the
+   full 1120px container width, and badly again split into columns. Centred so
+   the whitespace falls evenly instead of pooling on one side. */
+.prose-measure {
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
 /* Terms below the engagement cards. Needs real separation from the grid
    above it, or it reads as an orphaned caption hanging off the last card. */
 .offer-terms {
@@ -1087,6 +1095,28 @@ form:has(button:disabled) {
 .journey-step p {
   color: var(--color-ink-muted);
   margin-bottom: 0;
+}
+
+/* On the dark teal gradient the default marker (teal border, dark hairline
+   connector) disappears into the background, and h3/p inherit ink colours
+   that fail against it. Green reads as an accent here rather than competing
+   with the background the way teal does. */
+.section-alt .journey-step::before {
+  border-color: var(--color-green);
+  background: var(--color-paper-card);
+  color: var(--color-teal-deep);
+}
+
+.section-alt .journey-step::after {
+  background: rgba(246, 239, 225, 0.45);
+}
+
+.section-alt .journey-step h3 {
+  color: var(--color-paper);
+}
+
+.section-alt .journey-step p {
+  color: rgba(246, 239, 225, 0.82);
 }
 
 /* Three-across, with the connector running horizontally through the markers. */
