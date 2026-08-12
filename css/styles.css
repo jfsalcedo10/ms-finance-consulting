@@ -1004,12 +1004,109 @@ form:has(button:disabled) {
   hyphens: auto;
 }
 
+/* Journey steps are a third of the container wide — too narrow to justify
+   without visible gaps, so they stay ragged-right at every size. */
+.justified .journey-step p {
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
 @media (max-width: 640px) {
   .justified p,
   .justified .values-list span {
     text-align: left;
     -webkit-hyphens: manual;
     hyphens: manual;
+  }
+}
+
+/* ---------- Engagement journey ----------
+   A horizontal three-step timeline: numbered markers joined by a rule that
+   runs through them. Stacks to a vertical timeline below 860px, where three
+   columns would leave the text too narrow to read. The connector is drawn per
+   step and suppressed on the last one, so the line ends at the final marker
+   rather than trailing off the edge. */
+.journey {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 30px;
+  counter-reset: journey;
+}
+
+.journey-step {
+  position: relative;
+  counter-increment: journey;
+  padding: 0 0 0 54px;
+}
+
+/* The numbered marker. Sits above the connector so the rule appears to pass
+   behind it rather than through the digit. */
+.journey-step::before {
+  content: counter(journey);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-paper-card);
+  border: 1.5px solid var(--color-teal);
+  color: var(--color-teal-deep);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Vertical connector, mobile layout. */
+.journey-step::after {
+  content: "";
+  position: absolute;
+  left: 17.5px;
+  top: 36px;
+  bottom: -30px;
+  width: 1px;
+  background: var(--color-line);
+}
+
+.journey-step:last-child::after {
+  display: none;
+}
+
+.journey-step h3 {
+  margin-bottom: 0.4em;
+  font-size: 1.1rem;
+}
+
+.journey-step p {
+  color: var(--color-ink-muted);
+  margin-bottom: 0;
+}
+
+/* Three-across, with the connector running horizontally through the markers. */
+@media (min-width: 861px) {
+  .journey {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .journey-step {
+    padding: 52px 28px 0 0;
+  }
+
+  .journey-step::after {
+    left: 36px;
+    top: 17.5px;
+    bottom: auto;
+    right: 8px;
+    width: auto;
+    height: 1px;
   }
 }
 

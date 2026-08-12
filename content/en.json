@@ -315,7 +315,9 @@
       "s1body": "I look at where your data actually lives today and what is being done by hand. It ends one of two ways: with a confirmed scope and price, or with the assessment handed to you in writing and nothing further. This week is paid either way.",
       "s2title": "Week 2 onwards — the build",
       "s2body": "What we agreed gets built, to a timeline set at the end of week 1 against the real scope — not a number invented before looking at your data. It is delivered working and explained, so you can maintain it without depending on me.",
-      "note": "You can stop at the end of week 1, no explanation needed. The assessment is yours regardless."
+      "note": "You can stop at the end of week 1, no explanation needed. The assessment is yours regardless.",
+      "s0title": "First conversation",
+      "s0body": "Free, no commitment. You tell me what you can't see in your data today, and I tell you honestly whether it is something I should be solving."
     },
     "build": {
       "title": "What I build",

@@ -315,7 +315,9 @@
       "s1body": "Reviso dónde viven tus datos hoy y qué se está haciendo a mano. Termina de una de dos maneras: con un alcance y un precio confirmados, o con el diagnóstico entregado por escrito y ahí queda. Esta semana se paga en ambos casos.",
       "s2title": "Semana 2 en adelante — construcción",
       "s2body": "Se construye lo acordado, con un plazo definido al final de la semana 1 según el alcance real — no un número inventado antes de mirar tus datos. Se entrega funcionando y te explico cómo mantenerlo, sin dependencia permanente de mí.",
-      "note": "Puedes parar al final de la semana 1 sin explicaciones. El diagnóstico es tuyo de todas formas."
+      "note": "Puedes parar al final de la semana 1 sin explicaciones. El diagnóstico es tuyo de todas formas.",
+      "s0title": "Conversación inicial",
+      "s0body": "Sin costo y sin compromiso. Me cuentas qué no puedes ver hoy con tus datos y te digo con franqueza si es algo que yo deba resolver."
     },
     "build": {
       "title": "Qué construyo",

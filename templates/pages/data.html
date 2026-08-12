@@ -14,16 +14,20 @@
         <h2>{{ data.offer.title }}</h2>
         <p>{{ data.offer.lead }}</p>
 
-        <div class="grid grid-2">
-          <div class="card reveal">
+        <ol class="journey reveal">
+          <li class="journey-step">
+            <h3>{{ data.how.s0title }}</h3>
+            <p>{{ data.how.s0body }}</p>
+          </li>
+          <li class="journey-step">
             <h3>{{ data.how.s1title }}</h3>
             <p>{{ data.how.s1body }}</p>
-          </div>
-          <div class="card reveal">
+          </li>
+          <li class="journey-step">
             <h3>{{ data.how.s2title }}</h3>
             <p>{{ data.how.s2body }}</p>
-          </div>
-        </div>
+          </li>
+        </ol>
 
         <div class="offer-terms">
           <p class="note-strong">{{ data.how.note }}</p>
