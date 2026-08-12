@@ -753,8 +753,14 @@ p {
   margin-bottom: 0.9em;
 }
 
-.team-card p:last-child {
+/* Target the bio by what it IS, not by position. This was p:last-child, which
+   silently stopped matching the moment a link was added after the bio in one
+   card — leaving the two bios in different colours. */
+.team-card p:not(.role) {
   color: var(--color-ink-muted);
+}
+
+.team-card > :last-child {
   margin-bottom: 0;
 }
 
@@ -1034,7 +1040,6 @@ form:has(button:disabled) {
    justifying only stretches the opening line. The CTA banner stays centred. */
 .justified .journey-step p,
 .justified .card p,
-.justified .team-card p,
 .justified .subtitle,
 .justified .form-note {
   text-align: left;
@@ -1042,7 +1047,8 @@ form:has(button:disabled) {
   hyphens: manual;
 }
 
-.justified .cta-banner p {
+.justified .cta-banner p,
+.justified .team-card p {
   text-align: center;
   -webkit-hyphens: manual;
   hyphens: manual;
