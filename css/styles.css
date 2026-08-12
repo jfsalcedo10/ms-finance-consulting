@@ -742,6 +742,14 @@ p {
   font-weight: 600;
 }
 
+/* Explicit colour, not inherited: cards carry their own light background, so a
+   heading inside one must not pick up a dark-section override. Without this it
+   inherits --color-paper and lands at 1.12:1 on the cream card. */
+.card h3,
+.team-card h3 {
+  color: var(--color-teal-deep);
+}
+
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 0.4em;
