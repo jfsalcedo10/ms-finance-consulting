@@ -448,7 +448,18 @@ p {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 100px 0 76px;
+  padding: 48px 0;
+  /* Fill the viewport so the first section's heading sits just below the fold:
+     entering the site shows the hero and nothing else. min-height rather than
+     height, so the content still grows on short screens instead of clipping.
+     svh (not vh) because mobile browsers count the collapsing address bar in
+     vh, which makes a 100vh hero taller than the screen it is meant to fit.
+     The 66px is the sticky header, which sits in flow above this. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 66px);
+  min-height: calc(100svh - 66px);
 }
 
 .hero::before {

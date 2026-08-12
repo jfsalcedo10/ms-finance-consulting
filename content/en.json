@@ -10,9 +10,9 @@
     "tail": "Finance Consulting"
   },
   "hero": {
-    "eyebrow": "Accounting & Financial Consulting",
+    "eyebrow": "Accounting &amp; Financial Consulting",
     "title": "Clear finances. Confident decisions.",
-    "subtitle": "M&S Finance Consulting has supported businesses and individuals in Cartagena, Colombia for over 30 years with accounting, tax, and financial consulting — and now with dashboards, data integration and reporting automation as well.",
+    "subtitle": "M&amp;S Finance Consulting has supported businesses and individuals in Cartagena, Colombia for over 30 years with accounting, tax, and financial consulting — and now with dashboards, data integration and reporting automation as well.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "Our services"
   },
@@ -24,7 +24,7 @@
         "body": "Decades of hands-on accounting and financial consulting experience serving businesses and individuals across Cartagena."
       },
       "accounting": {
-        "title": "Accounting & Tax Expertise",
+        "title": "Accounting &amp; Tax Expertise",
         "body": "Full-service bookkeeping, tax filing, and financial statement preparation, compliant with Colombian regulations."
       },
       "data": {
@@ -35,7 +35,7 @@
     },
     "about": {
       "title": "A one-on-one relationship you can trust",
-      "body": "Founded and led personally, M&S Finance Consulting means you always work directly with an experienced professional — not a call center. Get to know our story.",
+      "body": "Founded and led personally, M&amp;S Finance Consulting means you always work directly with an experienced professional — not a call center. Get to know our story.",
       "cta": "Learn more about us"
     },
     "cta": {
@@ -47,8 +47,8 @@
   "about": {
     "eyebrow": "About Us",
     "title": "Three decades of experience, one dedicated professional",
-    "intro": "M&S Finance Consulting was built on a simple principle: give every client the same care, precision, and attention a business owner would give their own finances.",
-    "body1": "For more than 30 years, M&S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
+    "intro": "M&amp;S Finance Consulting was built on a simple principle: give every client the same care, precision, and attention a business owner would give their own finances.",
+    "body1": "For more than 30 years, M&amp;S Finance Consulting has provided accounting, tax, and financial consulting services to businesses and individuals in Cartagena, Colombia. As a one-person practice, every engagement is handled personally — no hand-offs, no juniors learning on your account, just direct, experienced guidance from start to finish.",
     "body2": "In recent years, the practice has expanded to include data analysis services, bringing modern tools and techniques to help clients understand their numbers more deeply and make better decisions — a new chapter built on the same foundation of trust.",
     "values": {
       "title": "Our values",
@@ -75,14 +75,14 @@
     "founder": {
       "eyebrow": "Founder",
       "name": "Emilio Salcedo",
-      "role": "Founder & Lead Consultant, Accountant",
+      "role": "Founder &amp; Lead Consultant, Accountant",
       "bio": "With over 30 years of experience in accounting and financial consulting, our founder has helped countless businesses and individuals in Cartagena navigate their finances with clarity and confidence.",
       "link": "See accounting services"
     },
     "analyst": {
-      "eyebrow": "Data & Analytics",
+      "eyebrow": "Data &amp; Analytics",
       "name": "Juan Felipe Salcedo",
-      "role": "Data Engineer & Technology Consultant",
+      "role": "Data Engineer &amp; Technology Consultant",
       "bio": "Juan Felipe is a data engineer with an MSc in Statistics and Data Science and five years building data systems in enterprise environments. He builds dashboards, integrations and automation — and AI systems that cite their sources, so what they answer can be checked.",
       "link": "See Data &amp; AI"
     }
@@ -93,11 +93,11 @@
     "intro": "Comprehensive accounting, tax and financial consulting services, backed by three decades of experience in Cartagena.",
     "items": {
       "accounting": {
-        "title": "Accounting & Bookkeeping",
+        "title": "Accounting &amp; Bookkeeping",
         "body": "Accurate, up-to-date bookkeeping and financial statement preparation, so you always know exactly where your business stands."
       },
       "tax": {
-        "title": "Tax Planning & Filing",
+        "title": "Tax Planning &amp; Filing",
         "body": "Timely, compliant tax preparation and planning under Colombian regulations, minimizing risk and helping you plan ahead."
       },
       "consulting": {
@@ -141,7 +141,7 @@
       "subject": "Subject",
       "message": "Message",
       "submit": "Send message",
-      "consent": "I authorize M&S Finance Consulting S.A.S. to process the personal data I provide here, for the purposes and under the terms described in its",
+      "consent": "I authorize M&amp;S Finance Consulting S.A.S. to process the personal data I provide here, for the purposes and under the terms described in its",
       "consentLink": "Personal Data Processing Policy",
       "consentTail": ", including its transmission through servers located abroad.",
       "note": "Prefer not to use the form? Reach us directly using the details in the footer below.",
@@ -153,13 +153,13 @@
   "legal": {
     "eyebrow": "Legal",
     "title": "Personal Data Processing Policy",
-    "subtitle": "How M&S Finance Consulting collects, uses, protects, and deletes your personal data, in compliance with Colombian Law 1581 of 2012 and Decree 1074 of 2015.",
+    "subtitle": "How M&amp;S Finance Consulting collects, uses, protects, and deletes your personal data, in compliance with Colombian Law 1581 of 2012 and Decree 1074 of 2015.",
     "updated": "In force since: 11 August 2026",
     "langNote": "Issued in Spanish. The English translation is informational; in case of discrepancy, the Spanish text governs.",
     "s1": {
       "title": "1. Who is responsible for your data",
       "body": "The party responsible for processing your personal data (Responsable del Tratamiento) is:",
-      "name": "M&S Finance Consulting S.A.S. — NIT: 901.242.087-7",
+      "name": "M&amp;S Finance Consulting S.A.S. — NIT: 901.242.087-7",
       "address": "Address: Cartagena, Bolívar, Colombia",
       "email": "Email: info@mscontadores.com.co",
       "phone": "Phone: +57 300 787 1159",
@@ -227,7 +227,7 @@
     "tagline": "Accounting, tax, and financial consulting in Cartagena, Colombia.",
     "rights": "All rights reserved.",
     "contactTitle": "Contact",
-    "hoursTitle": "Hours & Location",
+    "hoursTitle": "Hours &amp; Location",
     "privacy": "Privacy Policy"
   },
   "notFound": {
@@ -281,7 +281,7 @@
       "Dashboards and business intelligence"
     ],
     "areaServedRegion": "Caribbean Region, Colombia",
-    "analystJobTitle": "Data Engineer & Technology Consultant",
+    "analystJobTitle": "Data Engineer &amp; Technology Consultant",
     "offerCatalogLabel": "Services",
     "services": [
       "Bookkeeping and accounting",

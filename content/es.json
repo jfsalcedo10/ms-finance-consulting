@@ -12,7 +12,7 @@
   "hero": {
     "eyebrow": "Consultoría Contable y Financiera",
     "title": "Finanzas claras. Decisiones seguras.",
-    "subtitle": "M&S Finance Consulting ha acompañado a empresas y personas en Cartagena, Colombia durante más de 30 años en contabilidad, impuestos y consultoría financiera — y ahora también en tableros, integración de datos y automatización de informes.",
+    "subtitle": "M&amp;S Finance Consulting ha acompañado a empresas y personas en Cartagena, Colombia durante más de 30 años en contabilidad, impuestos y consultoría financiera — y ahora también en tableros, integración de datos y automatización de informes.",
     "ctaPrimary": "Contáctanos",
     "ctaSecondary": "Nuestros servicios"
   },
@@ -35,7 +35,7 @@
     },
     "about": {
       "title": "Una relación personal en la que puedes confiar",
-      "body": "Fundada y dirigida personalmente, en M&S Finance Consulting siempre trabajas directamente con un profesional con experiencia — no con un centro de llamadas. Conoce nuestra historia.",
+      "body": "Fundada y dirigida personalmente, en M&amp;S Finance Consulting siempre trabajas directamente con un profesional con experiencia — no con un centro de llamadas. Conoce nuestra historia.",
       "cta": "Conócenos"
     },
     "cta": {
@@ -47,8 +47,8 @@
   "about": {
     "eyebrow": "Sobre Nosotros",
     "title": "Tres décadas de experiencia, un profesional dedicado",
-    "intro": "M&S Finance Consulting se construyó sobre un principio simple: brindar a cada cliente el mismo cuidado, precisión y atención que un empresario le daría a sus propias finanzas.",
-    "body1": "Durante más de 30 años, M&S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
+    "intro": "M&amp;S Finance Consulting se construyó sobre un principio simple: brindar a cada cliente el mismo cuidado, precisión y atención que un empresario le daría a sus propias finanzas.",
+    "body1": "Durante más de 30 años, M&amp;S Finance Consulting ha brindado servicios de contabilidad, impuestos y consultoría financiera a empresas y personas en Cartagena, Colombia. Al ser una práctica de una sola persona, cada caso se maneja personalmente — sin traspasos, sin junior aprendiendo con tu cuenta, solo asesoría directa y experimentada de principio a fin.",
     "body2": "En los últimos años, la práctica se ha ampliado para incluir servicios de análisis de datos, incorporando herramientas y técnicas modernas para ayudar a los clientes a entender mejor sus números y tomar mejores decisiones — un nuevo capítulo construido sobre la misma base de confianza.",
     "values": {
       "title": "Nuestros valores",
@@ -141,7 +141,7 @@
       "subject": "Asunto",
       "message": "Mensaje",
       "submit": "Enviar mensaje",
-      "consent": "Autorizo a M&S Finance Consulting S.A.S. a tratar los datos personales que suministro aquí, para las finalidades y en los términos descritos en su",
+      "consent": "Autorizo a M&amp;S Finance Consulting S.A.S. a tratar los datos personales que suministro aquí, para las finalidades y en los términos descritos en su",
       "consentLink": "Política de Tratamiento de Datos Personales",
       "consentTail": ", incluida su transmisión a través de servidores ubicados en el exterior.",
       "note": "¿Prefieres no usar el formulario? Contáctanos directamente usando los datos en el pie de página.",
@@ -153,13 +153,13 @@
   "legal": {
     "eyebrow": "Legal",
     "title": "Política de Tratamiento de Datos Personales",
-    "subtitle": "Cómo M&S Finance Consulting recolecta, usa, protege y elimina tus datos personales, en cumplimiento de la Ley 1581 de 2012 y el Decreto 1074 de 2015.",
+    "subtitle": "Cómo M&amp;S Finance Consulting recolecta, usa, protege y elimina tus datos personales, en cumplimiento de la Ley 1581 de 2012 y el Decreto 1074 de 2015.",
     "updated": "Vigente desde: 11 de agosto de 2026",
     "langNote": "Expedida en español. La traducción al inglés es informativa; en caso de discrepancia, prevalece el texto en español.",
     "s1": {
       "title": "1. Responsable del Tratamiento",
       "body": "El Responsable del Tratamiento de tus datos personales es:",
-      "name": "M&S Finance Consulting S.A.S. — NIT: 901.242.087-7",
+      "name": "M&amp;S Finance Consulting S.A.S. — NIT: 901.242.087-7",
       "address": "Dirección: Cartagena, Bolívar, Colombia",
       "email": "Correo electrónico: info@mscontadores.com.co",
       "phone": "Teléfono: +57 300 787 1159",
