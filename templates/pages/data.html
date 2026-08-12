@@ -7,34 +7,6 @@
       </div>
     </section>
 
-    <!-- The offer comes before the capability list on purpose: a visitor who
-         can't tell what they'd be buying leaves before reaching the detail. -->
-    <section class="section section-alt">
-      <div class="container">
-        <h2>{{ data.offer.title }}</h2>
-        <p>{{ data.offer.lead }}</p>
-
-        <ol class="journey reveal">
-          <li class="journey-step">
-            <h3>{{ data.how.s0title }}</h3>
-            <p>{{ data.how.s0body }}</p>
-          </li>
-          <li class="journey-step">
-            <h3>{{ data.how.s1title }}</h3>
-            <p>{{ data.how.s1body }}</p>
-          </li>
-          <li class="journey-step">
-            <h3>{{ data.how.s2title }}</h3>
-            <p>{{ data.how.s2body }}</p>
-          </li>
-        </ol>
-
-        <div class="offer-terms">
-          <p class="note-strong">{{ data.how.note }}</p>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
         <div class="section-header align-left">
@@ -65,7 +37,38 @@
       </div>
     </section>
 
+    <!-- Process, so it follows the capability rather than leading. A visitor
+         needs to know what gets built before how the engagement runs. -->
     <section class="section section-alt">
+      <div class="container">
+        <h2>{{ data.offer.title }}</h2>
+        <p>{{ data.offer.lead }}</p>
+
+        <ol class="journey reveal">
+          <li class="journey-step">
+            <h3>{{ data.how.s0title }}</h3>
+            <p class="journey-cost">{{ data.how.s0cost }}</p>
+            <p>{{ data.how.s0body }}</p>
+          </li>
+          <li class="journey-step">
+            <h3>{{ data.how.s1title }}</h3>
+            <p class="journey-cost">{{ data.how.s1cost }}</p>
+            <p>{{ data.how.s1body }}</p>
+          </li>
+          <li class="journey-step">
+            <h3>{{ data.how.s2title }}</h3>
+            <p class="journey-cost">{{ data.how.s2cost }}</p>
+            <p>{{ data.how.s2body }}</p>
+          </li>
+        </ol>
+
+        <div class="offer-terms">
+          <p class="note-strong">{{ data.how.note }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section-header align-left">
           <h2>{{ data.why.title }}</h2>
@@ -98,7 +101,7 @@
 
     <!-- The differentiator. A reader won't derive it unaided, so it gets its
          own section rather than a bullet. -->
-    <section class="section">
+    <section class="section section-alt">
       <div class="container">
         <div class="prose-measure reveal">
           <h2>{{ data.trust.title }}</h2>
@@ -108,7 +111,7 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section">
       <div class="container">
         <div class="section-header align-left reveal">
           <h2>{{ data.limits.title }}</h2>

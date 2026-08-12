@@ -305,23 +305,26 @@
   "data": {
     "eyebrow": "Data & AI",
     "title": "From scattered data to clear decisions",
-    "subtitle": "The information already exists. It is spread across accounting software, spreadsheets and email, and answering a simple question takes days. I build the systems that put it within reach.",
+    "subtitle": "The information already exists. It is spread across accounting software, spreadsheets and email, and answering a simple question takes days. We build the systems that put it within reach.",
     "offer": {
-      "title": "What you can hire",
+      "title": "How we work together",
       "lead": "A fixed-scope build: a working system, delivered and explained. Not open-ended advice, and not a report full of recommendations — something that is left running."
     },
     "how": {
       "title": "How it works",
       "s1title": "Week 1 — assessment",
-      "s1body": "I look at where your data actually lives today and what is being done by hand. It ends one of two ways: with a confirmed scope and price, or with the assessment handed to you in writing and nothing further. This week is paid either way.",
+      "s1body": "We look at where your data actually lives today and what is being done by hand. It ends one of two ways: with a confirmed scope and price, or with the assessment handed to you in writing and nothing further.",
       "s2title": "Week 2 onwards — the build",
-      "s2body": "What we agreed gets built, to a timeline set at the end of week 1 against the real scope — not a number invented before looking at your data. It is delivered working and explained, so you can maintain it without depending on me.",
+      "s2body": "What we agreed gets built, to a timeline set at the end of week 1 against the real scope — not a number invented before looking at your data. It is delivered working and explained, so you can maintain it without depending on us.",
       "note": "You can stop at the end of week 1, no explanation needed. The assessment is yours regardless.",
       "s0title": "First conversation",
-      "s0body": "Free, no commitment. You tell me what you can't see in your data today, and I tell you honestly whether it is something I should be solving."
+      "s0body": "You tell us what you can't see in your data today, and we tell you honestly whether it is something we should be solving.",
+      "s0cost": "No cost",
+      "s1cost": "Charged separately, whether or not you continue",
+      "s2cost": "Fixed price, agreed before we start"
     },
     "build": {
-      "title": "What I build",
+      "title": "What we build",
       "dashboards": {
         "title": "Dashboards and reporting",
         "body": "One place to see margin, cash flow or sales without rebuilding the spreadsheet each time, kept up to date on its own."
@@ -340,35 +343,35 @@
       }
     },
     "why": {
-      "title": "Why me",
+      "title": "Why us",
       "experience": {
         "title": "Five years building data systems",
-        "body": "Data engineer with an MSc in Statistics and Data Science. I have worked across very different industries — customer loyalty and marketing at Leal, in Colombia, and today industrial manufacturing at a global company — and that range teaches something concrete: every business measures different things. The data model comes from the business, not from a template."
+        "body": "Juan Felipe Salcedo, data engineer with an MSc in Statistics and Data Science. He has worked across very different industries — customer loyalty and marketing at Leal, in Colombia, and today industrial manufacturing at a global company — and that range teaches something concrete: every business measures different things. The data model comes from the business, not from a template."
       },
       "requirements": {
-        "title": "I translate needs, I don't receive specifications",
-        "body": "Almost nobody arrives with a written requirement. They arrive saying “I don't know whether this product is actually making me money”. Turning that into a data model is the hard part, and it is what I do every day."
+        "title": "We translate needs, we don't receive specifications",
+        "body": "Almost nobody arrives with a written requirement. They arrive saying “I don't know whether this product is actually making me money”. Turning that into a data model is the hard part, and it is what we do every day."
       },
       "rigor": {
         "title": "Rigour before novelty",
-        "body": "I build AI systems that cite their sources and score how well grounded each answer is, so it is obvious when the model is speculating."
+        "body": "We build AI systems that cite their sources and score how well grounded each answer is, so it is obvious when the model is speculating."
       }
     },
     "trust": {
       "title": "AI you can check",
       "body1": "The most common objection to using AI with financial information is that it makes things up. It is a fair objection and worth taking seriously.",
-      "body2": "So the systems I build return the source alongside the answer, plus a measure of how well supported it is. When the model has nothing to stand on, that shows. For numbers that end up in a tax filing or a business decision, that difference is not a technical detail."
+      "body2": "So the systems we build return the source alongside the answer, plus a measure of how well supported it is. When the model has nothing to stand on, that shows. For numbers that end up in a tax filing or a business decision, that difference is not a technical detail."
     },
     "limits": {
-      "title": "What I don't do",
-      "i1": "I don't develop custom applications or websites.",
-      "i2": "I don't replace the accounting work. This builds on it.",
-      "i3": "I don't propose AI when a well-built spreadsheet solves the problem.",
-      "i4": "I don't take on work that needs immediate support around the clock. I work to a defined scope and agreed timelines."
+      "title": "What we don't do",
+      "i1": "We don't develop custom applications or websites.",
+      "i2": "We don't replace the accounting work. This builds on it.",
+      "i3": "We don't propose AI when a well-built spreadsheet solves the problem.",
+      "i4": "We don't take on work that needs immediate support around the clock. We work to a defined scope and agreed timelines."
     },
     "cta": {
-      "title": "Tell me what you can't see today",
-      "body": "Write to me with the question your data should answer and doesn't. If it isn't something I should be solving, I'll say so.",
+      "title": "Tell us what you can't see today",
+      "body": "Write to us with the question your data should answer and doesn't. If it isn't something we should be solving, we'll say so.",
       "button": "Contact us"
     }
   }

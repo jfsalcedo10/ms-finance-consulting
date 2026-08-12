@@ -1134,6 +1134,18 @@ form:has(button:disabled) {
   margin-bottom: 0;
 }
 
+/* What each step costs, stated on the step itself. The distinction between the
+   paid assessment and the paid build is the thing a buyer most needs to be
+   sure of, and burying it in prose meant it could be missed. */
+.journey-cost {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.7em !important;
+}
+
 /* On the dark teal gradient the default marker (teal border, dark hairline
    connector) disappears into the background, and h3/p inherit ink colours
    that fail against it. Green reads as an accent here rather than competing
@@ -1150,6 +1162,10 @@ form:has(button:disabled) {
 
 .section-alt .journey-step p {
   color: rgba(246, 239, 225, 0.82);
+}
+
+.section-alt .journey-cost {
+  color: var(--color-green);
 }
 
 /* Three-across, with the connector running horizontally through the markers. */

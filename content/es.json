@@ -305,23 +305,26 @@
   "data": {
     "eyebrow": "Datos e IA",
     "title": "De datos dispersos a decisiones claras",
-    "subtitle": "La información ya existe. Está repartida entre el software contable, hojas de cálculo y correos, y responder una pregunta simple toma días. Construyo los sistemas que la ponen a tu alcance.",
+    "subtitle": "La información ya existe. Está repartida entre el software contable, hojas de cálculo y correos, y responder una pregunta simple toma días. Construimos los sistemas que la ponen a tu alcance.",
     "offer": {
-      "title": "Qué puedes contratar",
+      "title": "Cómo trabajamos juntos",
       "lead": "Un desarrollo de alcance fijo: un sistema que funciona, entregado y explicado. No es una asesoría abierta ni un informe con recomendaciones — es algo que queda funcionando."
     },
     "how": {
       "title": "Cómo funciona",
       "s1title": "Semana 1 — diagnóstico",
-      "s1body": "Reviso dónde viven tus datos hoy y qué se está haciendo a mano. Termina de una de dos maneras: con un alcance y un precio confirmados, o con el diagnóstico entregado por escrito y ahí queda. Esta semana se paga en ambos casos.",
+      "s1body": "Revisamos dónde viven tus datos hoy y qué se está haciendo a mano. Termina de una de dos maneras: con un alcance y un precio confirmados, o con el diagnóstico entregado por escrito y ahí queda.",
       "s2title": "Semana 2 en adelante — construcción",
-      "s2body": "Se construye lo acordado, con un plazo definido al final de la semana 1 según el alcance real — no un número inventado antes de mirar tus datos. Se entrega funcionando y te explico cómo mantenerlo, sin dependencia permanente de mí.",
+      "s2body": "Se construye lo acordado, con un plazo definido al final de la semana 1 según el alcance real — no un número inventado antes de mirar tus datos. Se entrega funcionando y te explicamos cómo mantenerlo, sin dependencia permanente de nosotros.",
       "note": "Puedes parar al final de la semana 1 sin explicaciones. El diagnóstico es tuyo de todas formas.",
       "s0title": "Conversación inicial",
-      "s0body": "Sin costo y sin compromiso. Me cuentas qué no puedes ver hoy con tus datos y te digo con franqueza si es algo que yo deba resolver."
+      "s0body": "Nos cuentas qué no puedes ver hoy con tus datos y te decimos con franqueza si es algo que debamos resolver nosotros.",
+      "s0cost": "Sin costo",
+      "s1cost": "Se cobra por separado, se continúe o no",
+      "s2cost": "Precio fijo, acordado antes de empezar"
     },
     "build": {
-      "title": "Qué construyo",
+      "title": "Qué construimos",
       "dashboards": {
         "title": "Tableros y reportes",
         "body": "Un lugar donde ver margen, flujo de caja o ventas sin volver a armar la hoja de cálculo cada vez, actualizado solo."
@@ -340,35 +343,35 @@
       }
     },
     "why": {
-      "title": "Por qué yo",
+      "title": "Por qué nosotros",
       "experience": {
         "title": "Cinco años construyendo sistemas de datos",
-        "body": "Ingeniero de datos con maestría en Estadística y Ciencia de Datos. He trabajado en industrias muy distintas — fidelización de clientes y marketing en Leal, en Colombia, y hoy manufactura industrial en una empresa global — y esa variedad enseña algo concreto: cada negocio mide cosas diferentes. El modelo de datos sale del negocio, no de una plantilla."
+        "body": "Juan Felipe Salcedo, ingeniero de datos con maestría en Estadística y Ciencia de Datos. Ha trabajado en industrias muy distintas — fidelización de clientes y marketing en Leal, en Colombia, y hoy manufactura industrial en una empresa global — y esa variedad enseña algo concreto: cada negocio mide cosas diferentes. El modelo de datos sale del negocio, no de una plantilla."
       },
       "requirements": {
-        "title": "Traduzco necesidades, no recibo especificaciones",
-        "body": "Casi nadie llega con un requerimiento escrito. Llegan diciendo «no sé si este producto me está dejando plata». Convertir eso en un modelo de datos es la parte difícil, y es la que hago todos los días."
+        "title": "Traducimos necesidades, no recibimos especificaciones",
+        "body": "Casi nadie llega con un requerimiento escrito. Llegan diciendo «no sé si este producto me está dejando plata». Convertir eso en un modelo de datos es la parte difícil, y es la que hacemos todos los días."
       },
       "rigor": {
         "title": "Rigor antes que novedad",
-        "body": "Construyo sistemas de IA que citan sus fuentes y miden qué tan fundamentada está cada respuesta, de modo que sea evidente cuándo el modelo está especulando."
+        "body": "Construimos sistemas de IA que citan sus fuentes y miden qué tan fundamentada está cada respuesta, de modo que sea evidente cuándo el modelo está especulando."
       }
     },
     "trust": {
       "title": "IA que puedes verificar",
       "body1": "La objeción más común a usar IA con información financiera es que se inventa cosas. Es una objeción correcta, y conviene tomarla en serio.",
-      "body2": "Por eso los sistemas que construyo devuelven la fuente junto con la respuesta, y una medida de qué tan respaldada está. Cuando el modelo no tiene con qué sostener algo, se nota. Tratándose de números que terminan en una declaración o en una decisión de negocio, esa diferencia no es un detalle técnico."
+      "body2": "Por eso los sistemas que construimos devuelven la fuente junto con la respuesta, y una medida de qué tan respaldada está. Cuando el modelo no tiene con qué sostener algo, se nota. Tratándose de números que terminan en una declaración o en una decisión de negocio, esa diferencia no es un detalle técnico."
     },
     "limits": {
-      "title": "Qué no hago",
-      "i1": "No desarrollo aplicaciones ni sitios web a medida.",
-      "i2": "No reemplazo el trabajo contable. Se apoya en él.",
-      "i3": "No propongo IA cuando una hoja de cálculo bien hecha resuelve el problema.",
-      "i4": "No tomo proyectos que exijan soporte inmediato a toda hora. Trabajo con alcance definido y tiempos acordados."
+      "title": "Qué no hacemos",
+      "i1": "No desarrollamos aplicaciones ni sitios web a medida.",
+      "i2": "No reemplazamos el trabajo contable. Se apoya en él.",
+      "i3": "No proponemos IA cuando una hoja de cálculo bien hecha resuelve el problema.",
+      "i4": "No tomamos proyectos que exijan soporte inmediato a toda hora. Trabajamos con alcance definido y tiempos acordados."
     },
     "cta": {
-      "title": "Cuéntame qué no puedes ver hoy",
-      "body": "Escríbeme con la pregunta que tus datos deberían responder y no responden. Si no es algo que yo deba resolver, te lo digo.",
+      "title": "Cuéntanos qué no puedes ver hoy",
+      "body": "Escríbenos con la pregunta que tus datos deberían responder y no responden. Si no es algo que debamos resolver nosotros, te lo decimos.",
       "button": "Contáctanos"
     }
   }
