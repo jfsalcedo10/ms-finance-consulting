@@ -12,7 +12,7 @@
   "hero": {
     "eyebrow": "Accounting & Financial Consulting",
     "title": "Clear finances. Confident decisions.",
-    "subtitle": "M&S Finance Consulting has supported businesses and individuals in Cartagena, Colombia for over 30 years with accounting, tax, and financial consulting — now enhanced with modern data analysis.",
+    "subtitle": "M&S Finance Consulting has supported businesses and individuals in Cartagena, Colombia for over 30 years with accounting, tax, and financial consulting — and now with dashboards, data integration and reporting automation as well.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "Our services"
   },
@@ -28,8 +28,9 @@
         "body": "Full-service bookkeeping, tax filing, and financial statement preparation, compliant with Colombian regulations."
       },
       "data": {
-        "title": "Modern Data Analysis and AI",
-        "body": "A new generation of insight — AI-assisted analysis, automation, and dashboards that turn your financial data into clearer, faster decisions."
+        "title": "Dashboards and automation",
+        "body": "Dashboards that keep themselves up to date, integration between your accounting software and your spreadsheets, and automation of the manual work that costs hours every week.",
+        "link": "See what we build"
       }
     },
     "about": {
@@ -65,7 +66,7 @@
       },
       "learning": {
         "title": "Continuous learning",
-        "body": "Combining decades of experience with modern tools like data analysis to keep delivering value."
+        "body": "Decades of accounting experience alongside current data engineering, so the practice stays useful as the tools change."
       }
     },
     "team": {
@@ -81,13 +82,14 @@
       "eyebrow": "Data & Analytics",
       "name": "Juan Felipe Salcedo",
       "role": "Data Engineer & Technology Consultant",
-      "bio": "Juan Felipe brings modern data analysis, AI, and automation skills to the practice, helping turn financial and business data into clear dashboards and insights that support better decisions."
+      "bio": "Juan Felipe is a data engineer with an MSc in Statistics and Data Science and five years building data systems in enterprise environments. He builds dashboards, integrations and automation — and AI systems that cite their sources, so what they answer can be checked.",
+      "link": "See Data & AI"
     }
   },
   "services": {
     "eyebrow": "What We Offer",
-    "title": "Accounting, tax, and data analysis services",
-    "intro": "Comprehensive accounting and financial services, backed by three decades of experience — plus modern data analysis to give you a sharper view of your numbers.",
+    "title": "Accounting and tax services",
+    "intro": "Comprehensive accounting, tax and financial consulting services, backed by three decades of experience in Cartagena.",
     "items": {
       "accounting": {
         "title": "Accounting & Bookkeeping",
@@ -102,8 +104,9 @@
         "body": "Personalized guidance on budgeting, cash flow, and financial strategy for businesses and individuals alike."
       },
       "data": {
-        "title": "Data Analysis & AI",
-        "body": "Modern data analysis, AI-assisted reporting, and workflow automation — plus custom dashboards and BI tools — that turn your financial and business data into clear, actionable insights. A new capability built on decades of financial expertise."
+        "title": "Data & AI",
+        "body": "A separate service line: dashboards, data integration and reporting automation, with a fixed scope and price.",
+        "link": "Explore Data & AI"
       }
     },
     "cta": {
@@ -247,8 +250,8 @@
       "description": "A public accountant with 30+ years in Cartagena, alongside an MSc in Statistics and Data Science. Established financial expertise and modern analytical capability in one practice."
     },
     "services": {
-      "title": "Accounting, Tax and Data Services in Cartagena | M&amp;S",
-      "description": "Bookkeeping, tax planning, financial consulting, and data analysis with AI, automation and custom dashboards, in Cartagena, Colombia."
+      "title": "Accounting and Tax Services in Cartagena | M&amp;S",
+      "description": "Bookkeeping, tax planning, income tax filing and financial consulting for businesses and individuals in Cartagena, Colombia. Over 30 years of experience."
     },
     "contact": {
       "title": "Contact | Accountant in Cartagena &mdash; M&amp;S Finance Consulting",

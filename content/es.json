@@ -12,7 +12,7 @@
   "hero": {
     "eyebrow": "Consultoría Contable y Financiera",
     "title": "Finanzas claras. Decisiones seguras.",
-    "subtitle": "M&S Finance Consulting ha acompañado a empresas y personas en Cartagena, Colombia durante más de 30 años en contabilidad, impuestos y consultoría financiera — ahora potenciado con análisis de datos moderno.",
+    "subtitle": "M&S Finance Consulting ha acompañado a empresas y personas en Cartagena, Colombia durante más de 30 años en contabilidad, impuestos y consultoría financiera — y ahora también en tableros, integración de datos y automatización de informes.",
     "ctaPrimary": "Contáctanos",
     "ctaSecondary": "Nuestros servicios"
   },
@@ -28,8 +28,9 @@
         "body": "Contabilidad integral, declaración de impuestos y preparación de estados financieros, conforme a la normativa colombiana."
       },
       "data": {
-        "title": "Análisis de Datos Moderno e IA",
-        "body": "Una nueva generación de conocimiento — análisis asistido por IA, automatización y tableros que convierten tus datos financieros en decisiones más claras y rápidas."
+        "title": "Tableros y automatización",
+        "body": "Tableros que se actualizan solos, integración entre tu software contable y tus hojas de cálculo, y automatización del trabajo manual que hoy toma horas cada semana.",
+        "link": "Ver qué construimos"
       }
     },
     "about": {
@@ -65,7 +66,7 @@
       },
       "learning": {
         "title": "Aprendizaje continuo",
-        "body": "Combinando décadas de experiencia con herramientas modernas como el análisis de datos para seguir generando valor."
+        "body": "Décadas de experiencia contable junto a ingeniería de datos actual, para que la práctica siga siendo útil a medida que cambian las herramientas."
       }
     },
     "team": {
@@ -81,13 +82,14 @@
       "eyebrow": "Datos y Analítica",
       "name": "Juan Felipe Salcedo",
       "role": "Ingeniero de Datos y Consultor en Tecnología",
-      "bio": "Juan Felipe aporta habilidades modernas de análisis de datos, IA y automatización a la práctica, ayudando a convertir los datos financieros y de negocio en tableros claros y conocimientos que apoyan mejores decisiones."
+      "bio": "Juan Felipe es ingeniero de datos con maestría en Estadística y Ciencia de Datos, con cinco años construyendo sistemas de datos en entornos corporativos. Construye tableros, integraciones y automatizaciones — y sistemas de IA que citan sus fuentes, para que se pueda comprobar lo que responden.",
+      "link": "Ver Datos e IA"
     }
   },
   "services": {
     "eyebrow": "Lo Que Ofrecemos",
-    "title": "Servicios contables, tributarios y de análisis de datos",
-    "intro": "Servicios integrales de contabilidad y finanzas, respaldados por tres décadas de experiencia — además de análisis de datos moderno para darte una visión más clara de tus números.",
+    "title": "Servicios contables y tributarios",
+    "intro": "Servicios integrales de contabilidad, impuestos y consultoría financiera, respaldados por tres décadas de experiencia en Cartagena.",
     "items": {
       "accounting": {
         "title": "Contabilidad y Teneduría de Libros",
@@ -102,8 +104,9 @@
         "body": "Asesoría personalizada en presupuestos, flujo de caja y estrategia financiera, tanto para empresas como para personas."
       },
       "data": {
-        "title": "Análisis de Datos e IA",
-        "body": "Análisis de datos moderno, informes asistidos por IA y automatización de flujos de trabajo — además de tableros personalizados y herramientas de BI — que convierten tu información financiera y de negocio en conocimientos claros y accionables. Una nueva capacidad construida sobre décadas de experiencia financiera."
+        "title": "Datos e IA",
+        "body": "Una línea de servicio aparte: tableros, integración de datos y automatización de informes, con alcance y precio fijos.",
+        "link": "Conocer Datos e IA"
       }
     },
     "cta": {
@@ -247,8 +250,8 @@
       "description": "Contador p&uacute;blico con 30+ a&ntilde;os en Cartagena, junto a un MSc en Estad&iacute;stica y Ciencia de Datos. Experiencia contable y capacidad anal&iacute;tica moderna en una sola pr&aacute;ctica."
     },
     "services": {
-      "title": "Servicios Contables, Tributarios y de Datos en Cartagena | M&amp;S",
-      "description": "Contabilidad, planeaci&oacute;n tributaria, consultor&iacute;a financiera y an&aacute;lisis de datos con IA, automatizaci&oacute;n y tableros a la medida, en Cartagena, Colombia."
+      "title": "Servicios Contables y Tributarios en Cartagena | M&amp;S",
+      "description": "Contabilidad, planeaci&oacute;n tributaria, declaraci&oacute;n de renta y consultor&iacute;a financiera para empresas y personas en Cartagena, Colombia. M&aacute;s de 30 a&ntilde;os de experiencia."
     },
     "contact": {
       "title": "Contacto | Contador en Cartagena &mdash; M&amp;S Finance Consulting",

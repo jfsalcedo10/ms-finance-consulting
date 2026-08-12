@@ -975,6 +975,23 @@ form:has(button:disabled) {
   color: var(--color-teal-deep);
 }
 
+/* Inline link at the foot of a card, for cards that point somewhere. */
+.card-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  border-bottom: 1px solid var(--color-line);
+  transition: border-color 0.18s var(--ease-out), color 0.18s var(--ease-out);
+}
+
+.card-link:hover {
+  color: var(--color-teal-deep);
+  border-bottom-color: var(--color-green);
+}
+
 /* ---------- Consent checkbox (contact form) ---------- */
 .form-consent {
   display: flex;
