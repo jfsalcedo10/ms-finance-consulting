@@ -991,6 +991,28 @@ form:has(button:disabled) {
   border-bottom-color: var(--color-green);
 }
 
+/* Justified body copy. Hyphenation is required, not optional: without it,
+   justification stretches word spacing into rivers of whitespace, and it is
+   worse in narrow card columns than in full-width prose. The <html lang>
+   attribute is what lets the browser hyphenate correctly per language.
+   Reverts to ragged-right on narrow screens, where the measure is too short
+   for justification to read as anything but gaps. */
+.justified p,
+.justified .values-list span {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (max-width: 640px) {
+  .justified p,
+  .justified .values-list span {
+    text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+  }
+}
+
 /* ---------- Consent checkbox (contact form) ---------- */
 .form-consent {
   display: flex;
