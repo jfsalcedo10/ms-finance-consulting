@@ -1105,30 +1105,6 @@ form:has(button:disabled) {
   }
 }
 
-/* Scroll cue: a hairline at the foot of the hero that fades out over the first
-   100px of scroll. Deliberately static rather than a bouncing chevron — that
-   pattern is a recognisable template tell, and motion here competes with the
-   hero's two CTAs for attention. The line is a gradient so it emerges from the
-   page rather than sitting on it as a drawn object. Decorative only, so it is
-   aria-hidden and carries no meaning for screen readers. */
-.scroll-cue {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  width: 1px;
-  height: 44px;
-  transform: translateX(-50%);
-  background: linear-gradient(to bottom, transparent, var(--color-teal));
-  pointer-events: none;
-}
-
-@media (max-width: 640px) {
-  .scroll-cue {
-    height: 28px;
-    bottom: 10px;
-  }
-}
-
 /* ---------- Engagement journey ----------
    A horizontal three-step timeline: numbered markers joined by a rule that
    runs through them. Stacks to a vertical timeline below 860px, where three

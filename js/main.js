@@ -96,20 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Scroll cue on the home hero: fades out across the first 100px of scroll,
-  // so it is gone the moment it has done its job. Opacity is driven straight
-  // from scroll position rather than a transition, so there is no animation
-  // running on its own — nothing to suppress for reduced-motion users.
-  const scrollCue = document.querySelector(".scroll-cue");
-  if (scrollCue) {
-    const fadeCue = () => {
-      const progress = Math.min(window.scrollY / 100, 1);
-      scrollCue.style.opacity = String(1 - progress);
-    };
-    fadeCue();
-    window.addEventListener("scroll", fadeCue, { passive: true });
-  }
-
   // Language dropdown. The menu items are now real links (the URL carries the
   // language), so this only handles open/close and keyboard navigation.
   const closeLangSelect = (select, { returnFocus } = {}) => {
