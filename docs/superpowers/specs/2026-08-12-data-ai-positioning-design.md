@@ -124,8 +124,8 @@ Scope protection sits inside the offer rather than before it:
 The page states plainly what is included, what is not, and that week 1 can end
 it. This is the difference between a scoping step and a sales device.
 
-**Pricing is not published on the page.** It states fixed scope and a fixed
-price agreed before any build begins. Publishing a number is a later
+**Pricing is not published on the page.** Confirmed 2026-08-12. It states fixed
+scope and a fixed price agreed before any build begins. Publishing a number is a later
 optimisation, once there is evidence of what engagements actually cost to
 deliver; guessing one now, with no delivered engagements to calibrate against,
 would be worse than omitting it.
@@ -182,10 +182,12 @@ in exactly one place.
 - **No implied client delivery.** Groundwork is a bootcamp capstone and side
   project. It demonstrates capability and must be described as such, never as
   work delivered to a client.
-- **The current employer is described generically** ("a global materials
-  technology company") until the owner has checked whether their contract
-  permits naming it on a page selling consulting services. Leal is past
-  employment and safe to name.
+- **The current employer is not named.** Decided 2026-08-12: it is described
+  generically ("a global materials technology company") regardless of what the
+  contract permits. Naming a current employer on a page selling consulting
+  services invites a conversation with no upside — the generic description
+  carries the same signal (enterprise scale, high data volume) at no risk. Leal
+  is past employment and is named.
 
 ## Site integration
 
@@ -207,12 +209,10 @@ in exactly one place.
 
 These are dependencies with a named owner, not open questions in the design:
 
-1. **Contract check** on naming the current employer. Until confirmed, the
-   generic description is used.
-2. **The first build's concrete deliverable** — a dashboard over the client's
+1. **The first build's concrete deliverable** — a dashboard over the client's
    accounting data is the working assumption; the owner is better placed to say
    what is realistic in three weeks of evenings.
-3. **One or two additional capability examples** if desired, anonymised as
+2. **One or two additional capability examples** if desired, anonymised as
    needed. Groundwork alone is sufficient to write from but is a side project;
    professional examples would strengthen the "why me" section.
 
