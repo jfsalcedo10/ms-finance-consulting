@@ -627,6 +627,23 @@ p {
   color: rgba(246, 239, 225, 0.82);
 }
 
+/* Headings and emphasis on the dark gradient. Without these they fall back to
+   --color-teal-deep, which is 1.00:1 against the top of the gradient — the
+   same colour, i.e. invisible. .note-strong hit exactly that. */
+.section-alt h3,
+.section-alt h4 {
+  color: var(--color-paper);
+}
+
+.section-alt .note-strong {
+  color: var(--color-paper);
+}
+
+.section-alt .card-link {
+  color: var(--color-green);
+  border-bottom-color: rgba(246, 239, 225, 0.4);
+}
+
 .section-alt .values-list strong {
   color: var(--color-paper);
 }
@@ -1012,10 +1029,21 @@ form:has(button:disabled) {
   hyphens: auto;
 }
 
-/* Journey steps are a third of the container wide — too narrow to justify
-   without visible gaps, so they stay ragged-right at every size. */
-.justified .journey-step p {
+/* Contexts too narrow or too short for justification to help. Cards run from
+   ~340px (three-up) to ~500px (two-up); subtitles are one to three lines, where
+   justifying only stretches the opening line. The CTA banner stays centred. */
+.justified .journey-step p,
+.justified .card p,
+.justified .team-card p,
+.justified .subtitle,
+.justified .form-note {
   text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+.justified .cta-banner p {
+  text-align: center;
   -webkit-hyphens: manual;
   hyphens: manual;
 }
@@ -1109,10 +1137,6 @@ form:has(button:disabled) {
 
 .section-alt .journey-step::after {
   background: rgba(246, 239, 225, 0.45);
-}
-
-.section-alt .journey-step h3 {
-  color: var(--color-paper);
 }
 
 .section-alt .journey-step p {
