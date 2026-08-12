@@ -4,7 +4,7 @@
     "about": "About",
     "services": "Services",
     "contact": "Contact",
-    "data": "Data & AI"
+    "data": "Data &amp; AI"
   },
   "brand": {
     "tail": "Finance Consulting"
@@ -84,7 +84,7 @@
       "name": "Juan Felipe Salcedo",
       "role": "Data Engineer & Technology Consultant",
       "bio": "Juan Felipe is a data engineer with an MSc in Statistics and Data Science and five years building data systems in enterprise environments. He builds dashboards, integrations and automation — and AI systems that cite their sources, so what they answer can be checked.",
-      "link": "See Data & AI"
+      "link": "See Data &amp; AI"
     }
   },
   "services": {
@@ -105,9 +105,9 @@
         "body": "Personalized guidance on budgeting, cash flow, and financial strategy for businesses and individuals alike."
       },
       "data": {
-        "title": "Data & AI",
+        "title": "Data &amp; AI",
         "body": "A separate service line: dashboards, data integration and reporting automation, with a fixed scope and price.",
-        "link": "Explore Data & AI"
+        "link": "Explore Data &amp; AI"
       }
     },
     "cta": {
@@ -303,7 +303,7 @@
     ]
   },
   "data": {
-    "eyebrow": "Data & AI",
+    "eyebrow": "Data &amp; AI",
     "title": "From scattered data to clear decisions",
     "subtitle": "The information already exists. It is spread across accounting software, spreadsheets and email, and answering a simple question takes days. We build the systems that put it within reach.",
     "offer": {

@@ -4,7 +4,7 @@
     "about": "Nosotros",
     "services": "Servicios",
     "contact": "Contacto",
-    "data": "Datos e IA"
+    "data": "Datos &amp; IA"
   },
   "brand": {
     "tail": "Finance Consulting"
@@ -84,7 +84,7 @@
       "name": "Juan Felipe Salcedo",
       "role": "Ingeniero de Datos y Consultor en Tecnología",
       "bio": "Juan Felipe es ingeniero de datos con maestría en Estadística y Ciencia de Datos, con cinco años construyendo sistemas de datos en entornos corporativos. Construye tableros, integraciones y automatizaciones — y sistemas de IA que citan sus fuentes, para que se pueda comprobar lo que responden.",
-      "link": "Ver Datos e IA"
+      "link": "Ver Datos &amp; IA"
     }
   },
   "services": {
@@ -105,9 +105,9 @@
         "body": "Asesoría personalizada en presupuestos, flujo de caja y estrategia financiera, tanto para empresas como para personas."
       },
       "data": {
-        "title": "Datos e IA",
+        "title": "Datos &amp; IA",
         "body": "Una línea de servicio aparte: tableros, integración de datos y automatización de informes, con alcance y precio fijos.",
-        "link": "Conocer Datos e IA"
+        "link": "Conocer Datos &amp; IA"
       }
     },
     "cta": {
@@ -303,7 +303,7 @@
     ]
   },
   "data": {
-    "eyebrow": "Datos e IA",
+    "eyebrow": "Datos &amp; IA",
     "title": "De datos dispersos a decisiones claras",
     "subtitle": "La información ya existe. Está repartida entre el software contable, hojas de cálculo y correos, y responder una pregunta simple toma días. Construimos los sistemas que la ponen a tu alcance.",
     "offer": {

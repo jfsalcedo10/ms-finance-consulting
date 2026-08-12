@@ -514,7 +514,7 @@ p {
 .page-header {
   position: relative;
   overflow: hidden;
-  padding: 84px 0 52px;
+  padding: 84px 0 36px;
 }
 
 .page-header::before {
@@ -610,7 +610,7 @@ p {
 
 /* ---------- Sections ---------- */
 .section {
-  padding: 76px 0;
+  padding: 48px 0;
 }
 
 /* The page header already carries 52px of bottom padding. A following section
@@ -619,7 +619,7 @@ p {
    than as rhythm. 76px is right BETWEEN sections, where nothing else is
    spacing them; it is double-counting directly under a header. */
 .page-header + .section {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .section-alt {
