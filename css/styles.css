@@ -50,7 +50,7 @@ body {
      ruled/grid lines read as school-notebook paper instead of a financial
      document. Inlined as a data URI (not a separate asset) to keep the site
      dependency-free; source SVG kept below for future edits. */
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDM2YTdhIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDYiPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjE4Ii8+PGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iMzIiLz48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMzIiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIzMiIvPjxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjMyIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSIzMiIvPjwvZz48L3N2Zz4=");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDM2YTdhIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMTAiPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjEwIi8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjE2Ii8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjIyIi8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjI4Ii8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjM0Ii8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjQwIi8+IDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjQ2Ii8+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjEwIi8+IDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIxNiIvPiA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMjIiLz4gPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjI4Ii8+IDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzNCIvPiA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNDAiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIxMCIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIxNiIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIyMiIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIyOCIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSIzNCIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIwIiByPSI0MCIvPjxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjEwIi8+IDxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjE2Ii8+IDxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjIyIi8+IDxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjI4Ii8+IDxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjM0Ii8+IDxjaXJjbGUgY3g9IjAiIGN5PSIxMjAiIHI9IjQwIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSIxMCIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIxMjAiIHI9IjE2Ii8+IDxjaXJjbGUgY3g9IjEyMCIgY3k9IjEyMCIgcj0iMjIiLz4gPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSIyOCIvPiA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIxMjAiIHI9IjM0Ii8+IDxjaXJjbGUgY3g9IjEyMCIgY3k9IjEyMCIgcj0iNDAiLz48L2c+PC9zdmc+");
   background-size: 120px 120px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -60,21 +60,52 @@ body {
    python3 -c "import base64; print(base64.b64encode(open('pattern.svg','rb').read()).decode())"
 
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
-  <g fill="none" stroke="#036a7a" stroke-width="0.5" stroke-opacity="0.06">
-    <circle cx="60" cy="60" r="18"/>
-    <circle cx="60" cy="60" r="32"/>
-    <circle cx="0" cy="0" r="32"/>
-    <circle cx="120" cy="0" r="32"/>
-    <circle cx="0" cy="120" r="32"/>
-    <circle cx="120" cy="120" r="32"/>
+  <g fill="none" stroke="#036a7a" stroke-width="0.5" stroke-opacity="0.10">
+    <!-- centre rosette, 6px ring spacing -->
+    <circle cx="60" cy="60" r="10"/>
+    <circle cx="60" cy="60" r="16"/>
+    <circle cx="60" cy="60" r="22"/>
+    <circle cx="60" cy="60" r="28"/>
+    <circle cx="60" cy="60" r="34"/>
+    <circle cx="60" cy="60" r="40"/>
+    <circle cx="60" cy="60" r="46"/>
+    <!-- corner rosettes: repeated at all four corners so the field is
+         continuous across tile edges instead of isolated circles -->
+    <circle cx="0" cy="0" r="10"/>
+    <circle cx="0" cy="0" r="16"/>
+    <circle cx="0" cy="0" r="22"/>
+    <circle cx="0" cy="0" r="28"/>
+    <circle cx="0" cy="0" r="34"/>
+    <circle cx="0" cy="0" r="40"/>
+    <circle cx="120" cy="0" r="10"/>
+    <circle cx="120" cy="0" r="16"/>
+    <circle cx="120" cy="0" r="22"/>
+    <circle cx="120" cy="0" r="28"/>
+    <circle cx="120" cy="0" r="34"/>
+    <circle cx="120" cy="0" r="40"/>
+    <circle cx="0" cy="120" r="10"/>
+    <circle cx="0" cy="120" r="16"/>
+    <circle cx="0" cy="120" r="22"/>
+    <circle cx="0" cy="120" r="28"/>
+    <circle cx="0" cy="120" r="34"/>
+    <circle cx="0" cy="120" r="40"/>
+    <circle cx="120" cy="120" r="10"/>
+    <circle cx="120" cy="120" r="16"/>
+    <circle cx="120" cy="120" r="22"/>
+    <circle cx="120" cy="120" r="28"/>
+    <circle cx="120" cy="120" r="34"/>
+    <circle cx="120" cy="120" r="40"/>
   </g>
 </svg>
 
-Tuning notes: the first pass (80px tile, 3 rings, 0.14 opacity) looked fine
-in an isolated mockup but was overwhelming across a full page — this
-120px/2-ring/0.06-opacity version is the one that actually reads as quiet
-atmosphere at real page scale. Verify any future change against a full
-rendered page, not a small swatch.
+Tuning notes: presence here comes from ring DENSITY, not ink. Earlier passes
+tuned opacity alone against a sparse 2-ring tile (0.06 read as nothing, 0.14
+was overwhelming, 0.12 still read as isolated circles rather than a field).
+Real guilloché is many closely-spaced lines, so this version uses 6px ring
+spacing with rosettes at the centre and all four corners — which reads as a
+denser engraved field at a LOWER 0.10 opacity. If it needs adjusting, change
+the ring spacing before the opacity. Verify against a full rendered page, not
+a small swatch.
 */
 
 img {
