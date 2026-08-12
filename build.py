@@ -144,6 +144,10 @@ def generate():
                     f"en/{filename('en', page)}.html" if lang == "es"
                     else f"{filename('en', page)}.html"
                 ),
+                # Marks the current language in the switcher. Emitted as an
+                # attribute so the shared template needs no conditionals.
+                "page.esCurrent": ' aria-current="true"' if lang == "es" else "",
+                "page.enCurrent": ' aria-current="true"' if lang == "en" else "",
                 # Nav links are bare siblings within a language tree, but the
                 # data page's filename differs per language, so the nav needs it
                 # supplied rather than hardcoded in base.html.

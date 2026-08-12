@@ -418,7 +418,10 @@ p {
   outline-offset: -2px;
 }
 
-.lang-select-menu li[aria-selected="true"] {
+/* Marks the language you are currently reading. This was
+   li[aria-selected="true"], which stopped matching anything when the menu
+   items became real links — nothing has set aria-selected since. */
+.lang-select-menu li a[aria-current="true"] {
   color: var(--color-teal-deep);
   font-weight: 700;
   background: var(--color-paper);

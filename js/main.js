@@ -127,7 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // point) is what reliably makes the link focusable; verified
         // empirically, not a guess. Do not "simplify" this back to a
         // synchronous focus() call — that silently does nothing.
-        setTimeout(() => links[0]?.focus(), 60);
+        // Focus the language you are on, not the first item — otherwise the
+        // focus ring always lands on English and reads as "English is
+        // selected" no matter which version you are reading.
+        const current = select.querySelector('.lang-select-menu a[aria-current="true"]');
+        setTimeout(() => (current || links[0])?.focus(), 60);
       }
     });
 
