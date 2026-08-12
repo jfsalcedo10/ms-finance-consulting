@@ -259,6 +259,38 @@
     }
   },
   "schema": {
-    "description": "Firma de contabilidad, impuestos y consultoría financiera en Cartagena, Colombia, con más de 30 años de experiencia, que también ofrece análisis de datos aplicado a las finanzas."
+    "description": "Firma de contabilidad, impuestos y consultoría financiera en Cartagena, Colombia, con más de 30 años de experiencia, que también ofrece análisis de datos aplicado a las finanzas.",
+    "knowsAbout": [
+      "Contabilidad",
+      "Teneduría de libros",
+      "Impuestos y planeación tributaria",
+      "Estados financieros",
+      "Consultoría financiera",
+      "Análisis de datos",
+      "Inteligencia artificial aplicada a las finanzas",
+      "Automatización de procesos",
+      "Tableros y Business Intelligence"
+    ],
+    "areaServedRegion": "Región Caribe, Colombia",
+    "analystJobTitle": "Ingeniero de Datos y Consultor en Tecnología",
+    "offerCatalogLabel": "Servicios",
+    "services": [
+      "Contabilidad y teneduría de libros",
+      "Planeación tributaria y declaración de impuestos",
+      "Consultoría financiera",
+      "Análisis de datos",
+      "Informes asistidos por inteligencia artificial",
+      "Automatización de flujos de trabajo",
+      "Tableros personalizados y herramientas de BI"
+    ],
+    "areaServedCities": [
+      "Cartagena",
+      "Barranquilla",
+      "Santa Marta",
+      "Montería",
+      "Sincelejo",
+      "Valledupar",
+      "Riohacha"
+    ]
   }
 }

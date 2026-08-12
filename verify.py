@@ -34,7 +34,8 @@ PLACEHOLDER = re.compile(r"\{\{\s*([A-Za-z0-9_.]+)\s*\}\}")
 # Slots build.py supplies itself; not content keys.
 BUILD_SUPPLIED = {"content", "head_extra", "rel", "page.title", "page.description",
                   "page.canonical", "page.altEs", "page.altEn",
-                  "page.langEs", "page.langEn"}
+                  "page.langEs", "page.langEn",
+                  "schema.areaServed", "schema.offerCatalog"}
 
 
 def check_template_placeholders():

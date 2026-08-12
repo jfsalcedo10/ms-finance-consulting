@@ -30,6 +30,27 @@ def check_parity(es, en):
         sys.exit("build failed: content/es.json and content/en.json key sets differ")
 
 
+def area_served(values):
+    """Schema.org areaServed: the region, then each city it covers."""
+    return [{"@type": "AdministrativeArea", "name": values["schema.areaServedRegion"]}] + [
+        {"@type": "City", "name": city} for city in values["schema.areaServedCities"]
+    ]
+
+
+def offer_catalog(values):
+    """Wrap the plain service-name list from content/*.json in the Offer /
+    Service scaffolding schema.org expects, so the content file stays
+    readable instead of carrying nested JSON-LD boilerplate."""
+    return {
+        "@type": "OfferCatalog",
+        "name": values["schema.offerCatalogLabel"],
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": name}}
+            for name in values["schema.services"]
+        ],
+    }
+
+
 def canonical(lang, page):
     if page == "index":
         return f"{SITE}/" if lang == "es" else f"{SITE}/en/"
@@ -45,7 +66,12 @@ def render(template, values, where):
         key = match.group(1)
         if key not in values:
             sys.exit(f"build failed: unknown placeholder {{{{ {key} }}}} in {where}")
-        return str(values[key])
+        value = values[key]
+        # Lists and dicts appear inside JSON-LD blocks, so they must be emitted
+        # as JSON. str() would produce Python repr — single quotes, invalid JSON.
+        if not isinstance(value, str):
+            return json.dumps(value, ensure_ascii=False, indent=None)
+        return value
 
     out = PLACEHOLDER.sub(replace, template)
     leftover = PLACEHOLDER.search(out)
@@ -100,6 +126,8 @@ def generate():
 
             page_values = dict(values)
             page_values.update({
+                "schema.areaServed": area_served(values),
+                "schema.offerCatalog": offer_catalog(values),
                 "rel": REL[lang],
                 "page.title": values[f"pages.{page}.title"],
                 "page.description": values[f"pages.{page}.description"],
@@ -111,7 +139,13 @@ def generate():
             })
             body = render(body_tpl, page_values, f"templates/pages/{page}.html ({lang})")
             page_values["content"] = body
-            page_values["head_extra"] = head_extra
+            # Head fragments carry placeholders too (services.html holds the
+            # OfferCatalog), and substitution is single-pass — so they must be
+            # rendered before being slotted into base.html, not after.
+            page_values["head_extra"] = (
+                render(head_extra, page_values, f"templates/head/{page}.html ({lang})")
+                if head_extra else ""
+            )
             outputs[output_path(lang, page)] = render(
                 base, page_values, f"templates/base.html ({lang}/{page})"
             )

@@ -259,6 +259,38 @@
     }
   },
   "schema": {
-    "description": "Accounting, tax and financial consulting firm in Cartagena, Colombia, with more than 30 years of experience, also offering data analysis applied to finance."
+    "description": "Accounting, tax and financial consulting firm in Cartagena, Colombia, with more than 30 years of experience, also offering data analysis applied to finance.",
+    "knowsAbout": [
+      "Accounting",
+      "Bookkeeping",
+      "Tax and tax planning",
+      "Financial statements",
+      "Financial consulting",
+      "Data analysis",
+      "Artificial intelligence applied to finance",
+      "Process automation",
+      "Dashboards and business intelligence"
+    ],
+    "areaServedRegion": "Caribbean Region, Colombia",
+    "analystJobTitle": "Data Engineer & Technology Consultant",
+    "offerCatalogLabel": "Services",
+    "services": [
+      "Bookkeeping and accounting",
+      "Tax planning and filing",
+      "Financial consulting",
+      "Data analysis",
+      "AI-assisted reporting",
+      "Workflow automation",
+      "Custom dashboards and BI tools"
+    ],
+    "areaServedCities": [
+      "Cartagena",
+      "Barranquilla",
+      "Santa Marta",
+      "Montería",
+      "Sincelejo",
+      "Valledupar",
+      "Riohacha"
+    ]
   }
 }

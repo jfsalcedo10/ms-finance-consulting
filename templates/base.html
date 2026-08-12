@@ -46,33 +46,14 @@
     "email": "info@mscontadores.com.co",
     "knowsLanguage": ["es", "en"],
     "currenciesAccepted": "COP",
-    "knowsAbout": [
-      "Contabilidad",
-      "Tenedur\u00eda de libros",
-      "Impuestos y planeaci\u00f3n tributaria",
-      "Estados financieros",
-      "Consultor\u00eda financiera",
-      "An\u00e1lisis de datos",
-      "Inteligencia artificial aplicada a las finanzas",
-      "Automatizaci\u00f3n de procesos",
-      "Tableros y Business Intelligence"
-    ],
+    "knowsAbout": {{ schema.knowsAbout }},
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Cartagena",
       "addressRegion": "Bol\u00edvar",
       "addressCountry": "CO"
     },
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Regi\u00f3n Caribe, Colombia" },
-      { "@type": "City", "name": "Cartagena" },
-      { "@type": "City", "name": "Barranquilla" },
-      { "@type": "City", "name": "Santa Marta" },
-      { "@type": "City", "name": "Monter\u00eda" },
-      { "@type": "City", "name": "Sincelejo" },
-      { "@type": "City", "name": "Valledupar" },
-      { "@type": "City", "name": "Riohacha" }
-    ],
+    "areaServed": {{ schema.areaServed }},
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -92,7 +73,7 @@
       {
         "@type": "Person",
         "name": "Juan Felipe Salcedo",
-        "jobTitle": "Ingeniero de Datos y Consultor en Tecnolog\u00eda",
+        "jobTitle": "{{ schema.analystJobTitle }}",
         "worksFor": { "@id": "https://www.mscontadores.com.co/#organization" }
       }
     ]
