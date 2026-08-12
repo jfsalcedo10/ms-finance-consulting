@@ -458,8 +458,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vh - 66px);
-  min-height: calc(100svh - 66px);
+  /* 66px sticky header, then 36px of the dark section left showing as the
+     scroll cue: a strip of teal at the fold reads unmistakably as more
+     content, without needing an arrow. */
+  min-height: calc(100vh - 102px);
+  min-height: calc(100svh - 102px);
 }
 
 .hero::before {
@@ -665,6 +668,14 @@ p {
 .section-alt .card-link {
   color: var(--color-green);
   border-bottom-color: rgba(246, 239, 225, 0.4);
+}
+
+/* Cards keep their own light background even inside a dark section, so a link
+   inside one needs the light-surface colours back. Green on cream is 2.31:1. */
+.card .card-link,
+.team-card .card-link {
+  color: var(--color-teal);
+  border-bottom-color: var(--color-line);
 }
 
 .section-alt .values-list strong {
