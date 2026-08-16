@@ -65,8 +65,22 @@ code change.** The local pack — the three map results above the organic list �
 is ranked mostly on proximity, profile completeness, and reviews. On-page SEO
 decides where you rank *below* the pack; it cannot get you into it.
 
-**Blocker: the street address.** Still an open TODO in `README.md`. Verification
-effectively requires a real address even if it's later hidden.
+**Set it up as a service-area business (SAB).** Emilio travels to clients rather
+than receiving them, so there is no public-facing office and the listing should
+have no visible address.
+
+Google still requires a real address for **verification** — it is used to confirm
+the business exists and is then hidden from the public listing. That address is
+**deliberately not recorded in this repo**: the repository is public and
+`content/*.json` is served at the live domain, so anything committed here is
+published twice over. Ask Emilio for it at setup time; it goes into Google's form
+and nowhere else.
+
+The site is already consistent with this and needs no change: the footer and
+contact page show only "Cartagena, Colombia", and the JSON-LD `PostalAddress`
+carries `addressLocality` / `addressRegion` / `addressCountry` with **no
+`streetAddress`**. Do not add one — a `streetAddress` in the structured data
+would publish what the SAB setting is meant to hide.
 
 1. <https://business.google.com> → create a profile, signed in as the practice's
    Workspace account (not a personal Gmail — the Workspace account keeps
@@ -78,9 +92,11 @@ effectively requires a real address even if it's later hidden.
    Secondary: `Servicio de contabilidad`, and consider `Asesor fiscal`.
    The primary category carries far more ranking weight than the others — get
    it right rather than hedging.
-4. **Address:** the real street address. If Emilio prefers not to publish it,
-   choose *"I deliver goods and services to my customers"* — the address is used
-   for verification but hidden from the public listing.
+4. **Address:** enter the real address for verification, then tick
+   *"I deliver goods and services to my customers"* and **untick "Show business
+   address to customers"**. The address is used to verify and is then hidden.
+   Confirm it is actually hidden once the listing goes live — this is the step
+   worth double-checking, because the default in some flows is to display it.
 5. **Service areas:** Cartagena plus the Caribbean cities we already list in the
    site's `areaServed` — Barranquilla, Santa Marta, Montería, Sincelejo,
    Valledupar, Riohacha. Up to 20 are allowed.
@@ -107,9 +123,12 @@ effectively requires a real address even if it's later hidden.
 
 ## Sequence
 
-1. Search Console — two minutes, unblocked today, do it first
-2. Get the street address from Emilio
-3. Google Business Profile — blocked on step 2
-4. Reviews and directory listings — ongoing, after GBP is verified
+1. Search Console — done (Domain property verified 2026-08-15, DNS TXT added)
+2. Google Business Profile as a service-area business — unblocked; the address
+   for verification comes from Emilio at setup time and is not stored here
+3. Reviews and directory listings — ongoing, after GBP is verified
 
-Steps 2–4 will move local ranking more than anything left in this repo.
+Steps 2–3 will move local ranking more than anything left in this repo. Note
+that a service-area business is ranked from its verified address even though it
+is hidden, so proximity still applies — the SAB setting controls display, not
+ranking.

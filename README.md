@@ -110,8 +110,13 @@ Content placeholders that only the client (dad) can fill in — search
 - [ ] Founder's exact professional title/credentials (`about.founder.role`
       currently says "Founder & Lead Consultant, Accountant" — confirm
       wording, e.g. official "Contador Público" / tarjeta profesional no.)
-- [x] Address — kept to "Cartagena, Colombia" only, no street address
-      (`contact.info.address.value`)
+- [x] Address — deliberately kept to "Cartagena, Colombia" only, with no
+      street address (`contact.info.address.value`, and no `streetAddress` in
+      the JSON-LD). Emilio travels to clients, so there is no public-facing
+      office. A real address is needed once, for Google Business Profile
+      verification, where it stays hidden — **do not commit it to this repo.**
+      The repository is public and `content/*.json` is served at the live
+      domain, so anything stored here is published. See `docs/google-setup.md`.
 - [x] Contact form (`contact.html`) is wired to
       [Web3Forms](https://web3forms.com) with a real access key — see
       "Contact form setup" below
