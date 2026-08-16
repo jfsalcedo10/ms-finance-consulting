@@ -33,10 +33,45 @@ channel. Without tracking, a month of spend tells you your cost per *click* and
 nothing about your cost per *enquiry* — and only the second number tells you
 whether to do it again.
 
-The form (`templates/pages/contact.html` → `contact.html` / `en/contact.html`)
-posts to Web3Forms via `fetch` in `js/main.js` and shows an inline success
-state. That success branch is the clean place to fire a conversion event; it
-already exists, so this is a small change, not a rebuild.
+**The hook already exists.** `reportConversion()` in `js/main.js` runs on a
+confirmed successful submission and is **inert by default** — it loads no script,
+sets no cookie, and makes no network call until configured. It also always
+dispatches a `ms:contact-submitted` DOM event, so anything else that wants to
+observe an enquiry has a stable thing to listen on.
+
+To enable it, in this order:
+
+1. **Create the conversion action** in Google Ads → *Goals → Conversions*. Choose
+   a *Website* conversion, category *Submit lead form*. This produces the
+   conversion **ID** (`AW-XXXXXXXXX`) and **label** — neither exists before this
+   step, which is why nothing is hardcoded.
+
+2. **Update the privacy policy — before, not after.** `legal.s9.body` in
+   `content/es.json` and `content/en.json` currently states in both languages
+   that the site sets no cookies and stores nothing in the browser. Google's
+   tag sets advertising cookies, so shipping it without amending that text
+   leaves a false disclosure on a Habeas Data policy for a real practice. Amend
+   §9 to describe the advertising cookie, its purpose, and that it comes from
+   Google.
+
+   Also reconsider **§5 (third parties and international transfer)** — Google
+   becomes a second recipient of visitor data alongside Web3Forms, and Article
+   26 of Ley 1581 governs that transfer. Worth a look at whether a cookie
+   consent banner is warranted at that point; the current design deliberately
+   avoids needing one.
+
+3. **Add the gtag snippet** to `templates/base.html`, then rebuild.
+
+4. **Set the values on the form** in `templates/pages/contact.html`:
+   `data-conversion-id="AW-XXXXXXXXX"` and `data-conversion-label="…"`.
+   The hook reads both and stays silent unless both are present.
+
+5. **Test before spending.** Submit the form once and confirm the conversion
+   registers in Ads — a campaign that runs for a month with broken tracking
+   produces exactly the number you were trying to avoid: cost per click.
+
+Steps 2 and 3 are the ones to keep in order. Shipping the tag first means the
+policy is false for however long the gap lasts.
 
 **Check the floor.** In Keyword Planner, get the estimated CPC for
 `[contador cartagena]`, then:

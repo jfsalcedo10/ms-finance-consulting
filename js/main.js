@@ -70,6 +70,36 @@ document.addEventListener("DOMContentLoaded", () => {
       statusEl.textContent = MESSAGES[key] || "";
     };
 
+    // Fires when a message is actually delivered — the practice's only lead
+    // event, and the number an ad campaign has to be judged on (cost per
+    // enquiry, not cost per click).
+    //
+    // Deliberately does NOT load an analytics or ads tag. Two reasons:
+    //
+    //   1. The privacy policy states, in both languages, that the site sets no
+    //      cookies and stores nothing in the browser (legal.s9.body). Loading
+    //      gtag.js would set advertising cookies and make a Habeas Data
+    //      disclosure false. Enabling this therefore requires updating
+    //      legal.s9.body FIRST, in es.json and en.json.
+    //   2. The conversion id/label only exist once a conversion action is
+    //      created in Google Ads, so there is nothing to hardcode yet.
+    //
+    // To enable: create the conversion action in Ads, add the gtag snippet to
+    // templates/base.html, and set data-conversion-id / data-conversion-label
+    // on the form. Until then this is inert — no network call, no cookie.
+    // See docs/google-ads-playbook.md.
+    const reportConversion = () => {
+      const { conversionId, conversionLabel } = contactForm.dataset;
+      if (typeof window.gtag === "function" && conversionId && conversionLabel) {
+        window.gtag("event", "conversion", {
+          send_to: `${conversionId}/${conversionLabel}`,
+        });
+      }
+      // Always dispatched, tag or no tag, so anything else that wants to
+      // observe a successful enquiry has a stable hook to listen on.
+      document.dispatchEvent(new CustomEvent("ms:contact-submitted"));
+    };
+
     contactForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       submitBtn.disabled = true;
@@ -84,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = await response.json();
         if (result.success) {
           setStatus("success");
+          reportConversion();
           contactForm.reset();
         } else {
           setStatus("error");
